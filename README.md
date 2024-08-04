@@ -1,8 +1,12 @@
-# dotfiles-endvr
+## install packages
+
 sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat kitty tmux ttf-jetbrains-mono-nerd
 
-chezmoi init https://github.com/dem2k/dotfiles-manjaro --apply
-#chezmoi update
+## install dotfiles
+
+chezmoi init https://github.com/dem2k/dotfiles-endvr --apply
+
+## configure git
 
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
