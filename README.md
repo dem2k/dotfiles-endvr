@@ -15,7 +15,8 @@ chezmoi init https://github.com/dem2k/dotfiles-endvr --apply
 ````
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
-git config --global pull.rebase false # Merge
+git config --global pull.rebase false
+git config --global init.defaultBranch main
 ````
 
 
