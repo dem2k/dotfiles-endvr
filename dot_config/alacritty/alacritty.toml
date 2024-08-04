@@ -1,0 +1,35 @@
+
+# [shell]
+# program = "c:/scoop/apps/pwsh/current/pwsh.exe"
+
+[window]
+dimensions = { columns = 160, lines = 44 }
+padding = { x = 5, y = 5 }
+resize_increments = true
+
+# [font]
+# normal = { family = "Hack", style = "JetBrainsMono Nerd Font" }
+# size = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[cursor]
+style = {shape = "Block", blinking = "On"}
+
+[mouse]
+bindings = [
+{ mouse = "Right", action = "Paste" },
+]
+
+[keyboard]
+bindings = [
+# { key = "C", mods = "Control", action = "Copy" },
+# { key = "V", mods = "Control", action = "Paste" },
+ { key = "PageUp", mods = "Shift", action = "ScrollHalfPageUp" },
+ { key = "PageDown", mods = "Shift", action = "ScrollHalfPageDown" },
+]
+
+[selection]
+save_to_clipboard = true
+
