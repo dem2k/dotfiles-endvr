@@ -1,7 +1,8 @@
 ## install packages
 
 ````
-sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat kitty tmux ttf-jetbrains-mono-nerd
+sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat kitty tmux wezterm \
+        ttf-jetbrains-mono-nerd ttf-hack-nerd
 ````
 
 ## install dotfiles
