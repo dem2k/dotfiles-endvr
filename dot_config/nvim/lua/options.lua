@@ -5,7 +5,7 @@ vim.cmd [[filetype plugin indent on]]   -- Load plugins according to detected fi
 
 vim.opt.wrap = false                                -- Disable line wrap
 vim.opt.linebreak = true
--- vim.opt.clipboard = "unnamedplus"                   -- Sync with system clipboard
+vim.opt.clipboard = "unnamedplus"                   -- Sync with system clipboard
 vim.opt.completeopt = { "menu", "menuone", "noselect" } -- https://neovim.io/doc/user/options.html#'completeopt'
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "folds" }
 
@@ -67,7 +67,7 @@ vim.opt.shiftwidth = 4         -- Size of an indent by spaces
 vim.opt.softtabstop = 4        -- Set the value of softtabstop -- vim.cmd [[set softtabstop =4]] -- Tab key indents by 4 spaces.
 
 vim.opt.timeout = true
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 2500
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
 vim.opt.winminwidth = 8                -- Minimum window width
 -- vim.opt.splitkeep = "screen"
