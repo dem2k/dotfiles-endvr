@@ -53,7 +53,10 @@
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
-      <property name="Super_L" type="string" value="xfce4-appfinder">
+      <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="Super_L" type="string" value="rofi -font &quot;Hack Nerd Font 20&quot; -modes drun,window,combi -show-icons -markup -show drun">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
     </property>
