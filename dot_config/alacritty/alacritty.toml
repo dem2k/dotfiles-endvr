@@ -7,12 +7,11 @@ dimensions = { columns = 160, lines = 44 }
 padding = { x = 5, y = 5 }
 resize_increments = true
 
-# [font]
-# normal = { family = "Hack", style = "JetBrainsMono Nerd Font" }
-# size = 14
+[font]
+size = 12
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Hack Nerd Font"
 
 [cursor]
 style = {shape = "Block", blinking = "On"}
