@@ -5,4 +5,8 @@ last_extension=png
 show_in_folder=false
 screenshot_dir=file:/home/xtest/Bilder
 action=1
+delay=0
+region=1
+show_mouse=0
+show_border=1
 
