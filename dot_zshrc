@@ -122,3 +122,5 @@ test -f ~/.p10k.zsh && source ~/.p10k.zsh
 ## disable p10k fast git backend. 
 export POWERLEVEL9K_DISABLE_GITSTATUS=true
 
+bindkey '^H' backward-kill-word
+
