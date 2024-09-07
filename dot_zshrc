@@ -122,5 +122,11 @@ test -f ~/.p10k.zsh && source ~/.p10k.zsh
 ## disable p10k fast git backend. 
 export POWERLEVEL9K_DISABLE_GITSTATUS=true
 
-bindkey '^H' backward-kill-word
+# Function to delete current word or previous word
+delete-word-back-or-current() {
+   [[ $CURSOR -eq 0 || "${LBUFFER[-1]}" =~ [[:space:]] ]] &&
+   zle backward-kill-word || { zle backward-word; zle kill-word }
+}
+zle -N delete-word-back-or-current
+bindkey '^H' delete-word-back-or-current  # Ctrl+Bksp to delete current or previous word
 
