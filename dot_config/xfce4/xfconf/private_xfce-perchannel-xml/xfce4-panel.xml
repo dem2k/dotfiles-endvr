@@ -52,12 +52,17 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="notizen"/>
         <value type="string" value="zwischenablage"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="screengrab"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
+      <property name="known-players" type="string" value="org.gnome.Totem"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -77,19 +82,19 @@
       <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-14" type="string" value="actions">
-      <property name="appearance" type="uint" value="1"/>
-      <property name="button-title" type="uint" value="1"/>
+      <property name="appearance" type="uint" value="0"/>
+      <property name="button-title" type="uint" value="3"/>
       <property name="items" type="array">
-        <value type="string" value="+lock-screen"/>
-        <value type="string" value="+switch-user"/>
-        <value type="string" value="+separator"/>
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
         <value type="string" value="-suspend"/>
         <value type="string" value="-hibernate"/>
         <value type="string" value="-hybrid-sleep"/>
         <value type="string" value="-separator"/>
         <value type="string" value="-shutdown"/>
         <value type="string" value="-restart"/>
-        <value type="string" value="+separator"/>
+        <value type="string" value="-separator"/>
         <value type="string" value="+logout"/>
         <value type="string" value="-logout-dialog"/>
       </property>
@@ -174,5 +179,17 @@
       </property>
     </property>
     <property name="plugin-18" type="string" value="separator"/>
+    <property name="clipman" type="empty">
+      <property name="tweaks" type="empty">
+        <property name="popup-at-pointer" type="bool" value="true"/>
+        <property name="max-menu-items" type="uint" value="99"/>
+        <property name="reverse-menu-order" type="bool" value="false"/>
+      </property>
+    </property>
+    <property name="notes" type="empty">
+      <property name="global" type="empty">
+        <property name="version" type="string" value="1.11.0"/>
+      </property>
+    </property>
   </property>
 </channel>
