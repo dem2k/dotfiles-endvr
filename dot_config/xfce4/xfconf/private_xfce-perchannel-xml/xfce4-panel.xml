@@ -26,8 +26,6 @@
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
-        <value type="int" value="14"/>
-        <value type="int" value="18"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
@@ -52,10 +50,13 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="ethernet-netzverbindung »kabelgebundene verbindung 1« ist aktiv"/>
+        <value type="string" value="netzwerk-manager-applet"/>
         <value type="string" value="notizen"/>
         <value type="string" value="zwischenablage"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="blueman"/>
         <value type="string" value="screengrab"/>
       </property>
     </property>
@@ -80,26 +81,6 @@
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="1"/>
       <property name="expand" type="bool" value="false"/>
-    </property>
-    <property name="plugin-14" type="string" value="actions">
-      <property name="appearance" type="uint" value="0"/>
-      <property name="button-title" type="uint" value="3"/>
-      <property name="items" type="array">
-        <value type="string" value="-lock-screen"/>
-        <value type="string" value="-switch-user"/>
-        <value type="string" value="-separator"/>
-        <value type="string" value="-suspend"/>
-        <value type="string" value="-hibernate"/>
-        <value type="string" value="-hybrid-sleep"/>
-        <value type="string" value="-separator"/>
-        <value type="string" value="-shutdown"/>
-        <value type="string" value="-restart"/>
-        <value type="string" value="-separator"/>
-        <value type="string" value="+logout"/>
-        <value type="string" value="-logout-dialog"/>
-      </property>
-      <property name="custom-title" type="string" value="X"/>
-      <property name="ask-confirmation" type="bool" value="true"/>
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -178,7 +159,6 @@
         <value type="double" value="1"/>
       </property>
     </property>
-    <property name="plugin-18" type="string" value="separator"/>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="popup-at-pointer" type="bool" value="true"/>
