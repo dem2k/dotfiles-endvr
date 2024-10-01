@@ -172,8 +172,8 @@
       <property name="&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
       <property name="&lt;Primary&gt;F1" type="string" value="workspace_1_key"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;Down" type="string" value="hide_window_key"/>
       <property name="&lt;Super&gt;Up" type="string" value="maximize_window_key"/>
+      <property name="&lt;Super&gt;Down" type="string" value="hide_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
