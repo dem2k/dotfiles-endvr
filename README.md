@@ -2,7 +2,7 @@
 
 ````
 sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat kitty tmux wezterm \
-        ttf-jetbrains-mono-nerd ttf-hack-nerd ranger rofi
+        ttf-jetbrains-mono-nerd ttf-hack-nerd ranger rofi autoconf texinfo
 ````
 
 ## install dotfiles
