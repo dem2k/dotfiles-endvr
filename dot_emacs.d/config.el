@@ -353,7 +353,7 @@
   :ensure t
   :bind (([remap describe-bindings] . embark-bindings)
          ("C-." . embark-act) ; In a French AZERTY keyboard, the Â² key is right above TAB
-         ("M-Â²" . embark-collect)
+         ("M-²" . embark-collect)
          ("M-." . embark-dwim))
   :init
   ;; Use Embark to show bindings in a key prefix with `C-h`
@@ -459,7 +459,7 @@
 
 (add-hook 'nxml-mode-hook
           (lambda() (interactive)
-            (define-key nxml-mode-map (kbd "C-Ã¶ w") 'my-kmacro-anwinfo)))
+            (define-key nxml-mode-map (kbd "C-ö w") 'my-kmacro-anwinfo)))
 
 (use-package drag-stuff :ensure t
   :diminish
