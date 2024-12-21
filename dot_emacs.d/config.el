@@ -132,6 +132,7 @@
 (use-package nerd-icons :ensure t)
 (use-package wgrep :ensure t)
 (use-package buffer-move :ensure t)
+(use-package git-timemachine :ensure t)
 
 (use-package dashboard :ensure t
   :init
@@ -146,6 +147,7 @@
         doom-modeline-lsp t
         ;; doom-modeline-project-detection 'auto
         doom-modeline-minor-modes t
+        doom-modeline-column-zero-based nil
         ;; doom-modeline-modal-icon t
         ;; doom-modeline-modal-modern-icon t
         doom-modeline-window-width-limit 76)
@@ -161,9 +163,8 @@
         which-key-popup-type 'minibuffer
         ;; which-key-dont-use-unicode nil
         which-key-separator "  "
-        which-key-min-display-lines 8
         ;; which-key-max-display-columns 5
-        )
+        which-key-min-display-lines 8)
   (which-key-mode +1))
 
 (use-package nerd-icons-dired :ensure t
@@ -183,10 +184,10 @@
   :custom
   (evil-undo-system 'undo-redo)
   (evil-want-fine-undo t)
-  (evil-respect-visual-line-mode t)
+  ;; (evil-respect-visual-line-mode t) ;; now using evil-better-visual-line.el
   :config
   ;; (evil-select-search-module 'evil-search-module 'evil-search)
-  (unbind-key "<deletechar>" evil-normal-state-map) ;; DEL soll nicht ins Clipboard löschen.
+  (unbind-key "<deletechar>" evil-normal-state-map) ;; DEL soll nicht ins Clipboard lÃ¶schen.
   (evil-mode +1))
 
 (use-package evil-collection :ensure t
@@ -323,9 +324,12 @@
    completion-category-defaults nil
    completion-category-overrides nil))
 
+(use-package counsel :ensure t)
+
 (use-package consult :ensure t
   :demand t
-  :hook (completion-list-mode . consult-preview-at-point-mode)
+  :hook
+  (completion-list-mode . consult-preview-at-point-mode)
   (embark-collect-mode . consult-preview-at-point-mode)
   :custom
   ;; Use `consult-xref' for `xref-find-definitions'
@@ -348,8 +352,8 @@
 (use-package embark
   :ensure t
   :bind (([remap describe-bindings] . embark-bindings)
-         ("C-." . embark-act) ; In a French AZERTY keyboard, the ² key is right above TAB
-         ("M-²" . embark-collect)
+         ("C-." . embark-act) ; In a French AZERTY keyboard, the Â² key is right above TAB
+         ("M-Â²" . embark-collect)
          ("M-." . embark-dwim))
   :init
   ;; Use Embark to show bindings in a key prefix with `C-h`
@@ -365,17 +369,10 @@
 
 (use-package format-all :ensure t
   :demand t
-  :commands (format-all-mode format-all-region-or-buffer)
   :config
-  (setq format-all-show-errors 'errors)
-  (setq-default format-all-formatters '(("Typescript" (prettierd))
-	                                    ("Javascript" (prettierd))
-	                                    ("Emacs Lisp" (emacs-lisp))
-                                        ;; ("XML" ("tidy.exe" "-xml")) ;; <== THIS should work as documented! but it dont...
-                                        ;; ("XML" (c:/scoop/apps/tidy/current/tidy.exe "-xml -raw -indent -quiet -wrap 0"))
-										))
-  :custom
-  (format-all-debug nil))
+  (setq-default format-all-formatters '(("Emacs Lisp" (emacs-lisp))
+                                        ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0"))))
+  )
 
 (defun dual-format-function ()
   "Format code using lsp-format if lsp-mode is active, otherwise use format-all."
@@ -443,8 +440,7 @@
   :config
   (centaur-tabs-mode t)
   (centaur-tabs-headline-match)
-  (centaur-tabs-group-by-projectile-project)
-  )
+  (centaur-tabs-group-by-projectile-project))
 
 (use-package avy :ensure t
   :demand t
@@ -463,7 +459,7 @@
 
 (add-hook 'nxml-mode-hook
           (lambda() (interactive)
-            (define-key nxml-mode-map (kbd "C-ö w") 'my-kmacro-anwinfo)))
+            (define-key nxml-mode-map (kbd "C-Ã¶ w") 'my-kmacro-anwinfo)))
 
 (use-package drag-stuff :ensure t
   :diminish
@@ -492,11 +488,10 @@
   (put 'dired-find-alternate-file 'disabled nil)
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
-  ;; (dired-listing-switches "-goahF --group-directories-first --time-style=long-iso")
-  ;; (dired-listing-switches "-laogvhF --group-directories-first --time-style='+%Y-%b-%d %H:%M'")
   (dired-listing-switches "-lahFv --group-directories-first")
   (dired-dwim-target t)
-  (dired-backup-overwrite t)
+  (dired-backup-overwrite t)
+
   (dired-auto-revert-buffer t)
   ;; (dired-free-space 'separate)
   (dired-hide-details-hide-symlink-targets nil)
@@ -563,6 +558,14 @@
     (dired-rainbow-define vc "#0074d9" ("git" "gitignore" "gitattributes" "gitmodules"))
     (dired-rainbow-define-chmod executable-unix "#38c172" "-.*x.*")))
 
+;;;{{{ toggle between most recent buffers
+;; http://www.emacswiki.org/emacs/SwitchingBuffers#toc5
+(defun switch-to-last-used-buffer ()
+  "Switch to most recent buffer. Repeated calls toggle back and forth between the most recent two buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+;;;}}}
+
 (use-package general :ensure t
   :after evil
   :config
@@ -580,6 +583,8 @@
     ;; "SPC" '(counsel-M-x :wk "Counsel M-x")
     "." '(find-file :wk "Find file")
     "=" '(perspective-map :wk "Perspective") ;; Lists all the perspective keybindings
+    "SPC" '(switch-to-last-used-buffer :wk "Switch to last Buffer")
+    ;; "SPC" '(evil-switch-to-windows-last-buffer :wk "Switch to last Buffer"))
     "u" '(universal-argument :wk "Universal argument"))
 
   (my-leader-keys
@@ -605,8 +610,7 @@
 
   (my-leader-keys
     "l" '(:ignore t :wk "Code")
-    "lf" '(dual-format-function :wk "Format Buffer or Region")) ;; why this isnt work??
-  ;; "lf" '(format-all-region-or-buffer :wk "Format Buffer or Region"))
+    "lf" '(dual-format-function :wk "Format Buffer or Region"))
 
   (my-leader-keys
     "d" '(:ignore t :wk "Dired")
@@ -755,11 +759,11 @@
     "s l" '(consult-line :wk "Search in Lines")
     "s i" '(consult-imenu :wk "Imenu")
     "s o" '(occur :wk "Occurrence")
-    "s g" '(consult-ripgrep :wk "Grep in Files")
-    "s G" '(counsel-rg :wk "Grep in ")
+    "s g" '(consult-ripgrep :wk "consult-ripgrep: in Files curr. Dir")
+    "s s" '(counsel-grep-or-swiper :wk "Swiper or Grep")
+    "s G" '(counsel-rg :wk "counsel-ripgrep: in Files curr. Dir")
     "s r" '(rg-menu :wk "RipGrep dwim")
     "s d" '(dictionary-search :wk "Search dictionary")
-    "s s" '(counsel-grep-or-swiper :wk "Swiper or Grep")
     "s t" '(tldr :wk "Lookup TLDR docs for a command")
     ;; "s m" '(man :wk "Search Man Pages")
     "s m" '(woman :wk "Man Pages (w/o man)"))
@@ -779,6 +783,7 @@
     ;; Window splits
     "w k" '(evil-window-delete :wk "Kill Window")
     "w c" '(evil-window-new :wk "Create new Window")
+    "w f" '(make-frame :wk "Open buffer in new frame")
     "w s" '(evil-window-split :wk "Horizontal split Window")
     "w v" '(evil-window-vsplit :wk "Vertical split Window")
     ;; Window motions
@@ -811,9 +816,6 @@
         ;; If nil, the fzf buffer will appear at the top of the window
         fzf/position-bottom t
         fzf/window-height 15))
-
-(use-package git-timemachine :ensure t)
-(use-package counsel :ensure t)
 
 ;; (use-package projection
 ;;   :ensure t
@@ -869,6 +871,9 @@
   (global-auto-highlight-symbol-mode t)
   :config
   (setq js-indent-level 2))
+
+(use-package powershell
+  :mode ("\\.ps1\\'" . powershell-mode))
 
 (use-package color-identifiers-mode :ensure t
   :config
@@ -931,7 +936,29 @@
 
 (use-package rg
   :custom
-  (rg-executable "c:/scoop/apps/ripgrep/current/rg.exe")
+  (rg-executable (if (eq system-type 'windows-nt)
+                     "c:/scoop/apps/ripgrep/current/rg.exe"
+                   "rg"))
   :hook
   (rg-mode . (lambda () (switch-to-buffer-other-window "*rg*")))
   (rg-mode . wgrep-rg-setup))
+
+(use-package golden-ratio
+  :diminish
+  :config
+  (golden-ratio-mode +1))
+
+(use-package evil-better-visual-line
+  :load-path "~/.emacs.d/pkgs"
+  :config
+  (evil-better-visual-line-on))
+
+(use-package csv-mode
+  :mode ("\\.[Cc][Ss][Vv]\\'" . csv-mode)
+  :hook (csv-mode . csv-guess-set-separator))
+
+;; https://github.com/matsievskiysv/vimish-fold
+;; https://github.com/jaalto/project-emacs--folding-mode
+;; https://emacs.stackexchange.com/questions/37363/vim-triple-braces-code-folding-in-emacs
+
+;; (use-package origami :ensure t)
