@@ -912,6 +912,8 @@
   :custom
   (lsp-ui-doc-header t)
   (lsp-ui-doc-include-signature t)
+  (lsp-modeline-code-action-fallback-icon "î´") ;; ïƒ«  îª†  î­­  î´
+  ;; (lsp-modeline-code-actions-segments '(count name))
   :config
   ;; (when (display-graphic-p)
   ;;   (setq lsp-ui-doc-use-webkit t))
