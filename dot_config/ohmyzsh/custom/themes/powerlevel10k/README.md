@@ -536,11 +536,6 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zs
 [zsh-theme-powerlevel10k-git](https://aur.archlinux.org/packages/zsh-theme-powerlevel10k-git/)
 referenced above is the official Powerlevel10k package.
 
-There is also [zsh-theme-powerlevel10k](
-  https://www.archlinux.org/packages/extra/x86_64/zsh-theme-powerlevel10k/) package.
-Historically, [it has been breaking often and for extended periods of time](
-  https://github.com/romkatv/powerlevel10k/pull/786). **Do not use it.**
-
 ### Alpine Linux
 
 ```zsh
@@ -698,6 +693,8 @@ If you are using a different terminal, proceed with manual font installation. �
      *Use these personal options* and change *Font:* under *Terminal UI* to `MesloLGS NF Regular`.
      To change the font for the remote host connections, go to *Preferences → Terminal Options →
      Look and Feel* and change *Font:* under *Terminal UI* to `MesloLGS NF Regular`.
+   - **Warp**: Open Warp and Navigate to *Settings* then *Appearance*.  Scroll down to *Text* Section
+     and under *"Terminal Font"*, select the `MesloLGS NF` font.
    - **WSLtty**: Right click on an open terminal and then on *Options*. In the *Text* section, under
      *Font*, click *"Select..."* and set Font to `MesloLGS NF Regular`.
    - **Yakuake**: Click *≡* → *Manage Profiles* → *New* → *Appearance*. Click *Choose* next to the
@@ -780,6 +777,12 @@ If you are using a different terminal, proceed with manual font installation. �
      }
      ```
      **_CAVEAT_**: If you open the normal terminal preferences these settings will be overwritten.
+   - **Deepin Terminal**: Create or open `~/.config/deepin/deepin-terminal/config.conf` and add the following section
+     to it:
+     ```ini
+     [basic.interface.font]
+     value = "MesloLGS NF"
+     ```
 1. Run `p10k configure` to generate a new `~/.p10k.zsh`. The old config may work
    incorrectly with the new font.
 
