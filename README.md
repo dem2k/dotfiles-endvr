@@ -1,6 +1,6 @@
 ## install packages
 ```
-yay -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat kitty tmux wezterm \
+sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat tmux \
       ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh
 ```
 
