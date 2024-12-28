@@ -126,21 +126,21 @@
 
 (eval-after-load "isearch" '(require 'isearch+))
 
-(use-package diminish :ensure t)
-(use-package magit :ensure t)
-(use-package helpful :ensure t)
-(use-package nerd-icons :ensure t)
-(use-package wgrep :ensure t)
-(use-package buffer-move :ensure t)
-(use-package git-timemachine :ensure t)
+(use-package diminish)
+(use-package magit)
+(use-package helpful)
+(use-package nerd-icons)
+(use-package wgrep)
+(use-package buffer-move)
+(use-package git-timemachine)
 
-(use-package dashboard :ensure t
+(use-package dashboard
   :init
   ;; (setq initial-buffer-choice 'dashboard-open)
   :config
   (dashboard-setup-startup-hook))
 
-(use-package doom-modeline :ensure t
+(use-package doom-modeline
   :config
   (setq doom-modeline-height 32
         ;; doom-modeline-hud t
@@ -153,7 +153,7 @@
         doom-modeline-window-width-limit 76)
   (doom-modeline-mode +1))
 
-(use-package which-key :ensure t
+(use-package which-key
   :diminish
   :config
   (setq which-key-side-window-location 'bottom
@@ -167,17 +167,16 @@
         which-key-min-display-lines 8)
   (which-key-mode +1))
 
-(use-package nerd-icons-dired :ensure t
+(use-package nerd-icons-dired
   :hook
   (dired-mode . nerd-icons-dired-mode))
 
 (use-package nerd-icons-completion
-  :ensure t
   :hook (marginalia-mode . nerd-icons-completion-marginalia-setup)
   :config
   (nerd-icons-completion-mode +1))
 
-(use-package evil :ensure t
+(use-package evil
   ;; :preface  ;; this is now in early-init.el
   ;; (setq evil-want-keybinding nil
   ;;       evil-want-integration t)
@@ -187,10 +186,10 @@
   ;; (evil-respect-visual-line-mode t) ;; now using evil-better-visual-line.el
   :config
   ;; (evil-select-search-module 'evil-search-module 'evil-search)
-  (unbind-key "<deletechar>" evil-normal-state-map) ;; DEL soll nicht ins Clipboard lÃ¶schen.
+  (unbind-key "<deletechar>" evil-normal-state-map) ;; DEL soll nicht ins Clipboard löschen.
   (evil-mode +1))
 
-(use-package evil-collection :ensure t
+(use-package evil-collection
   :after evil
   :custom
   (evil-collection-corfu-key-themes '(default tab-n-go))
@@ -205,7 +204,7 @@
 ;;   :after evil
 ;;   :bind ("C-#" . evilnc-comment-or-uncomment-lines))
 
-(use-package evil-commentary :ensure t
+(use-package evil-commentary
   :demand t
   :diminish
   :after evil
@@ -213,18 +212,18 @@
   :config
   (evil-commentary-mode +1))
 
-(use-package evil-numbers :ensure t
+(use-package evil-numbers
   :config
   (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt))
 
-(use-package evil-surround :ensure t
+(use-package evil-surround
   :demand t
   :after evil
   :config
   (global-evil-surround-mode +1))
 
-(use-package evil-goggles :ensure t
+(use-package evil-goggles
   :diminish
   :init
   (setq evil-goggles-duration 0.25)
@@ -247,7 +246,7 @@
 ;;    (setq org-return-follows-link  t)
 
 ;; Enable Corfu completion UI
-(use-package corfu :ensure t
+(use-package corfu
   :custom
   (corfu-cycle t)
   (corfu-auto t)
@@ -266,7 +265,7 @@
   (corfu-popupinfo-mode +1)
   (corfu-history-mode +1))
 
-(use-package nerd-icons-corfu :ensure t
+(use-package nerd-icons-corfu
   :demand t
   :after corfu
   :config
@@ -289,15 +288,16 @@
   ;; ...
   )
 
-(use-package vertico :ensure t
+(use-package vertico
   :init
   (setq read-file-name-completion-ignore-case t
 		read-buffer-completion-ignore-case t
-		completion-ignore-case t
-		eldoc-echo-area-use-multiline-p nil
-		completion-styles '(flex partial-completion orderless)
-        vertico-preselect 'prompt
-		vertico-resize nil)
+		completion-ignore-case t)
+  :custom
+  (eldoc-echo-area-use-multiline-p nil)
+  (vertico-resize nil)
+  (vertico-preselect 'first)
+  (completion-styles '(flex partial-completion orderless))
   :config
   (with-eval-after-load 'rfn-eshadow
     ;; This works with `file-name-shadow-mode' enabled.  When you are in
@@ -317,16 +317,16 @@
 ;; 		(cdr args)))
 ;; (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
 
-(use-package orderless :ensure t
+(use-package orderless
   :demand t
   :config
   (setq ;;completion-styles '(orderless partial-completion basic)
    completion-category-defaults nil
    completion-category-overrides nil))
 
-(use-package counsel :ensure t)
+(use-package counsel)
 
-(use-package consult :ensure t
+(use-package consult
   :demand t
   :hook
   (completion-list-mode . consult-preview-at-point-mode)
@@ -337,7 +337,6 @@
   ;; for `xref-find-references'. However, I prefer listing references in a
   ;; separate buffer (default `xref-show-definitions-buffer')
   (xref-show-definitions-function #'consult-xref)
-
   :config
   (setq consult-line-numbers-widen t)
   (setq consult-preview-key 'any)
@@ -350,24 +349,24 @@
    :preview-key '(:debounce 0.5 any)))
 
 (use-package embark
-  :ensure t
+ 
   :bind (([remap describe-bindings] . embark-bindings)
-         ("C-." . embark-act) ; In a French AZERTY keyboard, the Â² key is right above TAB
+         ("C-." . embark-act) ; In a French AZERTY keyboard, the ² key is right above TAB
          ("M-²" . embark-collect)
          ("M-." . embark-dwim))
   :init
   ;; Use Embark to show bindings in a key prefix with `C-h`
   (setq prefix-help-command #'embark-prefix-help-command))
 
-(use-package embark-consult :ensure t)
+(use-package embark-consult)
 
-(use-package marginalia :ensure t
+(use-package marginalia
   :config
   (marginalia-mode +1))
 
 (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup)
 
-(use-package format-all :ensure t
+(use-package format-all
   :demand t
   :config
   (setq-default format-all-formatters '(("Emacs Lisp" (emacs-lisp))
@@ -381,12 +380,12 @@
 	  (lsp-format-buffer)
 	(format-all-region-or-buffer)))
 
-(use-package dired-gitignore :ensure t
+(use-package dired-gitignore
   :demand t
   :config
   (dired-gitignore-global-mode +1))
 
-(use-package dimmer :ensure t
+(use-package dimmer
   :init
   (setq dimmer-fraction 0.45
 	    dimmer-watch-frame-focus-events nil)
@@ -418,7 +417,7 @@
   (dimmer-configure-magit)
   (dimmer-mode +1))
 
-(use-package centaur-tabs :ensure t
+(use-package centaur-tabs
   :demand t
   ;; :hook
   ;; (server-after-make-frame . set-daemon-faces)
@@ -442,7 +441,7 @@
   (centaur-tabs-headline-match)
   (centaur-tabs-group-by-projectile-project))
 
-(use-package avy :ensure t
+(use-package avy
   :demand t
   :init
   (setq avy-timeout-seconds 0.45))
@@ -461,7 +460,7 @@
           (lambda() (interactive)
             (define-key nxml-mode-map (kbd "C-ö w") 'my-kmacro-anwinfo)))
 
-(use-package drag-stuff :ensure t
+(use-package drag-stuff
   :diminish
   :bind (("M-<up>" . drag-stuff-up)
          ("M-<down>" . drag-stuff-down)
@@ -491,7 +490,6 @@
   (dired-listing-switches "-lahFv --group-directories-first")
   (dired-dwim-target t)
   (dired-backup-overwrite t)
-
   (dired-auto-revert-buffer t)
   ;; (dired-free-space 'separate)
   (dired-hide-details-hide-symlink-targets nil)
@@ -526,10 +524,10 @@
 ;; (use-package so-long :ensure nil
 ;;   :hook (after-init . global-so-long-mode))
 
-(use-package dired-narrow :ensure t)
-(use-package dired-preview :ensure t)
+(use-package dired-narrow)
+(use-package dired-preview)
 
-(use-package dired-subtree :ensure t
+(use-package dired-subtree
   :after dired
   :config
   (setq dired-subtree-use-backgrounds nil))
@@ -566,7 +564,7 @@
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 ;;;}}}
 
-(use-package general :ensure t
+(use-package general
   :after evil
   :config
   (general-evil-setup)
@@ -654,9 +652,9 @@
     "g" '(:ignore t :wk "Git")
     "g b" '(magit-branch-checkout :wk "Switch Branch")
     "g B" '(magit-branch-and-checkout :wk "Create Branch and Checkout")
-    "g c" '(:ignore t :wk "Create")
-    "g c c" '(magit-commit-create :wk "Create Commit")
-    "g c f" '(magit-commit-fixup :wk "Create fixup Commit")
+    ;; "g c" '(:ignore t :wk "Create")
+    "g c" '(magit-commit-create :wk "Git Commit")
+    ;; "g c f" '(magit-commit-fixup :wk "Create fixup Commit")
     "g C" '(magit-clone :wk "Clone Repo")
     "g d" '(:ignore t :wk "Dispatch")
     "g d d" '(magit-dispatch :wk "Magit dispatch")
@@ -665,17 +663,20 @@
     "g f c" '(magit-show-commit :wk "Show Commit")
     "g f f" '(magit-find-file :wk "Git find File")
     "g f g" '(magit-find-git-config-file :wk "Find Gitconfig File")
+    "g k" '(magit-run-gitk :wk "GitK Commit Viewer")
     "g F" '(magit-pull :wk "Git Pull")
     "g P" '(magit-push :wk "Git Push")
     "g g" '(magit-status :wk "Git Status")
-    "g i" '(magit-init :wk "Initialize Git Repo")
+    "g m" '(magit-merge :wk "Git Merge")
     ;; "g l" '(magit-log-buffer-file :wk "Magit Buffer Log")
-    "g l" '(magit-log :wk "Git Log")
+    "g l" '(magit-log-current :wk "Git Log current Branch")
     "g r" '(vc-revert :wk "Git revert File")
     "g v" '(vc-next-action :wk "VC next Action")
     "g s" '(magit-stage-file :wk "Git stage File")
     "g t" '(git-timemachine :wk "Git time Machine")
-    "g u" '(magit-stage-file :wk "Git unstAge File"))
+    "g u" '(magit-stage-file :wk "Git unstAge File")
+    "g i" '(magit-init :wk "Initialize Git Repo")
+    )
 
   (my-leader-keys
     "h" '(:ignore t :wk "Help")
@@ -759,13 +760,16 @@
     "s l" '(consult-line :wk "Search in Lines")
     "s i" '(consult-imenu :wk "Imenu")
     "s o" '(occur :wk "Occurrence")
-    "s g" '(consult-ripgrep :wk "consult-ripgrep: in Files curr. Dir")
+    "s e" '(consult-git-grep :wk "Consult Git Grep")
+    "s E" '(counsel-git-grep :wk "Counsel Git Grep")
     "s s" '(counsel-grep-or-swiper :wk "Swiper or Grep")
+    "s g" '(consult-ripgrep :wk "consult-ripgrep: in Files curr. Dir")
     "s G" '(counsel-rg :wk "counsel-ripgrep: in Files curr. Dir")
-    "s r" '(rg-menu :wk "RipGrep dwim")
+    "s r" '(rg-menu :wk "RipGrep dwim Menu")
     "s d" '(dictionary-search :wk "Search dictionary")
     "s t" '(tldr :wk "Lookup TLDR docs for a command")
     ;; "s m" '(man :wk "Search Man Pages")
+    "s q" '(query-replace-regexp :wk "Search and Replace w. RegEx")
     "s m" '(woman :wk "Man Pages (w/o man)"))
 
   (my-leader-keys
@@ -818,7 +822,6 @@
         fzf/window-height 15))
 
 ;; (use-package projection
-;;   :ensure t
 ;;   :hook (after-init . global-projection-hook-mode)
 ;;   :config
 ;;   (with-eval-after-load 'project
@@ -837,14 +840,12 @@
 ;;   ("C-x P" . projection-map))
 
 ;; (use-package projection-multi
-;;   :ensure t
 ;;   ;; Allow interactively selecting available compilation targets from the current
 ;;   ;; project type.
 ;;   :bind ( :map project-prefix-map
 ;;           ("RET" . projection-multi-compile)))
 
 ;; (use-package projection-multi-embark
-;;   :ensure t
 ;;   :after embark
 ;;   :after projection-multi
 ;;   :demand t
@@ -852,7 +853,6 @@
 ;;   :config (projection-multi-embark-setup-command-map))
 
 (use-package projectile
-  :ensure t
   :diminish
   ;; :bind (:map projectile-mode-map
   ;;             ("s-p" . projectile-command-map)
@@ -860,7 +860,7 @@
   :config
   (projectile-mode +1))
 
-(use-package js2-mode :ensure t
+(use-package js2-mode
   :mode "\\.js\\'"
   :custom
   (js2-include-node-externs t)
@@ -875,12 +875,11 @@
 (use-package powershell
   :mode ("\\.ps1\\'" . powershell-mode))
 
-(use-package color-identifiers-mode :ensure t
+(use-package color-identifiers-mode
   :config
   (global-color-identifiers-mode +1))
 
 (use-package markdown-mode
-  :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
   :init (setq markdown-command "multimarkdown"))
 
@@ -912,7 +911,7 @@
   :custom
   (lsp-ui-doc-header t)
   (lsp-ui-doc-include-signature t)
-  (lsp-modeline-code-action-fallback-icon "î´") ;; ïƒ«  îª†  î­­  î´
+  (lsp-modeline-code-action-fallback-icon "") ;;       
   ;; (lsp-modeline-code-actions-segments '(count name))
   :config
   ;; (when (display-graphic-p)
@@ -929,7 +928,10 @@
   (add-hook 'java-mode-hook 'lsp))
 
 (use-package dap-mode)
-(use-package dap-java :ensure nil)
+
+;; ■  Error (use-package): Failed to install dap-java: Package ‘dap-java’ is unavailable
+;; (use-package dap-java)
+
 (use-package lsp-treemacs
   :commands lsp-treemacs-errors-list)
 
@@ -939,8 +941,7 @@
 (use-package rg
   :custom
   (rg-executable (if (eq system-type 'windows-nt)
-                     "c:/scoop/apps/ripgrep/current/rg.exe"
-                   "rg"))
+      "c:/scoop/apps/ripgrep/current/rg.exe" "rg"))
   :hook
   (rg-mode . (lambda () (switch-to-buffer-other-window "*rg*")))
   (rg-mode . wgrep-rg-setup))
@@ -963,4 +964,23 @@
 ;; https://github.com/jaalto/project-emacs--folding-mode
 ;; https://emacs.stackexchange.com/questions/37363/vim-triple-braces-code-folding-in-emacs
 
-;; (use-package origami :ensure t)
+;; (use-package origami)
+
+;; https://github.com/tninja/aider.el
+
+(evil-set-initial-state 'eshell-mode 'emacs)
+
+;; -- work but if switch bufer and byck to eshell evil is on again...
+;; (add-hook 'eshell-mode-hook
+;;           (lambda ()
+;;             (evil-local-mode -1)))
+
+;; -- not tested, ai generated.
+;; (add-hook 'eshell-mode-hook
+;;           (lambda ()
+;;             (evil-local-mode -1)
+;;             (add-hook 'buffer-list-update-hook
+;;                       (lambda ()
+;;                         (when (eq major-mode 'eshell-mode)
+;;                           (evil-local-mode -1)))
+;;                       :local)))

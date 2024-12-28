@@ -43,6 +43,9 @@ turned on.")
 ;;(setq mode-line-format nil)
 ;;(set-face-attribute 'default nil :background "#000000" :foreground "#ffffff")
 ;;(set-face-attribute 'mode-line nil :background "#000000" :foreground "#ffffff" :box 'unspecified)
+;; (setq default-frame-alist '((background-color . "black")))
+;; (setq initial-frame-alist '((background-color . "black") (foreground-color . "white")))
+;; (setq default-frame-alist initial-frame-alist)
 
 ;;; Load pre-early-init.el
 
@@ -208,7 +211,7 @@ turned on.")
 
 ;;; UI elements
 
-(setq default-frame-alist '((top . 48) (left . 256)
+(setq default-frame-alist '((background-color . "black") (top . 48) (left . 256)
                             (width . 168) (height . 44) (font . "JetBrainsMono NF")))
 
 ;; (setq frame-title-format minimal-emacs-frame-title-format
