@@ -4,14 +4,14 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat t
       ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh
 ```
 
-## change shell
-```
-chsh -s /bin/zsh
-```
-
 ## install dotfiles
 ```
 chezmoi init https://github.com/dem2k/dotfiles-endvr --apply
+```
+
+## change shell
+```
+chsh -s /bin/zsh
 ```
 
 ## configure git
