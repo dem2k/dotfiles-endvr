@@ -10,7 +10,6 @@ config.initial_rows = 40
 config.enable_tab_bar = false
 --
 config.font = wezterm.font("JetBrainsMono Nerd Font")
--- config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 12
 config.color_scheme = "Tokyo Night"
 
