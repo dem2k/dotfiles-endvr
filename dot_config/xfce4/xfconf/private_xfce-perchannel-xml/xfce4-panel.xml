@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
@@ -22,7 +22,7 @@
         <value type="int" value="9"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
-        <value type="int" value="15"/>
+        <value type="int" value="14"/>
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
@@ -86,79 +86,6 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-24" type="string" value="separator"/>
-    <property name="plugin-15" type="string" value="cpugraph">
-      <property name="update-interval" type="int" value="3"/>
-      <property name="time-scale" type="int" value="0"/>
-      <property name="size" type="int" value="128"/>
-      <property name="mode" type="int" value="1"/>
-      <property name="color-mode" type="int" value="0"/>
-      <property name="frame" type="int" value="1"/>
-      <property name="border" type="int" value="1"/>
-      <property name="bars" type="int" value="1"/>
-      <property name="per-core" type="int" value="0"/>
-      <property name="tracked-core" type="int" value="0"/>
-      <property name="in-terminal" type="int" value="1"/>
-      <property name="startup-notification" type="int" value="0"/>
-      <property name="load-threshold" type="int" value="0"/>
-      <property name="smt-stats" type="int" value="0"/>
-      <property name="smt-issues" type="int" value="0"/>
-      <property name="per-core-spacing" type="int" value="1"/>
-      <property name="command" type="string" value=""/>
-      <property name="background" type="array">
-        <value type="double" value="1"/>
-        <value type="double" value="1"/>
-        <value type="double" value="1"/>
-        <value type="double" value="0"/>
-      </property>
-      <property name="foreground-1" type="array">
-        <value type="double" value="0"/>
-        <value type="double" value="1"/>
-        <value type="double" value="0"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-2" type="array">
-        <value type="double" value="1"/>
-        <value type="double" value="0"/>
-        <value type="double" value="0"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-3" type="array">
-        <value type="double" value="0"/>
-        <value type="double" value="0"/>
-        <value type="double" value="1"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="smt-issues-color" type="array">
-        <value type="double" value="0.90000000000000002"/>
-        <value type="double" value="0"/>
-        <value type="double" value="0"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-system" type="array">
-        <value type="double" value="0.90000000000000002"/>
-        <value type="double" value="0.10000000000000001"/>
-        <value type="double" value="0.10000000000000001"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-user" type="array">
-        <value type="double" value="0.10000000000000001"/>
-        <value type="double" value="0.40000000000000002"/>
-        <value type="double" value="0.90000000000000002"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-nice" type="array">
-        <value type="double" value="0.90000000000000002"/>
-        <value type="double" value="0.80000000000000004"/>
-        <value type="double" value="0.20000000000000001"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="foreground-iowait" type="array">
-        <value type="double" value="0.20000000000000001"/>
-        <value type="double" value="0.90000000000000002"/>
-        <value type="double" value="0.40000000000000002"/>
-        <value type="double" value="1"/>
-      </property>
-    </property>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="popup-at-pointer" type="bool" value="true"/>
@@ -171,5 +98,6 @@
         <property name="version" type="string" value="1.11.0"/>
       </property>
     </property>
+    <property name="plugin-14" type="string" value="netload"/>
   </property>
 </channel>

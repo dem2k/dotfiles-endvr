@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
   <property name="scrolling-lines" type="uint" value="9000"/>
-  <property name="font-name" type="string" value="Hack Nerd Font Mono 14"/>
+  <property name="font-name" type="string" value="JetBrainsMono Nerd Font 12"/>
   <property name="misc-default-geometry" type="string" value="150x40"/>
   <property name="misc-copy-on-select" type="bool" value="true"/>
   <property name="shortcuts-no-menukey" type="bool" value="true"/>
