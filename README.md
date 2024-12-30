@@ -1,7 +1,7 @@
 ## install packages
 ```
 sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat tmux \
-      ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc
+      ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc htop
 ```
 
 ## install dotfiles
