@@ -1,2 +1,4 @@
 README.md
 **/*.zwc
+**/powerlevel10k/gitstatus
+
