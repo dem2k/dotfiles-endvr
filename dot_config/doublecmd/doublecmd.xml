@@ -217,7 +217,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -254,62 +254,62 @@
       <Quality>1</Quality>
     </Main>
     <Editor>
-      <Name>Lucida Console</Name>
+      <Name>JetBrainsMono Nerd Font</Name>
       <Size>11</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Editor>
     <Viewer>
-      <Name>Lucida Console</Name>
+      <Name>JetBrainsMono Nerd Font</Name>
       <Size>11</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Viewer>
     <ViewerBook>
-      <Name>default</Name>
+      <Name>Roboto Condensed</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </ViewerBook>
     <Log>
-      <Name>Courier New</Name>
-      <Size>12</Size>
+      <Name>JetBrainsMono Nerd Font</Name>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Lucida Console</Name>
+      <Name>JetBrains Mono</Name>
       <Size>11</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Console>
     <PathEdit>
-      <Name>default</Name>
-      <Size>10</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </PathEdit>
     <FunctionButtons>
-      <Name>default</Name>
-      <Size>10</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </FunctionButtons>
     <SearchResults>
-      <Name>default</Name>
-      <Size>10</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </SearchResults>
     <TreeViewMenu>
-      <Name>default</Name>
-      <Size>10</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </TreeViewMenu>
     <StatusBar>
       <Name>Roboto Condensed</Name>
-      <Size>12</Size>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </StatusBar>

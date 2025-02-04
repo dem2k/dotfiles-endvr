@@ -2,8 +2,10 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item>/home/xtest/</Item>
+      <Item>/home/xtest/.config/doublecmd/</Item>
+      <Item>/home/xtest/.config/</Item>
       <Item>/home/</Item>
+      <Item>/home/xtest/</Item>
       <Item>/home/xtest/1xTmp/</Item>
       <Item>w:\untitled\</Item>
       <Item>w:\</Item>

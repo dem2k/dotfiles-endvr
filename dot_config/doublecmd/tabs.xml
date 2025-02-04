@@ -30,6 +30,7 @@
                   <Path Filename="1xTmp">/home/xtest/</Path>
                   <Path Filename="doublcmd-windows.zip">/home/xtest/1xTmp/</Path>
                   <Path Filename="1xTmp">/home/xtest/</Path>
+                  <Path Filename="..">/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -91,7 +92,9 @@
                   <Path Filename="xtest">/home/</Path>
                   <Path Filename="..">/home/xtest/</Path>
                   <Path Filename="xtest">/home/</Path>
-                  <Path Filename="..">/home/xtest/</Path>
+                  <Path Filename=".config">/home/xtest/</Path>
+                  <Path Filename="doublecmd">/home/xtest/.config/</Path>
+                  <Path Filename="colors.json">/home/xtest/.config/doublecmd/</Path>
                 </Paths>
               </Entry>
             </History>
