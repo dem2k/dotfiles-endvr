@@ -49,6 +49,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="netzwerkadresse für ethernet-netz »ethernet-verbindung 1« wird angefordert …"/>
+        <value type="string" value="javaembeddedframe"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="ethernet-netzverbindung »kabelgebundene verbindung 1« ist aktiv"/>
         <value type="string" value="netzwerk-manager-applet"/>
@@ -56,6 +58,7 @@
         <value type="string" value="zwischenablage"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="Fcitx"/>
         <value type="string" value="blueman"/>
         <value type="string" value="screengrab"/>
       </property>
@@ -63,7 +66,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="known-players" type="string" value="org.gnome.Totem"/>
+      <property name="known-players" type="string" value="Chromium;org.gnome.Totem"/>
     </property>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
