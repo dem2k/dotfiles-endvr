@@ -16,16 +16,16 @@ before `source oh-my-zsh.sh` in your zshrc.
 
 ## Aliases
 
-| Aliases       | Command            |  Description                           |
+| Aliases     | Command            | Description                            |
 | :---------- | :----------------- | :------------------------------------- |
-| pbi           | `perlbrew install` | Install specific perl version          |
-| pbl           | `perlbrew list`    | List all perl version installed        |
-| pbo           | `perlbrew off`     | Go back to the system perl             |
-| pbs           | `perlbrew switch`  | Turn it back on                        |
-| pbu           | `perlbrew use`     | Use specific version of perl           |
-| pd            | `perldoc`          | Show the perl documentation            |
-| ple           | `perl -wlne`       | Use perl like awk/sed                  |
-| latest-perl   | `curl ...`         | Show the latest stable release of Perl |
+| pbi         | `perlbrew install` | Install specific perl version          |
+| pbl         | `perlbrew list`    | List all perl version installed        |
+| pbo         | `perlbrew off`     | Go back to the system perl             |
+| pbs         | `perlbrew switch`  | Turn it back on                        |
+| pbu         | `perlbrew use`     | Use specific version of perl           |
+| pd          | `perldoc`          | Show the perl documentation            |
+| ple         | `perl -wlne`       | Use perl like awk/sed                  |
+| latest-perl | `curl ...`         | Show the latest stable release of Perl |
 
 ## Functions
 
