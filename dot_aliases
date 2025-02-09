@@ -1,8 +1,12 @@
 #
 # meine aliase.
 #
-alias ll='ls -lhF --color=auto --group-directories-first'
+alias l='ls -lhF --color=auto --group-directories-first'
 alias la='ls -lhFa --color=auto --group-directories-first'
+alias ll='ls -lhFa --color=auto --group-directories-first'
 alias more='/usr/bin/bat'
 alias cd..='cd ..'
+alias cd='z'
+alias zz='zi'
 alias ec='emacsclient -n -r'
+
