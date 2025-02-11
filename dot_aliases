@@ -1,5 +1,5 @@
 #
-# meine aliase.
+# meine aliase. ne, is klar!
 #
 alias l='ls -lhF --color=auto --group-directories-first'
 alias la='ls -lhFa --color=auto --group-directories-first'
