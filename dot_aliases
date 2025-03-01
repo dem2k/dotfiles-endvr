@@ -12,3 +12,8 @@ alias ec='emacsclient -n -r'
 alias duh='du -sch * | sort -h'
 alias cls='clear'
 
+lf () {
+    EDITOR="emacsclient -n -r"
+    cd "$(command lf -print-last-dir "$@")"
+}
+

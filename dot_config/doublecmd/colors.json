@@ -1649,8 +1649,8 @@
       Viewer : {
         ImageBackColor1 : -2147483643,
         ImageBackColor2 : 536870912,
-        BookBackgroundColor : 0,
-        BookFontColor : 16777215
+        BookBackgroundColor : 12632256,
+        BookFontColor : 0
       },
       Differ : {
         AddedColor : 9097847,

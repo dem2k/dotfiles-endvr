@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:$HOME/bin
 
+# default pager is less.
+export PAGER="bat --paging=always"
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.config/ohmyzsh"
 
