@@ -176,14 +176,14 @@
     <GoToRoot>False</GoToRoot>
     <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
-    <RunInTerminalStayOpenCmd>cmd.exe</RunInTerminalStayOpenCmd>
-    <RunInTerminalStayOpenParams>/K {command}</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>cmd.exe</RunInTerminalCloseCmd>
-    <RunInTerminalCloseParams>/C {command}</RunInTerminalCloseParams>
-    <JustRunTerminal>cmd.exe</JustRunTerminal>
+    <RunInTerminalStayOpenCmd>konsole</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
+    <RunInTerminalCloseCmd>konsole</RunInTerminalCloseCmd>
+    <RunInTerminalCloseParams>-e sh -c '{command}'</RunInTerminalCloseParams>
+    <JustRunTerminal>konsole</JustRunTerminal>
     <JustRunTermParams/>
     <OnlyOneAppInstance>False</OnlyOneAppInstance>
-    <LynxLike>False</LynxLike>
+    <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <OperationSizeFormat>0</OperationSizeFormat>
     <HeaderSizeFormat>0</HeaderSizeFormat>
@@ -213,7 +213,7 @@
     <AutoSizeColumn>1</AutoSizeColumn>
     <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
     <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
-    <DateTimeFormat>dd.MM.yyyy hh:nn:ss</DateTimeFormat>
+    <DateTimeFormat>dd.mm.yyyy hh:nn:ss</DateTimeFormat>
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
@@ -232,18 +232,18 @@
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
-    <Editor Enabled="True">
-      <Path>c:\scoop\apps\emacs\current\bin\emacsclientw.exe</Path>
-      <Parameters/>
-      <RunInTerminal>False</RunInTerminal>
-      <KeepTerminalOpen>False</KeepTerminalOpen>
-    </Editor>
-    <Differ Enabled="False">
+    <Editor Enabled="False">
       <Path/>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
-      <FramePosAfterComp>0</FramePosAfterComp>
+    </Editor>
+    <Differ Enabled="True">
+      <Path>meld</Path>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+      <FramePosAfterComp>1</FramePosAfterComp>
     </Differ>
   </Tools>
   <Fonts>
@@ -327,7 +327,7 @@
     </FreeSpaceIndicator>
   </Colors>
   <ToolTips>
-    <ShowToolTipMode>True</ShowToolTipMode>
+    <ShowToolTipMode>False</ShowToolTipMode>
     <ActualToolTipMode>0</ActualToolTipMode>
     <ToolTipHideTimeOut>0</ToolTipHideTimeOut>
     <CustomFields/>
@@ -426,11 +426,11 @@
     <WipePassNumber>1</WipePassNumber>
     <DropReadOnlyFlag>False</DropReadOnlyFlag>
     <ProcessComments>True</ProcessComments>
-    <RenameSelOnlyName>False</RenameSelOnlyName>
-    <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
+    <RenameSelOnlyName>True</RenameSelOnlyName>
+    <ShowCopyTabSelectPanel>True</ShowCopyTabSelectPanel>
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
-    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <TypeOfDuplicatedRename>1</TypeOfDuplicatedRename>
     <DefaultDropEffect>True</DefaultDropEffect>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
@@ -450,7 +450,7 @@
       <CorrectLinks>False</CorrectLinks>
       <CopyOnWrite>2</CopyOnWrite>
       <FileExists>0</FileExists>
-      <DirectoryExists>0</DirectoryExists>
+      <DirectoryExists>3</DirectoryExists>
       <SetPropertyError>0</SetPropertyError>
       <ReserveSpace>True</ReserveSpace>
       <CheckFreeSpace>True</CheckFreeSpace>
@@ -460,32 +460,32 @@
       <CopyTime>True</CopyTime>
       <CopyOwnership>False</CopyOwnership>
       <CopyPermissions>False</CopyPermissions>
-      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
+      <ExcludeEmptyTemplateDirectories>False</ExcludeEmptyTemplateDirectories>
     </Options>
     <Extract>
       <Overwrite>False</Overwrite>
     </Extract>
     <MultiRename>
       <MulRenShowMenuBarOnTop>True</MulRenShowMenuBarOnTop>
-      <MulRenInvalidCharReplacement>.</MulRenInvalidCharReplacement>
+      <MulRenInvalidCharReplacement>_</MulRenInvalidCharReplacement>
       <MulRenLaunchBehavor>0</MulRenLaunchBehavor>
       <MulRenExitModifiedPreset>0</MulRenExitModifiedPreset>
       <MulRenSaveRenamingLog>0</MulRenSaveRenamingLog>
-      <MulRenLogFilename>%DC_CONFIG_PATH%\multirename.log</MulRenLogFilename>
+      <MulRenLogFilename>%DC_CONFIG_PATH%/multirename.log</MulRenLogFilename>
       <MultRenDailyIndividualDirLog>True</MultRenDailyIndividualDirLog>
       <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
   </FileOperations>
   <Tabs>
-    <Options>49937</Options>
+    <Options>50000</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
-    <ActionOnDoubleClick>2</ActionOnDoubleClick>
+    <ActionOnDoubleClick>0</ActionOnDoubleClick>
   </Tabs>
   <Log Enabled="False" Count="0" LogFileWithDateInName="False">
-    <FileName>%DC_CONFIG_PATH%\doublecmd.log</FileName>
-    <Options>1023</Options>
+    <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
+    <Options>0</Options>
   </Log>
   <Configuration Save="True" SortOrder="0" TreeType="0">
     <FolderTabs Save="True"/>
@@ -535,7 +535,7 @@
     <Height>128</Height>
   </Thumbnails>
   <Description>
-    <CreateNewUnicode>True</CreateNewUnicode>
+    <CreateNewUnicode>False</CreateNewUnicode>
     <DefaultEncoding>2</DefaultEncoding>
     <CreateNewEncoding>3</CreateNewEncoding>
   </Description>
@@ -549,8 +549,8 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>20</Size>
-    <DiskSize>20</DiskSize>
+    <Size>24</Size>
+    <DiskSize>24</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
@@ -563,9 +563,12 @@
     <ShowButtonGlyphs>0</ShowButtonGlyphs>
   </Icons>
   <IgnoreList Enabled="False">
-    <IgnoreListFile>%DC_CONFIG_PATH%\ignorelist.txt</IgnoreListFile>
+    <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
-  <DirectoryHotList/>
+  <DirectoryHotList>
+    <HotDir Name="(&amp;M) Home" Path="/home/dk/"/>
+    <HotDir Name="(&amp;1) 1xTmp" Path="/home/dk/1xTmp/"/>
+  </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
     <ImageStretch>False</ImageStretch>
@@ -598,7 +601,7 @@
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
-    <SynEditOptions>331787</SynEditOptions>
+    <SynEditOptions>327691</SynEditOptions>
     <SynEditTabWidth>4</SynEditTabWidth>
     <SynEditRightEdge>132</SynEditRightEdge>
     <SynEditBlockIndent>2</SynEditBlockIndent>
@@ -698,15 +701,15 @@
     <DfltRightGoTo>1</DfltRightGoTo>
     <DfltKeep>5</DfltKeep>
     <DfltSaveDirHistory>False</DfltSaveDirHistory>
-    <FavTabsLastUniqueID>{2524E99F-1A4D-4180-BC6F-EC8641CE42F9}</FavTabsLastUniqueID>
+    <FavTabsLastUniqueID>{D6E55AD1-8BFB-4387-A061-EB7F485CCB58}</FavTabsLastUniqueID>
   </FavoriteTabsOptions>
   <Lua>
-    <PathToLibrary>lua5.1.dll</PathToLibrary>
+    <PathToLibrary>liblua5.1.so.0</PathToLibrary>
   </Lua>
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>tlz</LastUsedPacker>
   <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -731,9 +734,9 @@
           <Width>200</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Roboto Condensed</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -747,9 +750,9 @@
           <Width>40</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Roboto Condensed</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -763,9 +766,9 @@
           <Width>56</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Roboto Condensed</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -779,9 +782,9 @@
           <Width>112</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Roboto Condensed</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -795,9 +798,9 @@
           <Width>80</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Roboto Condensed</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -812,233 +815,158 @@
     <WcxPlugins>
       <WcxPlugin Enabled="True">
         <ArchiveExt>zip</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>735</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>jar</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>990</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>7z</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/sevenzip/sevenzip.wcx</Path>
         <Flags>607</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>tar</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>223</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>bz2</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>91</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>tbz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>95</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>gz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>91</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>tgz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>95</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>lzma</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>1</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>tlz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>95</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>xz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>91</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>zst</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>91</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>txz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>95</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>zipx</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>223</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>cpio</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>deb</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>arj</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>cab</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>cramfs</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>dmg</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>fat</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>hfs</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>iso</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>lha</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>lzh</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>ntfs</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>squashfs</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>taz</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>vhd</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>wim</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>85</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>xar</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
-        <Flags>4</Flags>
-      </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>z</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/cpio/cpio.wcx</Path>
         <Flags>4</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>rpm</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\rpm\rpm.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/rpm/rpm.wcx</Path>
         <Flags>4</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>rar</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\unrar\unrar.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
         <Flags>607</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>b64</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\base64\base64.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
         <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>iso</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/sevenzip/sevenzip.wcx</Path>
+        <Flags>0</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>rar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/sevenzip/sevenzip.wcx</Path>
+        <Flags>0</Flags>
       </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
       <WdxPlugin>
         <Name>deb_wdx</Name>
-        <Path>%commander_path%\plugins\wdx\deb_wdx\deb_wdx.wdx</Path>
+        <Path>%commander_path%/plugins/wdx/deb_wdx/deb_wdx.wdx</Path>
         <DetectString>EXT="DEB"</DetectString>
       </WdxPlugin>
       <WdxPlugin>
         <Name>rpm_wdx</Name>
-        <Path>%commander_path%\plugins\wdx\rpm_wdx\rpm_wdx.wdx</Path>
+        <Path>%commander_path%/plugins/wdx/rpm_wdx/rpm_wdx.wdx</Path>
         <DetectString>EXT="RPM"</DetectString>
       </WdxPlugin>
       <WdxPlugin>
         <Name>audioinfo</Name>
-        <Path>%commander_path%\plugins\wdx\audioinfo\audioinfo.wdx</Path>
+        <Path>%commander_path%/plugins/wdx/audioinfo/audioinfo.wdx</Path>
         <DetectString>(EXT="MP3") | (EXT="MP2") | (EXT="MP1") | (EXT="OGG") | (EXT="WMA") | (EXT="WAV") | (EXT="VQF") | (EXT="AAC") | (EXT="APE") | (EXT="MPC") | (EXT="FLAC") | (EXT="CDA") | (EXT="TTA") | (EXT="AC3") | (EXT="DTS") | (EXT="WV") | (EXT="WVC") | (EXT="OFR") | (EXT="OFS") | (EXT="M4A") | (EXT="MP4") | (EXT="OPUS")</DetectString>
       </WdxPlugin>
     </WdxPlugins>
     <WfxPlugins>
       <WfxPlugin Enabled="True">
         <Name>FTP</Name>
-        <Path>%commander_path%\plugins\wfx\ftp\ftp.wfx</Path>
+        <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
       </WfxPlugin>
     </WfxPlugins>
     <WlxPlugins>
       <WlxPlugin Enabled="True">
         <Name>richview</Name>
-        <Path>%commander_path%\plugins\wlx\richview\richview.wlx</Path>
+        <Path>%commander_path%/plugins/wlx/richview/richview.wlx</Path>
         <DetectString>EXT="RTF"</DetectString>
       </WlxPlugin>
       <WlxPlugin Enabled="True">
         <Name>preview</Name>
-        <Path>%commander_path%\plugins\wlx\preview\preview.wlx</Path>
+        <Path>%commander_path%/plugins/wlx/preview/preview.wlx</Path>
         <DetectString>(EXT="HTM")|(EXT="HTML")|(EXT="MHT")|(EXT="MHTML")</DetectString>
       </WlxPlugin>
       <WlxPlugin Enabled="True">
         <Name>wmp</Name>
-        <Path>%commander_path%\plugins\wlx\wmp\wmp.wlx</Path>
+        <Path>%commander_path%/plugins/wlx/wmp/wmp.wlx</Path>
         <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="WMA")|(EXT="MP4")|(EXT="AVI")|(EXT="WMV")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
     <TweakPluginHeight0>0</TweakPluginHeight0>
-    <TweakPluginWidth1>0</TweakPluginWidth1>
-    <TweakPluginHeight1>0</TweakPluginHeight1>
+    <TweakPluginWidth1>516</TweakPluginWidth1>
+    <TweakPluginHeight1>404</TweakPluginHeight1>
     <TweakPluginWidth2>0</TweakPluginWidth2>
     <TweakPluginHeight2>0</TweakPluginHeight2>
     <TweakPluginWidth3>0</TweakPluginWidth3>
     <TweakPluginHeight3>0</TweakPluginHeight3>
-    <TweakPluginWidth4>0</TweakPluginWidth4>
-    <TweakPluginHeight4>0</TweakPluginHeight4>
-    <AutoTweak>False</AutoTweak>
+    <TweakPluginWidth4>406</TweakPluginWidth4>
+    <TweakPluginHeight4>254</TweakPluginHeight4>
+    <AutoTweak>True</AutoTweak>
     <WCXConfigViewMode>0</WCXConfigViewMode>
-    <PluginFilenameStyle>0</PluginFilenameStyle>
+    <PluginFilenameStyle>1</PluginFilenameStyle>
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
   <MultiRenamePresets>

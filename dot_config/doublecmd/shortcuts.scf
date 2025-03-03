@@ -396,6 +396,10 @@
         <Param>index=9</Param>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Alt+S</Shortcut>
+        <Command>cm_DirHotList</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
