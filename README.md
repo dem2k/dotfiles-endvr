@@ -41,6 +41,7 @@ git config --global user.name "dk"
 git config --global user.email "user@server.com"
 git config --global pull.rebase false
 git config --global init.defaultBranch main
+git config --global diff.algorithm histogram
 ```
 
 ## compile emacs
