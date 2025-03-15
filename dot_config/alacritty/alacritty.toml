@@ -3,7 +3,7 @@
 # program = "c:/scoop/apps/pwsh/current/pwsh.exe"
 
 [window]
-dimensions = { columns = 150, lines = 40 }
+dimensions = { columns = 170, lines = 50 }
 padding = { x = 5, y = 5 }
 resize_increments = true
 

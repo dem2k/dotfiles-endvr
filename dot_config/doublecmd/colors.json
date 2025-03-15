@@ -3,7 +3,7 @@
     {
       Name : "Light",
       FilePanel : {
-        CursorBorderColor : -2147483635,
+        CursorBorderColor : -2147483627,
         ForeColor : -2147483640,
         BackColor : -2147483643,
         BackColor2 : -2147483643,
@@ -11,8 +11,8 @@
         CursorColor : -2147483635,
         CursorText : -2147483634,
         GridLine : 12632256,
-        InactiveCursorColor : -2147483645,
-        InactiveMarkColor : 128
+        InactiveCursorColor : 16771047,
+        InactiveMarkColor : 255
       },
       FreeSpaceIndicator : {
         ForeColor : 0,
@@ -65,7 +65,7 @@
         {
           Unique : "D7F629E9-5AAE-4A3B-B05B-BC641D8D93E5",
           Name : "Default",
-          CursorBorderColor : -2147483635,
+          CursorBorderColor : -2147483627,
           Columns : [
             {
               Unique : "2518755D-D5B2-4E4C-B36D-6C30F0C0F9EF",
@@ -76,20 +76,8 @@
               MarkColor : 255,
               CursorColor : -2147483635,
               CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
-            },
-            {
-              Unique : "1B2309C6-0865-4C59-8478-06CBAE4B5572",
-              Title : "Erw",
-              TextColor : -2147483640,
-              Background : -2147483643,
-              Background2 : -2147483643,
-              MarkColor : 255,
-              CursorColor : -2147483635,
-              CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
             },
             {
               Unique : "50458812-F3CB-4AFF-A0EE-94FE7917DEBF",
@@ -100,8 +88,8 @@
               MarkColor : 255,
               CursorColor : -2147483635,
               CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
             },
             {
               Unique : "2AED1B26-399C-4D69-9332-3CAD8B9DBDBB",
@@ -112,8 +100,8 @@
               MarkColor : 255,
               CursorColor : -2147483635,
               CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
             },
             {
               Unique : "8C871DBC-7D61-4A3C-8324-9D1DF2CE0BD6",
@@ -124,8 +112,8 @@
               MarkColor : 255,
               CursorColor : -2147483635,
               CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
             }
           ]
         }
@@ -1681,18 +1669,6 @@
             {
               Unique : "2518755D-D5B2-4E4C-B36D-6C30F0C0F9EF",
               Title : "Name",
-              TextColor : -2147483640,
-              Background : -2147483643,
-              Background2 : -2147483643,
-              MarkColor : 255,
-              CursorColor : -2147483635,
-              CursorText : -2147483634,
-              InactiveCursorColor : -2147483645,
-              InactiveMarkColor : 128
-            },
-            {
-              Unique : "1B2309C6-0865-4C59-8478-06CBAE4B5572",
-              Title : "Erw",
               TextColor : -2147483640,
               Background : -2147483643,
               Background2 : -2147483643,

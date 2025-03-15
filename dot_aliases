@@ -8,12 +8,11 @@ alias more='/usr/bin/bat'
 alias cd..='cd ..'
 alias cd='z'
 alias zz='zi'
-alias ec='emacsclient -n -r'
+alias ec='emacsclient -n -r --alternate-editor nvim'
 alias duh='du -sch * | sort -h'
 alias cls='clear'
 
 lf () {
-    EDITOR="emacsclient -n -r"
     cd "$(command lf -print-last-dir "$@")"
 }
 

@@ -211,8 +211,8 @@ turned on.")
 
 ;;; UI elements
 
-(setq default-frame-alist '((background-color . "black") (top . 48) (left . 256)
-                            (width . 168) (height . 44) (font . "JetBrainsMono NF")))
+(setq default-frame-alist '((background-color . "black") ;; (top . 48) (left . 256)
+                            (width . 170) (height . 48) (font . "JetBrainsMono NF")))
 
 ;; (setq frame-title-format minimal-emacs-frame-title-format
 ;;       icon-title-format minimal-emacs-frame-title-format)

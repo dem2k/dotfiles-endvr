@@ -159,11 +159,11 @@
     </MiddleToolbar>
   </Toolbars>
   <MainWindow>
-    <Position Save="True">
+    <Position Save="False">
       <Left>202</Left>
       <Top>35</Top>
-      <Width>1321</Width>
-      <Height>762</Height>
+      <Width>1561</Width>
+      <Height>921</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
@@ -182,7 +182,7 @@
     <RunInTerminalCloseParams>-e sh -c '{command}'</RunInTerminalCloseParams>
     <JustRunTerminal>konsole</JustRunTerminal>
     <JustRunTermParams/>
-    <OnlyOneAppInstance>False</OnlyOneAppInstance>
+    <OnlyOneAppInstance>True</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <OperationSizeFormat>0</OperationSizeFormat>
@@ -217,7 +217,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>True</ShowSystemFiles>
+    <ShowSystemFiles>False</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -232,9 +232,9 @@
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
-    <Editor Enabled="False">
-      <Path/>
-      <Parameters/>
+    <Editor Enabled="True">
+      <Path>emacsclient</Path>
+      <Parameters>-n -r --alternate-editor nvim</Parameters>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Editor>
@@ -318,7 +318,7 @@
     <UseCursorBorder>False</UseCursorBorder>
     <UseFrameCursor>False</UseFrameCursor>
     <UseInvertedSelection>False</UseInvertedSelection>
-    <UseInactiveSelColor>False</UseInactiveSelColor>
+    <UseInactiveSelColor>True</UseInactiveSelColor>
     <AllowOverColor>True</AllowOverColor>
     <gBorderFrameWidth>1</gBorderFrameWidth>
     <InactivePanelBrightness>100</InactivePanelBrightness>
@@ -488,7 +488,7 @@
     <Options>0</Options>
   </Log>
   <Configuration Save="True" SortOrder="0" TreeType="0">
-    <FolderTabs Save="True"/>
+    <FolderTabs Save="False"/>
   </Configuration>
   <History>
     <SearchReplaceHistory Save="True"/>
@@ -506,7 +506,7 @@
   </QuickSearch>
   <QuickFilter>
     <AutoHide>False</AutoHide>
-    <SaveSessionModifications>True</SaveSessionModifications>
+    <SaveSessionModifications>False</SaveSessionModifications>
   </QuickFilter>
   <Miscellaneous>
     <GridVertLine>False</GridVertLine>
@@ -540,7 +540,7 @@
     <CreateNewEncoding>3</CreateNewEncoding>
   </Description>
   <AutoRefresh>
-    <Options>3</Options>
+    <Options>7</Options>
     <ExcludeDirs/>
     <Mode>1</Mode>
   </AutoRefresh>
@@ -566,8 +566,10 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="(&amp;M) Home" Path="/home/dk/"/>
-    <HotDir Name="(&amp;1) 1xTmp" Path="/home/dk/1xTmp/"/>
+    <HotDir Name="(&amp;h) Home" Path="/home/dk"/>
+    <HotDir Name="(&amp;w) 1xTmp" Path="/home/dk/1xTmp"/>
+    <HotDir Name="(&amp;d) Downloads" Path="/home/dk/Downloads"/>
+    <HotDir Name="(&amp;c) dot_config" Path="/home/dk/.config"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
@@ -709,7 +711,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>tlz</LastUsedPacker>
+  <LastUsedPacker>zip</LastUsedPacker>
   <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -730,8 +732,8 @@
         <Column>
           <Title>Name</Title>
           <Unique>2518755D-D5B2-4E4C-B36D-6C30F0C0F9EF</Unique>
-          <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>200</Width>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>439</Width>
           <Align>0</Align>
           <Font>
             <Name>Roboto Condensed</Name>
@@ -740,23 +742,7 @@
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
-          <UseInactiveSelColor>False</UseInactiveSelColor>
-          <Overcolor>True</Overcolor>
-        </Column>
-        <Column>
-          <Title>Erw</Title>
-          <Unique>1B2309C6-0865-4C59-8478-06CBAE4B5572</Unique>
-          <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>40</Width>
-          <Align>0</Align>
-          <Font>
-            <Name>Roboto Condensed</Name>
-            <Size>12</Size>
-            <Style>0</Style>
-            <Quality>0</Quality>
-          </Font>
-          <UseInvertedSelection>False</UseInvertedSelection>
-          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
@@ -772,14 +758,14 @@
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
-          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Datum</Title>
           <Unique>2AED1B26-399C-4D69-9332-3CAD8B9DBDBB</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>112</Width>
+          <Width>165</Width>
           <Align>1</Align>
           <Font>
             <Name>Roboto Condensed</Name>
@@ -788,7 +774,7 @@
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
-          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
@@ -804,7 +790,7 @@
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
-          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
       </Columns>
@@ -978,7 +964,7 @@
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find/>
+        <Find>-</Find>
         <Replace/>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
