@@ -25,6 +25,11 @@
           <property name="last-image" type="string" value="/home/xtest/.conky/Green Apple Desktop/wallpaper.jpg"/>
         </property>
       </property>
+      <property name="monitorHDMI-A-0" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-x.svg"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="desktop-icons" type="empty">
