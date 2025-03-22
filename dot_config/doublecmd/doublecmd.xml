@@ -160,11 +160,11 @@
   </Toolbars>
   <MainWindow>
     <Position Save="False">
-      <Left>202</Left>
-      <Top>35</Top>
-      <Width>1561</Width>
-      <Height>921</Height>
-      <PixelsPerInch>96</PixelsPerInch>
+      <Left>883</Left>
+      <Top>516</Top>
+      <Width>1951</Width>
+      <Height>1151</Height>
+      <PixelsPerInch>120</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -248,68 +248,68 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>Roboto Condensed</Name>
-      <Size>12</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Main>
     <Editor>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>11</Size>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Editor>
     <Viewer>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>11</Size>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Viewer>
     <ViewerBook>
-      <Name>Roboto Condensed</Name>
-      <Size>12</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </ViewerBook>
     <Log>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>11</Size>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>JetBrains Mono</Name>
-      <Size>11</Size>
+      <Name>JetBrainsMono Nerd Font</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </Console>
     <PathEdit>
-      <Name>Roboto Condensed</Name>
-      <Size>11</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </PathEdit>
     <FunctionButtons>
-      <Name>Roboto Condensed</Name>
-      <Size>11</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </FunctionButtons>
     <SearchResults>
-      <Name>Roboto Condensed</Name>
-      <Size>11</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </SearchResults>
     <TreeViewMenu>
-      <Name>Roboto Condensed</Name>
-      <Size>11</Size>
+      <Name>Noto Sans</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </TreeViewMenu>
     <StatusBar>
-      <Name>Roboto Condensed</Name>
-      <Size>11</Size>
+      <Name>Noto Sans</Name>
+      <Size>9</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </StatusBar>
@@ -556,7 +556,7 @@
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>96</PixelsPerInch>
+    <PixelsPerInch>120</PixelsPerInch>
     <ShowInMenus Enabled="True">
       <Size>24</Size>
     </ShowInMenus>
@@ -712,7 +712,7 @@
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
   <LastUsedPacker>zip</LastUsedPacker>
-  <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
+  <LastDoAnyCommand>cm_RunTerm</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
   <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
@@ -726,14 +726,14 @@
       <Unique>D7F629E9-5AAE-4A3B-B05B-BC641D8D93E5</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>96</PixelsPerInch>
+      <PixelsPerInch>120</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>2518755D-D5B2-4E4C-B36D-6C30F0C0F9EF</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>439</Width>
+          <Width>549</Width>
           <Align>0</Align>
           <Font>
             <Name>Roboto Condensed</Name>
@@ -749,7 +749,7 @@
           <Title>Größe</Title>
           <Unique>50458812-F3CB-4AFF-A0EE-94FE7917DEBF</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>56</Width>
+          <Width>70</Width>
           <Align>1</Align>
           <Font>
             <Name>Roboto Condensed</Name>
@@ -765,7 +765,7 @@
           <Title>Datum</Title>
           <Unique>2AED1B26-399C-4D69-9332-3CAD8B9DBDBB</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>165</Width>
+          <Width>206</Width>
           <Align>1</Align>
           <Font>
             <Name>Roboto Condensed</Name>
@@ -781,7 +781,7 @@
           <Title>Attr</Title>
           <Unique>8C871DBC-7D61-4A3C-8324-9D1DF2CE0BD6</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>80</Width>
+          <Width>100</Width>
           <Align>0</Align>
           <Font>
             <Name>Roboto Condensed</Name>
