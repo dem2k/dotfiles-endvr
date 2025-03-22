@@ -8,13 +8,6 @@
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
-        <Program>
-          <ID>{AB9466A0-A595-40C0-B533-98B118F07CD0}</ID>
-          <Icon>cm_runterm</Icon>
-          <Hint>Terminalemulation öffnen</Hint>
-          <Command>c:\scoop\apps\windows-terminal\current\wt.exe</Command>
-          <Params>--size "160,44"</Params>
-        </Program>
         <Command>
           <ID>{07850A53-9839-41B5-97E1-BBFCFE24823E}</ID>
           <Icon>cm_options</Icon>
@@ -122,39 +115,40 @@
     </MainToolbar>
     <MiddleToolbar>
       <Row>
-        <Command>
-          <ID>{582B5E68-527A-43C0-8763-58740F9793BB}</ID>
-          <Icon>cm_view</Icon>
-          <Command>cm_View</Command>
-        </Command>
-        <Command>
-          <ID>{59A9F865-EED5-40C2-BFE8-065632A752B7}</ID>
-          <Icon>cm_edit</Icon>
-          <Command>cm_Edit</Command>
-        </Command>
-        <Command>
-          <ID>{AB7FD82F-9FAD-44DE-B2BE-B1D4F903059C}</ID>
-          <Icon>cm_copy</Icon>
-          <Command>cm_Copy</Command>
-        </Command>
-        <Command>
-          <ID>{9CB076EE-446B-4CD8-B25C-6E9DC7891271}</ID>
-          <Icon>cm_rename</Icon>
-          <Command>cm_Rename</Command>
-        </Command>
         <Separator>
           <Style>True</Style>
         </Separator>
-        <Command>
-          <ID>{76D3EACA-1C11-46A0-8AB3-973F293E17B7}</ID>
-          <Icon>cm_packfiles</Icon>
-          <Command>cm_PackFiles</Command>
-        </Command>
-        <Command>
-          <ID>{3C0DAB77-C381-482B-9BC0-4026CD606414}</ID>
-          <Icon>cm_makedir</Icon>
-          <Command>cm_MakeDir</Command>
-        </Command>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Program>
+          <ID>{D1ECD496-23B4-4A11-A9F1-A62F662C52BD}</ID>
+          <Icon>/usr/share/icons/Qogir/scalable/apps/meld.svg</Icon>
+          <Hint>Vergleichen</Hint>
+          <Command>meld</Command>
+          <Params>%pl %pr</Params>
+        </Program>
       </Row>
     </MiddleToolbar>
   </Toolbars>
@@ -176,11 +170,11 @@
     <GoToRoot>False</GoToRoot>
     <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
-    <RunInTerminalStayOpenCmd>konsole</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenCmd>alacritty</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>konsole</RunInTerminalCloseCmd>
+    <RunInTerminalCloseCmd>alacritty</RunInTerminalCloseCmd>
     <RunInTerminalCloseParams>-e sh -c '{command}'</RunInTerminalCloseParams>
-    <JustRunTerminal>konsole</JustRunTerminal>
+    <JustRunTerminal>alacritty</JustRunTerminal>
     <JustRunTermParams/>
     <OnlyOneAppInstance>True</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
@@ -344,15 +338,15 @@
       <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
       <PathModifierElements>0</PathModifierElements>
     </ButtonBar>
-    <MiddleBar Enabled="False">
-      <FlatIcons>True</FlatIcons>
-      <ButtonHeight>24</ButtonHeight>
-      <IconSize>16</IconSize>
+    <MiddleBar Enabled="True">
+      <FlatIcons>False</FlatIcons>
+      <ButtonHeight>38</ButtonHeight>
+      <IconSize>32</IconSize>
       <ShowCaptions>False</ShowCaptions>
-      <ReportErrorWithCommands>False</ReportErrorWithCommands>
+      <ReportErrorWithCommands>True</ReportErrorWithCommands>
     </MiddleBar>
     <DriveBar1>False</DriveBar1>
-    <DriveBar2>False</DriveBar2>
+    <DriveBar2>True</DriveBar2>
     <DriveBarFlat>False</DriveBarFlat>
     <DrivesListButton Enabled="False">
       <ShowLabel>True</ShowLabel>
@@ -370,7 +364,7 @@
     <KeyButtons>False</KeyButtons>
     <InterfaceFlat>False</InterfaceFlat>
     <DriveFreeSpace>True</DriveFreeSpace>
-    <DriveIndicator>False</DriveIndicator>
+    <DriveIndicator>True</DriveIndicator>
     <ProgressInMenuBar>True</ProgressInMenuBar>
     <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
     <HorizontalFilePanels>False</HorizontalFilePanels>
@@ -567,7 +561,7 @@
   </IgnoreList>
   <DirectoryHotList>
     <HotDir Name="(&amp;h) Home" Path="/home/dk"/>
-    <HotDir Name="(&amp;w) 1xTmp" Path="/home/dk/1xTmp"/>
+    <HotDir Name="(&amp;w) 1xTmp" Path="/home/dk/x-tmp"/>
     <HotDir Name="(&amp;d) Downloads" Path="/home/dk/Downloads"/>
     <HotDir Name="(&amp;c) dot_config" Path="/home/dk/.config"/>
   </DirectoryHotList>
@@ -712,7 +706,7 @@
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
   <LastUsedPacker>zip</LastUsedPacker>
-  <LastDoAnyCommand>cm_RunTerm</LastDoAnyCommand>
+  <LastDoAnyCommand>cm_FocusCmdLine</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
   <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
@@ -736,8 +730,8 @@
           <Width>549</Width>
           <Align>0</Align>
           <Font>
-            <Name>Roboto Condensed</Name>
-            <Size>12</Size>
+            <Name>Noto Sans</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -752,8 +746,8 @@
           <Width>70</Width>
           <Align>1</Align>
           <Font>
-            <Name>Roboto Condensed</Name>
-            <Size>12</Size>
+            <Name>Noto Sans</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -768,8 +762,8 @@
           <Width>206</Width>
           <Align>1</Align>
           <Font>
-            <Name>Roboto Condensed</Name>
-            <Size>12</Size>
+            <Name>Noto Sans</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -784,8 +778,8 @@
           <Width>100</Width>
           <Align>0</Align>
           <Font>
-            <Name>Roboto Condensed</Name>
-            <Size>12</Size>
+            <Name>Noto Sans</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
