@@ -27,7 +27,7 @@
       </property>
       <property name="monitorHDMI-A-0" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-x.svg"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-blue.jpg"/>
         </property>
       </property>
     </property>

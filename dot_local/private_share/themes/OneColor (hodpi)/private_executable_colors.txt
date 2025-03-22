@@ -1,0 +1,17 @@
+Predefined colors for the OneColor XFCE theme
+==============================================
+
+These are colors used in a theme pack
+
+Colors are in #RRGGBB format.
+
+
+Colors used in the pack
+========================
+blue    #4285f4
+red     #ea4335
+yellow  #fbbc05		
+green   #34a853
+orange  #df5e0b
+violet  #7041db
+

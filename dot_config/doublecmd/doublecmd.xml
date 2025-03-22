@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.22 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.23 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -242,7 +242,7 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
@@ -260,7 +260,7 @@
       <Quality>1</Quality>
     </Viewer>
     <ViewerBook>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>1</Quality>
@@ -278,31 +278,31 @@
       <Quality>1</Quality>
     </Console>
     <PathEdit>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </PathEdit>
     <FunctionButtons>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </FunctionButtons>
     <SearchResults>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </SearchResults>
     <TreeViewMenu>
-      <Name>Noto Sans</Name>
+      <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </TreeViewMenu>
     <StatusBar>
-      <Name>Noto Sans</Name>
+      <Name/>
       <Size>9</Size>
       <Style>0</Style>
       <Quality>1</Quality>
@@ -893,6 +893,11 @@
         <Path>%commander_path%/plugins/wcx/sevenzip/sevenzip.wcx</Path>
         <Flags>0</Flags>
       </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>deb</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/deb/deb.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
       <WdxPlugin>
@@ -958,8 +963,8 @@
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find>-</Find>
-        <Replace/>
+        <Find>-hidpi</Find>
+        <Replace> (hidpi)</Replace>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>
