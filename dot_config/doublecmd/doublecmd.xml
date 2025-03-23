@@ -211,7 +211,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -964,7 +964,7 @@
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
         <Find>-hidpi</Find>
-        <Replace> (hidpi)</Replace>
+        <Replace>(hidpi)</Replace>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>
