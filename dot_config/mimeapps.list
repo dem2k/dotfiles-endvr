@@ -1,0 +1,14 @@
+[Default Applications]
+image/jpeg=org.xfce.ristretto.desktop
+video/x-mjpeg=org.xfce.ristretto.desktop
+image/png=org.xfce.ristretto.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+
+[Added Associations]
+image/jpeg=org.xfce.ristretto.desktop;
+video/x-mjpeg=google-chrome.desktop;org.xfce.ristretto.desktop;
+image/png=org.xfce.ristretto.desktop;
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+
