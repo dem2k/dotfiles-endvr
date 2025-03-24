@@ -32,12 +32,8 @@
       <property name="&lt;Alt&gt;&lt;Super&gt;s" type="empty"/>
     </property>
     <property name="custom" type="empty">
-      <property name="&lt;Alt&gt;Print" type="string" value="xfce4-screenshooter -w"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
-      <property name="Print" type="string" value="xfce4-screenshooter"/>
-      <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
-      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Escape" type="string" value="xfce4-taskmanager"/>
@@ -49,7 +45,6 @@
       <property name="Super_L" type="string" value="rofi -font &quot;JetBrainsMono Nerd Font Regular 24&quot; -modes drun,window,combi -show-icons -markup -show drun">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

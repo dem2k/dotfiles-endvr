@@ -586,7 +586,7 @@
     <ViewerMode>1</ViewerMode>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
-    <WrapText>False</WrapText>
+    <WrapText>True</WrapText>
     <LeftMargin>4</LeftMargin>
     <ExtraLineSpan>0</ExtraLineSpan>
     <PaintColor>255</PaintColor>
