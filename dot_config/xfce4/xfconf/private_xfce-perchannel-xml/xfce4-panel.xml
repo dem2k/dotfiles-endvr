@@ -58,6 +58,7 @@
         <value type="string" value="zwischenablage"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="redshift"/>
         <value type="string" value="ksnip"/>
         <value type="string" value="Fcitx"/>
         <value type="string" value="blueman"/>

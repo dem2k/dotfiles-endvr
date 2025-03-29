@@ -130,18 +130,6 @@
         <Separator>
           <Style>True</Style>
         </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
         <Program>
           <ID>{D1ECD496-23B4-4A11-A9F1-A62F662C52BD}</ID>
           <Icon>/usr/share/icons/Qogir/scalable/apps/meld.svg</Icon>
@@ -303,7 +291,7 @@
     </TreeViewMenu>
     <StatusBar>
       <Name/>
-      <Size>9</Size>
+      <Size>15</Size>
       <Style>0</Style>
       <Quality>1</Quality>
     </StatusBar>
@@ -376,10 +364,10 @@
     <Sorting>
       <CaseSensitivity>0</CaseSensitivity>
       <NaturalSorting>True</NaturalSorting>
-      <SpecialSorting>False</SpecialSorting>
+      <SpecialSorting>True</SpecialSorting>
       <SortFolderMode>1</SortFolderMode>
       <NewFilesPosition>2</NewFilesPosition>
-      <UpdatedFilesPosition>2</UpdatedFilesPosition>
+      <UpdatedFilesPosition>0</UpdatedFilesPosition>
     </Sorting>
     <ColumnsView>
       <LongInStatus>False</LongInStatus>
@@ -395,8 +383,8 @@
       </Columns>
     </BriefView>
     <ExtraLineSpan>2</ExtraLineSpan>
-    <FolderPrefix>[</FolderPrefix>
-    <FolderPostfix>]</FolderPostfix>
+    <FolderPrefix/>
+    <FolderPostfix>/</FolderPostfix>
     <RenameConfirmMouse>False</RenameConfirmMouse>
   </FilesViews>
   <Keyboard>
@@ -507,7 +495,7 @@
     <GridHorzLine>False</GridHorzLine>
     <ShowWarningMessages>True</ShowWarningMessages>
     <SpaceMovesDown>True</SpaceMovesDown>
-    <DirBrackets>False</DirBrackets>
+    <DirBrackets>True</DirBrackets>
     <InplaceRename>False</InplaceRename>
     <InplaceRenameButton>True</InplaceRenameButton>
     <DblClickToParent>False</DblClickToParent>
@@ -586,7 +574,7 @@
     <ViewerMode>1</ViewerMode>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
-    <WrapText>True</WrapText>
+    <WrapText>False</WrapText>
     <LeftMargin>4</LeftMargin>
     <ExtraLineSpan>0</ExtraLineSpan>
     <PaintColor>255</PaintColor>
@@ -706,7 +694,7 @@
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
   <LastUsedPacker>zip</LastUsedPacker>
-  <LastDoAnyCommand>cm_FocusCmdLine</LastDoAnyCommand>
+  <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
   <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
@@ -730,7 +718,7 @@
           <Width>549</Width>
           <Align>0</Align>
           <Font>
-            <Name>Noto Sans</Name>
+            <Name>Noto Sans Condensed Medium</Name>
             <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -746,7 +734,7 @@
           <Width>70</Width>
           <Align>1</Align>
           <Font>
-            <Name>Noto Sans</Name>
+            <Name>Noto Sans Condensed Medium</Name>
             <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -762,7 +750,7 @@
           <Width>206</Width>
           <Align>1</Align>
           <Font>
-            <Name>Noto Sans</Name>
+            <Name>Noto Sans Condensed Medium</Name>
             <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -778,7 +766,7 @@
           <Width>100</Width>
           <Align>0</Align>
           <Font>
-            <Name>Noto Sans</Name>
+            <Name>Noto Sans Condensed Medium</Name>
             <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
