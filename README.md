@@ -1,7 +1,7 @@
 ## install packages
 ```
-sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi mc bat tmux \
-      ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc htop ripgrep
+sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide chezmoi bat tmux \
+      ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc ripgrep lf
 ```
 
 ## in case of errors
