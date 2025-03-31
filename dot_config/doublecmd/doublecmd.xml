@@ -216,7 +216,7 @@
     </Viewer>
     <Editor Enabled="True">
       <Path>emacsclient</Path>
-      <Parameters>-n -r --alternate-editor nvim</Parameters>
+      <Parameters>-n -r --alternate-editor 'alacritty -e nvim'</Parameters>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Editor>

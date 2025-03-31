@@ -2,13 +2,13 @@
 # meine aliase. ne, is klar!
 #
 alias l='ls -lhFv --color=auto --group-directories-first'
-alias la='ls -lhFva --color=auto --group-directories-first'
 alias ll='ls -lhFva --color=auto --group-directories-first'
 alias more='/usr/bin/bat'
 alias cd..='cd ..'
 alias cd='z'
 alias zz='zi'
-alias ec='emacsclient -n -r --alternate-editor nvim'
+alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
+
 alias duh='du -sch * | sort -h'
 alias cls='clear'
 

@@ -5,5 +5,7 @@ x-scheme-handler/http=xfce4-web-browser.desktop
 x-scheme-handler/https=xfce4-web-browser.desktop
 image/avif=xnviewmp.desktop
 image/gif=xnviewmp.desktop
+application/pdf=mupdf.desktop
+application/oxps=mupdf.desktop
 
 [Added Associations]
