@@ -1,0 +1,34 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="pointers" version="1.0">
+  <property name="Logitech_G915_TKL_LIGHTSPEED_Wireless_RGB_Mechanical_Gaming_Keyboard" type="empty">
+    <property name="RightHanded" type="bool" value="true"/>
+    <property name="Threshold" type="int" value="1"/>
+    <property name="Acceleration" type="double" value="1.1000000000000001"/>
+    <property name="Properties" type="empty">
+      <property name="libinput_Accel_Profile_Enabled" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="0"/>
+        <value type="int" value="0"/>
+      </property>
+      <property name="Device_Enabled" type="int" value="0"/>
+    </property>
+  </property>
+  <property name="MX_Anywhere_2_Mouse" type="empty">
+    <property name="RightHanded" type="bool" value="true"/>
+    <property name="Threshold" type="int" value="1"/>
+    <property name="Acceleration" type="double" value="1.1000000000000001"/>
+    <property name="Properties" type="empty">
+      <property name="libinput_Accel_Profile_Enabled" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="0"/>
+        <value type="int" value="0"/>
+      </property>
+    </property>
+  </property>
+  <property name="Getech_HUGE_TrackBall" type="empty">
+    <property name="RightHanded" type="bool" value="true"/>
+    <property name="Threshold" type="int" value="1"/>
+    <property name="Acceleration" type="double" value="0.80000000000000004"/>
+  </property>
+</channel>
