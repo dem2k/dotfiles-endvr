@@ -40,11 +40,11 @@
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
-      <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
       <property name="Super_L" type="string" value="rofi -font &quot;JetBrainsMono Nerd Font Regular 24&quot; -modes drun,window,combi -show-icons -markup -show drun">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Alt&gt;asciicircum" type="string" value="xfce4-clipman-history"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -25,6 +25,7 @@
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
+        <value type="int" value="3"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
@@ -96,6 +97,9 @@
         <property name="max-menu-items" type="uint" value="99"/>
         <property name="reverse-menu-order" type="bool" value="false"/>
       </property>
+      <property name="settings" type="empty">
+        <property name="show-qr-code" type="bool" value="false"/>
+      </property>
     </property>
     <property name="notes" type="empty">
       <property name="global" type="empty">
@@ -103,5 +107,9 @@
       </property>
     </property>
     <property name="plugin-14" type="string" value="netload"/>
+    <property name="plugin-3" type="string" value="launcher">
+      <property name="items" type="array">
+      </property>
+    </property>
   </property>
 </channel>

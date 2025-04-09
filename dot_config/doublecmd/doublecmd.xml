@@ -137,6 +137,13 @@
           <Command>meld</Command>
           <Params>%pl %pr</Params>
         </Program>
+        <Program>
+          <ID>{A99DD519-E3DE-4E77-ACE5-95098CB0CC41}</ID>
+          <Icon>/home/dk/.local/icons/diffmerge.png</Icon>
+          <Hint>diffmerge</Hint>
+          <Command>/usr/bin/diffmerge</Command>
+          <Params>%pl %pr</Params>
+        </Program>
       </Row>
     </MiddleToolbar>
   </Toolbars>

@@ -2,6 +2,11 @@
 # [shell]
 # program = "c:/scoop/apps/pwsh/current/pwsh.exe"
 
+[general]
+import = [
+ "~/.config/alacritty/breeze.toml"
+]
+
 [window]
 dimensions = { columns = 170, lines = 48 }
 padding = { x = 5, y = 5 }
@@ -19,13 +24,13 @@ style = {shape = "Block", blinking = "On"}
 
 [mouse]
 bindings = [
-{ mouse = "Right", action = "Paste" },
+ { mouse = "Right", action = "Paste" },
 ]
 
 [keyboard]
 bindings = [
-# { key = "C", mods = "Control", action = "Copy" },
-# { key = "V", mods = "Control", action = "Paste" },
+ # { key = "C", mods = "Control", action = "Copy" },
+ { key = "V", mods = "Control", action = "Paste" },
  { key = "PageUp", mods = "Shift", action = "ScrollHalfPageUp" },
  { key = "PageDown", mods = "Shift", action = "ScrollHalfPageDown" },
 ]
