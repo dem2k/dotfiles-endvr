@@ -9,3 +9,4 @@ application/pdf=mupdf.desktop
 application/oxps=mupdf.desktop
 
 [Added Associations]
+image/bmp=xnviewmp.desktop;

@@ -25,7 +25,6 @@
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
-        <value type="int" value="3"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
@@ -50,6 +49,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="virt-manager"/>
         <value type="string" value="netzwerkadresse für ethernet-netz »ethernet-verbindung 1« wird angefordert …"/>
         <value type="string" value="javaembeddedframe"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -107,9 +107,5 @@
       </property>
     </property>
     <property name="plugin-14" type="string" value="netload"/>
-    <property name="plugin-3" type="string" value="launcher">
-      <property name="items" type="array">
-      </property>
-    </property>
   </property>
 </channel>

@@ -8,6 +8,7 @@ alias cd..='cd ..'
 alias cd='z'
 alias zz='zi'
 alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
+alias docker='podman'
 
 alias duh='du -sch * | sort -h'
 alias cls='clear'
