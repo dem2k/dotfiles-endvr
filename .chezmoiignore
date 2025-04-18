@@ -2,4 +2,12 @@ README.md
 **/*.zwc
 **/powerlevel10k/gitstatus
 .jd/**
-
+.local/share/Trash
+.local/share/chezmoi
+.local/share/containers
+.local/share/zoxide
+.local/share/ranger
+.local/share/meld
+.local/share/nvim
+.local/share/lf
+.local/state

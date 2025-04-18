@@ -1,0 +1,12 @@
+[MIME Cache]
+application/epub+zip=mupdf.desktop;
+application/oxps=mupdf.desktop;
+application/pdf=mupdf.desktop;
+application/vnd.ms-xpsdocument=mupdf.desktop;
+application/x-cbz=mupdf.desktop;
+application/x-pdf=mupdf.desktop;
+image/jpeg=mupdf.desktop;
+image/pjpeg=mupdf.desktop;
+image/png=mupdf.desktop;
+image/tiff=mupdf.desktop;
+image/x-tiff=mupdf.desktop;
