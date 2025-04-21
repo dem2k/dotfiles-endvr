@@ -4,7 +4,7 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
+    <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=8;x=1279;y=1243"/>
       <property name="length" type="double" value="100"/>
@@ -25,11 +25,13 @@
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
+        <value type="int" value="9"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="background-style" type="uint" value="0"/>
+      <property name="border-width" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -49,6 +51,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
         <value type="string" value="virt-manager"/>
         <value type="string" value="netzwerkadresse für ethernet-netz »ethernet-verbindung 1« wird angefordert …"/>
         <value type="string" value="javaembeddedframe"/>
@@ -107,5 +110,8 @@
       </property>
     </property>
     <property name="plugin-14" type="string" value="netload"/>
+    <property name="plugin-9" type="string" value="showdesktop">
+      <property name="show-on-hover" type="bool" value="false"/>
+    </property>
   </property>
 </channel>

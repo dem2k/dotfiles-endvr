@@ -1,1 +1,6 @@
 Xcursor.size: 22
+XTerm*faceName: JetBrainsMono Nerd Font Mono
+XTerm*faceSize: 12
+XTerm*background: black
+XTerm*foreground: white
+XTerm*geometry: 132x40 

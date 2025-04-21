@@ -7,6 +7,9 @@ image/avif=xnviewmp.desktop
 image/gif=xnviewmp.desktop
 application/pdf=mupdf.desktop
 application/oxps=mupdf.desktop
+image/svg=xnviewmp.desktop
+image/webp=xnviewmp.desktop;
 
 [Added Associations]
 image/bmp=xnviewmp.desktop;
+image/webp=xnviewmp.desktop;

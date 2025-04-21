@@ -118,9 +118,107 @@
         <Separator>
           <Style>True</Style>
         </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
+        <Menu>
+          <ID>{18C4BA49-D1EF-4B88-9736-649F81C42F03}</ID>
+          <MenuItems>
+            <Command>
+              <ID>{8A02DAEA-E91E-4DCA-9D38-69E167D259F7}</ID>
+              <Icon>cm_runterm</Icon>
+              <Hint>(&amp;P) Terminalemulation öffnen</Hint>
+              <Command>cm_RunTerm</Command>
+            </Command>
+            <Program>
+              <ID>{C8647CCC-448F-43DD-977B-0259288CE7CB}</ID>
+              <Icon>/home/dk/bin/quick-actions.sh</Icon>
+              <Hint>(&amp;Q) Run Quick-Actions on File</Hint>
+              <Command>/home/dk/bin/quick-actions.sh</Command>
+              <Params>%p</Params>
+            </Program>
+            <Command>
+              <ID>{68235F3F-14E7-4436-8526-DAB1230655A5}</ID>
+              <Icon>cm_changedir</Icon>
+              <Hint>(&amp;M) Home Dir</Hint>
+              <Command>cm_ChangeDir</Command>
+              <Param>/home/dk/</Param>
+            </Command>
+            <Command>
+              <ID>{1F1741C1-871D-43D1-B4F4-BF510A5D7442}</ID>
+              <Icon>cm_changedir</Icon>
+              <Hint>(&amp;W) Working Dir</Hint>
+              <Command>cm_ChangeDir</Command>
+              <Param>/home/dk/x-tmp</Param>
+            </Command>
+            <Command>
+              <ID>{C3FFA075-8142-42A8-8A5B-1D8B99AF7CC2}</ID>
+              <Icon>cm_changedir</Icon>
+              <Hint>(&amp;E) Desktop</Hint>
+              <Command>cm_ChangeDir</Command>
+              <Param>/home/dk/Desktop</Param>
+            </Command>
+            <Command>
+              <ID>{CC49E502-0472-4CC7-BB7E-389655C61CB5}</ID>
+              <Icon>cm_changedir</Icon>
+              <Hint>(&amp;D) Downloads</Hint>
+              <Command>cm_ChangeDir</Command>
+              <Param>/home/dk/Downloads</Param>
+            </Command>
+            <Command>
+              <ID>{E5FAD90D-7975-411F-BBB1-031D7E5DCE2A}</ID>
+              <Icon>cm_changedir</Icon>
+              <Hint>(&amp;A) Tools</Hint>
+              <Command>cm_ChangeDir</Command>
+              <Param>/home/dk/bin</Param>
+            </Command>
+            <Separator>
+              <Style>False</Style>
+            </Separator>
+            <Menu>
+              <ID>{16F5C088-831F-4911-91FB-6EDACEE0B6FE}</ID>
+              <Hint>(&amp;Y) Yank</Hint>
+              <MenuItems>
+                <Command>
+                  <ID>{A6D03BB5-5EEA-44B3-9844-7B2CB76FED4F}</ID>
+                  <Icon>cm_copyfullnamestoclip</Icon>
+                  <Hint>(&amp;Y) Dateinamen mit komplettem Pfad kopieren</Hint>
+                  <Command>cm_CopyFullNamesToClip</Command>
+                </Command>
+                <Command>
+                  <ID>{90C5952D-1F87-4A9F-8831-D28B3FF0D7E6}</ID>
+                  <Icon>cm_copynamestoclip</Icon>
+                  <Hint>(&amp;W) Dateinamen in die Zwischenablage kopieren</Hint>
+                  <Command>cm_CopyNamesToClip</Command>
+                </Command>
+              </MenuItems>
+            </Menu>
+            <Menu>
+              <ID>{9C42587B-12E1-4C2F-AC6E-055DBA58832F}</ID>
+              <Hint>(&amp;V) Dateien Markieren</Hint>
+              <MenuItems>
+                <Command>
+                  <ID>{34C21019-C443-46EF-9F75-DE460394E28F}</ID>
+                  <Icon>cm_markcurrentextension</Icon>
+                  <Hint>(&amp;V) Alle mit gleicher Erweiterung wählen</Hint>
+                  <Command>cm_MarkCurrentExtension</Command>
+                </Command>
+                <Command>
+                  <ID>{E8F7C6ED-DAB4-45CF-9890-350317F0F8EB}</ID>
+                  <Icon>cm_markinvert</Icon>
+                  <Hint>(&amp;I) Auswahl umkehren</Hint>
+                  <Command>cm_MarkInvert</Command>
+                </Command>
+              </MenuItems>
+            </Menu>
+            <Separator>
+              <Style>True</Style>
+            </Separator>
+            <Command>
+              <ID>{386374F0-04D7-4C24-9387-1EA3754DE564}</ID>
+              <Icon>cm_dirhotlist</Icon>
+              <Hint>(&amp;S) Verzeichnisliste</Hint>
+              <Command>cm_DirHotList</Command>
+            </Command>
+          </MenuItems>
+        </Menu>
         <Separator>
           <Style>True</Style>
         </Separator>
@@ -206,7 +304,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -240,67 +338,67 @@
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </Main>
     <Editor>
       <Name>JetBrainsMono Nerd Font</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </Editor>
     <Viewer>
       <Name>JetBrainsMono Nerd Font</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </Viewer>
     <ViewerBook>
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </ViewerBook>
     <Log>
       <Name>JetBrainsMono Nerd Font</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>0</Quality>
+      <Quality>2</Quality>
     </Log>
     <Console>
       <Name>JetBrainsMono Nerd Font</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </Console>
     <PathEdit>
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>0</Quality>
+      <Quality>2</Quality>
     </PathEdit>
     <FunctionButtons>
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>0</Quality>
+      <Quality>2</Quality>
     </FunctionButtons>
     <SearchResults>
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>0</Quality>
+      <Quality>2</Quality>
     </SearchResults>
     <TreeViewMenu>
       <Name>Noto Sans Condensed Medium</Name>
       <Size>14</Size>
       <Style>0</Style>
-      <Quality>0</Quality>
+      <Quality>2</Quality>
     </TreeViewMenu>
     <StatusBar>
       <Name/>
       <Size>15</Size>
       <Style>0</Style>
-      <Quality>1</Quality>
+      <Quality>2</Quality>
     </StatusBar>
   </Fonts>
   <Colors>
@@ -575,7 +673,7 @@
     <PaintMode>0</PaintMode>
     <PaintWidth>5</PaintWidth>
     <NumberOfColumns>1</NumberOfColumns>
-    <TabSpaces>8</TabSpaces>
+    <TabSpaces>4</TabSpaces>
     <MaxCodeSize>128</MaxCodeSize>
     <MaxTextWidth>1024</MaxTextWidth>
     <ViewerMode>1</ViewerMode>

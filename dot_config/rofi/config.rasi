@@ -21,8 +21,8 @@ configuration {
 /*	dpi: -1;*/
 
 	/*---------- Matching setting ----------*/
-	matching: "normal";
-	tokenize: true;
+	matching: "glob";
+	tokenize: false;
 
 	/*---------- SSH settings ----------*/
 	ssh-client: "ssh";
@@ -32,8 +32,8 @@ configuration {
 
 	/*---------- Drun settings ----------*/
 	drun-categories: "";
-	drun-match-fields: "name,generic,exec,categories,keywords";
-	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	drun-match-fields: "exec,name";
+	drun-display-format: "{name} [<span weight='light' size='small'><i>({comment})</i></span>]";
 	drun-show-actions: false;
 	drun-url-launcher: "xdg-open";
 	drun-use-desktop-cache: false;
@@ -92,9 +92,9 @@ configuration {
 
 	/*---------- File browser settings ----------*/
     filebrowser {
-/*	  directory: "/home";*/
+	  directory: "/home/dk";
       directories-first: true;
-      sorting-method:    "name";
+      sorting-method:  "name";
     }
 
 	/*---------- Other settings ----------*/

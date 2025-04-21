@@ -7,10 +7,6 @@
         <Command>cm_HelpIndex</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>F2</Shortcut>
-        <Command>cm_RenameOnly</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Shift+F6</Shortcut>
         <Command>cm_RenameOnly</Command>
       </Hotkey>
@@ -249,10 +245,6 @@
         <Command>cm_OperationsViewer</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+X</Shortcut>
-        <Command>cm_Exit</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Alt+Z</Shortcut>
         <Command>cm_TargetEqualSource</Command>
       </Hotkey>
@@ -392,12 +384,14 @@
         <Param>index=9</Param>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+S</Shortcut>
-        <Command>cm_DirHotList</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Alt+F6</Shortcut>
         <Command>cm_ExtractFiles</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Alt+S</Shortcut>
+        <Command>cm_ExecuteToolbarItem</Command>
+        <Param>ToolBarID=TfrmOptionsToolbarMiddle</Param>
+        <Param>ToolItemID={18C4BA49-D1EF-4B88-9736-649F81C42F03}</Param>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
