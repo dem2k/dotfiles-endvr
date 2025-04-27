@@ -134,6 +134,9 @@
               <Command>/home/dk/bin/quick-actions.sh</Command>
               <Params>%p</Params>
             </Program>
+            <Separator>
+              <Style>False</Style>
+            </Separator>
             <Command>
               <ID>{68235F3F-14E7-4436-8526-DAB1230655A5}</ID>
               <Icon>cm_changedir</Icon>
@@ -233,13 +236,6 @@
           <Icon>/usr/share/icons/Qogir/scalable/apps/meld.svg</Icon>
           <Hint>Vergleichen</Hint>
           <Command>meld</Command>
-          <Params>%pl %pr</Params>
-        </Program>
-        <Program>
-          <ID>{A99DD519-E3DE-4E77-ACE5-95098CB0CC41}</ID>
-          <Icon>/home/dk/.local/icons/diffmerge.png</Icon>
-          <Hint>diffmerge</Hint>
-          <Command>/usr/bin/diffmerge</Command>
           <Params>%pl %pr</Params>
         </Program>
       </Row>
@@ -796,9 +792,9 @@
     <PathToLibrary>liblua5.1.so.0</PathToLibrary>
   </Lua>
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
-  <HotKeySortOrder>0</HotKeySortOrder>
+  <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>tgz</LastUsedPacker>
+  <LastUsedPacker>zip</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>

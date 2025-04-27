@@ -4598,13 +4598,16 @@ replacements from Isearch is `M-s w ... M-%'."
 
 
 ;; ADVISE `isearch-update' to run `isearch-update-post-hook', in Emacs 20-21.
+;; (when (< emacs-major-version 22)
+;;   (defadvice isearch-update (after run-isearch-update-post-hook activate)
+;;     "Run `isearch-update-post-hook' at the end."
+;;     (run-hooks 'isearch-update-post-hook)))
+
 (when (< emacs-major-version 22)
-
-  (defadvice isearch-update (after run-isearch-update-post-hook activate)
-    "Run `isearch-update-post-hook' at the end."
+  (defun my/run-isearch-update-post-hook (&rest _args)
+    "Run `isearch-update-post-hook' at the end of `isearch-update'."
     (run-hooks 'isearch-update-post-hook))
-
-  )
+  (advice-add 'isearch-update :after #'my/run-isearch-update-post-hook))
 
 
 ;; REPLACE ORIGINAL in `isearch.el'.
@@ -5162,27 +5165,41 @@ Non-nil argument REGEXP-FUNCTION:
   isearch-success)
 
 
-(defadvice isearch-done (after reset-ring-bell-fn activate)
-  "Reset `ring-bell-function' to `isearchp-orig-ring-bell-fn'."
-  (setq ring-bell-function  isearchp-orig-ring-bell-fn))
+;; (defadvice isearch-done (after reset-ring-bell-fn activate)
+;;   "Reset `ring-bell-function' to `isearchp-orig-ring-bell-fn'."
+;;   (setq ring-bell-function  isearchp-orig-ring-bell-fn))
+
+(defun my/reset-ring-bell-fn-after-isearch-done (&rest _args)
+  "Reset `ring-bell-function' to `isearchp-orig-ring-bell-fn' after `isearch-done'."
+  (setq ring-bell-function isearchp-orig-ring-bell-fn))
+(advice-add 'isearch-done :after #'my/reset-ring-bell-fn-after-isearch-done)
 
 
-;;; Dynamic search filtering.
-;;;
-(when (or (> emacs-major-version 24)    ; Emacs 24.4+
-          (and (= emacs-major-version 24)  (> emacs-minor-version 3)))
+;; ;;; Dynamic search filtering.
+;; ;;;
+;; (when (or (> emacs-major-version 24)    ; Emacs 24.4+
+;;           (and (= emacs-major-version 24)  (> emacs-minor-version 3)))
+;;   (defadvice isearch-done (after isearchp-restore/update-filter-pred activate)
+;;     "Reset `isearch-filter-predicate' or `isearchp-kept-filter-predicate'.
+;; If `isearchp-auto-keep-filter-predicate-flag' is non-nil then set
+;; `isearchp-kept-filter-predicate' to the current value of
+;; `isearch-filter-predicate'.  Otherwise, do the opposite."
+;;     (if isearchp-auto-keep-filter-predicate-flag
+;;         (setq isearchp-kept-filter-predicate  isearch-filter-predicate)
+;;       (setq isearch-filter-predicate  isearchp-kept-filter-predicate))))
 
-  (defadvice isearch-done (after isearchp-restore/update-filter-pred activate)
-    "Reset `isearch-filter-predicate' or `isearchp-kept-filter-predicate'.
+(when (or (> emacs-major-version 24)
+          (and (= emacs-major-version 24) (> emacs-minor-version 3)))
+  (defun my/isearchp-restore-or-update-filter-pred (&rest _args)
+    "Reset `isearch-filter-predicate' or `isearchp-kept-filter-predicate' after `isearch-done'.
 If `isearchp-auto-keep-filter-predicate-flag' is non-nil then set
 `isearchp-kept-filter-predicate' to the current value of
-`isearch-filter-predicate'.  Otherwise, do the opposite."
+`isearch-filter-predicate'. Otherwise, do the opposite."
     (if isearchp-auto-keep-filter-predicate-flag
-        (setq isearchp-kept-filter-predicate  isearch-filter-predicate)
-      (setq isearch-filter-predicate  isearchp-kept-filter-predicate)))
-
-  )
-
+        (setq isearchp-kept-filter-predicate isearch-filter-predicate)
+      (setq isearch-filter-predicate isearchp-kept-filter-predicate)))
+  
+  (advice-add 'isearch-done :after #'my/isearchp-restore-or-update-filter-pred))
 
 ;; REPLACE ORIGINAL in `isearch.el'.
 ;;
@@ -5799,17 +5816,21 @@ If SPACE-BEFORE is non-nil,  put a space before, instead of after it."
 
   )
 
+;; ;; Fix for Emacs bug #20234.  (Fixed in Emacs 24.5.)
+;; (when (and (featurep 'misearch)  (or (< emacs-major-version 24) ; Emacs 23 through 24.4.
+;;                                      (and (= emacs-major-version 24)  (< emacs-minor-version 5))))
+;;   (defadvice multi-isearch-end (after reset-buff-list activate)
+;;     "Reset `multi-isearch-buffer-list' to nil."
+;;     (setq multi-isearch-buffer-list  ())))
 
-;; Fix for Emacs bug #20234.  (Fixed in Emacs 24.5.)
-
-(when (and (featurep 'misearch)  (or (< emacs-major-version 24) ; Emacs 23 through 24.4.
-                                     (and (= emacs-major-version 24)  (< emacs-minor-version 5))))
-
-  (defadvice multi-isearch-end (after reset-buff-list activate)
-    "Reset `multi-isearch-buffer-list' to nil."
-    (setq multi-isearch-buffer-list  ()))
-
-  )
+(when (and (featurep 'misearch)
+           (or (< emacs-major-version 24)
+               (and (= emacs-major-version 24) (< emacs-minor-version 5))))
+  (defun my/multi-isearch-end-reset-buff-list (&rest _args)
+    "Reset `multi-isearch-buffer-list' to nil after `multi-isearch-end'."
+    (setq multi-isearch-buffer-list ()))
+  dd
+  (advice-add 'multi-isearch-end :after #'my/multi-isearch-end-reset-buff-list))
 
 
 ;;; Replacement on demand.  Emacs 22+

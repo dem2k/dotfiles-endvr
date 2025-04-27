@@ -69,10 +69,6 @@
         <Command>cm_QuickFilter</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+H</Shortcut>
-        <Command>cm_DirHistory</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Alt+Down</Shortcut>
         <Command>cm_DirHistory</Command>
       </Hotkey>
@@ -211,10 +207,6 @@
       <Hotkey>
         <Shortcut>Ctrl+\</Shortcut>
         <Command>cm_ChangeDirToRoot</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+.</Shortcut>
-        <Command>cm_ShowSysFiles</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Shift+F2</Shortcut>
@@ -394,6 +386,10 @@
         <Param>ToolItemID={18C4BA49-D1EF-4B88-9736-649F81C42F03}</Param>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+H</Shortcut>
+        <Command>cm_ShowSysFiles</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
@@ -406,11 +402,6 @@
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+A</Shortcut>
-        <Command>cm_MarkMarkAll</Command>
-        <Control>Files Panel</Control>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Num+</Shortcut>
         <Command>cm_MarkMarkAll</Command>
         <Control>Files Panel</Control>
       </Hotkey>

@@ -221,6 +221,8 @@
   :demand t
   :after evil
   :config
+  (setq-default evil-surround-pairs-alist
+        (push '(?q . ("\"" . "\"")) evil-surround-pairs-alist))
   (global-evil-surround-mode +1))
 
 (use-package evil-goggles

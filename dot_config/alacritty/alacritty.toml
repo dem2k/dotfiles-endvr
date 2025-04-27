@@ -3,6 +3,9 @@
 # program = "c:/scoop/apps/pwsh/current/pwsh.exe"
 
 [general]
+live_config_reload = false
+# working_directory = "None"
+
 import = [
  "~/.config/alacritty/breeze.toml"
 ]

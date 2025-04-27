@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:$HOME/bin
+
+# java options. default --> /usr/lib/jvm/zulu21-fx-bin
 export JAVA_HOME=/usr/lib/jvm/default
+export IDEA_JDK=$JAVA_HOME
+export IDEA_JFX=$JAVA_HOME
 
 # default pager is less.
 export PAGER="bat --paging=always"
