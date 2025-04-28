@@ -1,7 +1,15 @@
+## install xorg and xfce
+
+```
+sudo pacman -S --needed xorg xorg-apps xfce4 xfce4-goodies ly
+sudo systemctl set-default multi-user.target
+sudo systemctl enable --now ly.service
+```
+
 ## install packages
 ```
 mkdir -p ~/{bin,Bilder,Desktop,Dokumente,Downloads,IdeaProjects,Musik,Videos}
-sudo pacman -S --needed xorg xfce4 xfce4-goodies git fzf alacritty lazygit neovim zoxide \
+sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide \
    chezmoi bat tmux ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc ripgrep lf
 ```
 
