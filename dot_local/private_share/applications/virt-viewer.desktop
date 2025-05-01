@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/virt-viewer --connect qemu:///system
+Terminal=false
+Hidden=false
+Name=Virt Viewer
+Icon=virt-viewer
+Comment=Display the Graphical Console for a Virtual Machine
+StartupNotify=true
+GenericName=Display the Graphical Console for a Virtual Machine
