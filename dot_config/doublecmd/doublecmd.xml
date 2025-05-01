@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.23 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.24 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -243,11 +243,11 @@
   </Toolbars>
   <MainWindow>
     <Position Save="False">
-      <Left>883</Left>
-      <Top>516</Top>
-      <Width>1951</Width>
-      <Height>1151</Height>
-      <PixelsPerInch>120</PixelsPerInch>
+      <Left>352</Left>
+      <Top>177</Top>
+      <Width>1171</Width>
+      <Height>691</Height>
+      <PixelsPerInch>72</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -332,67 +332,67 @@
   <Fonts>
     <Main>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Main>
     <Editor>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Editor>
     <Viewer>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Viewer>
     <ViewerBook>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </ViewerBook>
     <Log>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Log>
     <Console>
       <Name>JetBrainsMono Nerd Font</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Console>
     <PathEdit>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </PathEdit>
     <FunctionButtons>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </FunctionButtons>
     <SearchResults>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </SearchResults>
     <TreeViewMenu>
       <Name>Noto Sans Condensed Medium</Name>
-      <Size>14</Size>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </TreeViewMenu>
     <StatusBar>
-      <Name/>
-      <Size>15</Size>
+      <Name>Noto Sans</Name>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </StatusBar>
@@ -419,8 +419,8 @@
     <MainMenu>True</MainMenu>
     <ButtonBar Enabled="False">
       <FlatIcons>False</FlatIcons>
-      <ButtonHeight>38</ButtonHeight>
-      <IconSize>32</IconSize>
+      <ButtonHeight>28</ButtonHeight>
+      <IconSize>24</IconSize>
       <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>True</ReportErrorWithCommands>
       <FilenameStyle>0</FilenameStyle>
@@ -428,9 +428,9 @@
       <PathModifierElements>0</PathModifierElements>
     </ButtonBar>
     <MiddleBar Enabled="True">
-      <FlatIcons>False</FlatIcons>
-      <ButtonHeight>38</ButtonHeight>
-      <IconSize>32</IconSize>
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>28</ButtonHeight>
+      <IconSize>24</IconSize>
       <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>True</ReportErrorWithCommands>
     </MiddleBar>
@@ -632,16 +632,16 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>24</Size>
-    <DiskSize>24</DiskSize>
+    <Size>16</Size>
+    <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>120</PixelsPerInch>
+    <PixelsPerInch>72</PixelsPerInch>
     <ShowInMenus Enabled="True">
-      <Size>24</Size>
+      <Size>16</Size>
     </ShowInMenus>
     <ShowButtonGlyphs>0</ShowButtonGlyphs>
   </Icons>
@@ -794,7 +794,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>tgz</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -809,18 +809,18 @@
       <Unique>D7F629E9-5AAE-4A3B-B05B-BC641D8D93E5</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>120</PixelsPerInch>
+      <PixelsPerInch>72</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>2518755D-D5B2-4E4C-B36D-6C30F0C0F9EF</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>549</Width>
+          <Width>330</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans Condensed Medium</Name>
-            <Size>14</Size>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -832,11 +832,11 @@
           <Title>Größe</Title>
           <Unique>50458812-F3CB-4AFF-A0EE-94FE7917DEBF</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>70</Width>
+          <Width>42</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans Condensed Medium</Name>
-            <Size>14</Size>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -848,11 +848,11 @@
           <Title>Datum</Title>
           <Unique>2AED1B26-399C-4D69-9332-3CAD8B9DBDBB</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>206</Width>
+          <Width>123</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans Condensed Medium</Name>
-            <Size>14</Size>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -864,11 +864,11 @@
           <Title>Attr</Title>
           <Unique>8C871DBC-7D61-4A3C-8324-9D1DF2CE0BD6</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>100</Width>
+          <Width>60</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans Condensed Medium</Name>
-            <Size>14</Size>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>

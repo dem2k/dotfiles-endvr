@@ -18,8 +18,8 @@
         <value type="int" value="2"/>
         <value type="int" value="5"/>
         <value type="int" value="16"/>
-        <value type="int" value="6"/>
         <value type="int" value="8"/>
+        <value type="int" value="6"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="14"/>
@@ -56,15 +56,15 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
         <value type="string" value="virt-manager"/>
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
         <value type="string" value="netzwerkadresse für ethernet-netz »ethernet-verbindung 1« wird angefordert …"/>
         <value type="string" value="javaembeddedframe"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="ethernet-netzverbindung »kabelgebundene verbindung 1« ist aktiv"/>
-        <value type="string" value="netzwerk-manager-applet"/>
         <value type="string" value="notizen"/>
         <value type="string" value="zwischenablage"/>
+        <value type="string" value="netzwerk-manager-applet"/>
       </property>
       <property name="known-items" type="array">
         <value type="string" value="redshift"/>
@@ -73,6 +73,12 @@
         <value type="string" value="blueman"/>
         <value type="string" value="screengrab"/>
       </property>
+      <property name="hidden-items" type="array">
+      </property>
+      <property name="icon-size" type="int" value="0"/>
+      <property name="hidden-legacy-items" type="array">
+      </property>
+      <property name="single-row" type="bool" value="false"/>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
@@ -81,24 +87,26 @@
     </property>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
+      <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
-      <property name="digital-layout" type="uint" value="1"/>
+      <property name="digital-layout" type="uint" value="3"/>
       <property name="digital-date-format" type="string" value="%a, %d %b"/>
       <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
       <property name="digital-date-font" type="string" value="Sans 9"/>
       <property name="digital-time-font" type="string" value="Sans 14"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
+      <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-24" type="string" value="separator"/>
+    <property name="plugin-24" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="popup-at-pointer" type="bool" value="true"/>

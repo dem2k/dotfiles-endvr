@@ -1,5 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/bin
+export PATH=$HOME/.local/bin:$PATH
+
+## look in /etc/environment file.
+# export QT_FONT_DPI=120
+# export QT_SCALE_FACTOR=1.5
+# export QT_QPA_PLATFORMTHEME=qt6ct
 
 # java options. default --> /usr/lib/jvm/zulu21-fx-bin
 export JAVA_HOME=/usr/lib/jvm/default

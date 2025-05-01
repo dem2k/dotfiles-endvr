@@ -28,10 +28,19 @@ glowormdcat() {
 	shift
 	if command -v glow > /dev/null 2>&1; then
 		glow "$file"
-	else
+	elif command -v mdcat > /dev/null 2>&1; then
 		mdcat "$file"
+    else
+        batorcat "$file"
 	fi
 }
+
+# # todo: how?
+# if [ "$lf_user_hex_view" = true ]; then
+#     hexdump -C "$1"
+# else
+#     cat "$1"
+# fi
 
 case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 	*.tgz|*.tar.gz) tar tzf "$1" ;;
@@ -42,6 +51,7 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 	*.gz) gzip -l "$1" ;;
 	*.rar) unrar l "$1" ;;
 	*.md) glowormdcat "$1";;
+    *.json) cat "$1"|jq ;;
 	*.7z) 7z l "$1" ;;
 	*.[1-8]) man "$1" | col -b ;;
 	*.o) nm "$1";;
@@ -50,7 +60,8 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 	*.odt|*.ods|*.odp|*.sxw) odt2txt "$1" ;;
 	*.doc) catdoc "$1" ;;
 	*.docx) docx2txt "$1" ;;
-	*.xml|*.html) w3m -dump "$1";;
+	*.xml) batorcat "$1" ;;
+	*.html) w3m -dump "$1";;
 	*.xls|*.xlsx)
 		ssconvert --export-type=Gnumeric_stf:stf_csv "$1" "fd://1" | batorcat --language=csv
 		;;
