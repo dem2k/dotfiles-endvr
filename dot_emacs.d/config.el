@@ -102,21 +102,63 @@
 (scroll-bar-mode -1)
 (file-name-shadow-mode +1)
 
-(setq major-mode-remap-alist
-      (append '((js-mode . js-ts-mode)
-                (sh-mode . bash-ts-mode)
-                (yaml-mode . yaml-ts-mode)
-                (bash-mode . bash-ts-mode)
-                (java-mode . java-ts-mode))
-              major-mode-remap-alist))
+;; (setq major-mode-remap-alist
+;;       (append '((js-mode . js-ts-mode)
+;;                 (sh-mode . bash-ts-mode)
+;;                 (yaml-mode . yaml-ts-mode)
+;;                 (bash-mode . bash-ts-mode)
+;;                 (java-mode . java-ts-mode))
+;;               major-mode-remap-alist))
 
-(setq auto-mode-alist
-      (append '(("\\.java\\'" . java-ts-mode)
-                ("\\.js\\'" . js-ts-mode)
-                ("\\.sh\\'" . bash-ts-mode)
-                ("\\.js\\'" . javascript-mode)
-                ("\\.ya?ml\\'" . yaml-ts-mode))
-              auto-mode-alist))
+;; (setq auto-mode-alist
+;;       (append '(("\\.java\\'" . java-ts-mode)
+;;                 ("\\.js\\'" . js-ts-mode)
+;;                 ("\\.sh\\'" . bash-ts-mode)
+;;                 ("\\.js\\'" . javascript-mode)
+;;                 ("\\.ya?ml\\'" . yaml-ts-mode))
+;;               auto-mode-alist))
+
+
+
+;; Tree-sitter aktivieren, falls verfügbar
+(when (treesit-available-p)
+  (require 'treesit)
+  ;; Manuell YAML-Repository hinzufügen (nicht standardmäßig enthalten)
+  (add-to-list 'treesit-language-source-alist
+               '(yaml "https://github.com/ikatyang/tree-sitter-yaml"))
+
+  ;; Optional: Parser automatisch installieren, falls nicht vorhanden
+  ;;  (dolist (lang '(bash c css html javascript json python ruby rust toml tsx typescript yaml java))
+  ;;    (unless (treesit-language-available-p lang)
+  ;;      (treesit-install-language-grammar lang)))
+
+  ;; Tree-sitter-Modi automatisch aktivieren
+  (setq major-mode-remap-alist
+        '((sh-mode         . bash-ts-mode)
+          (bash-mode       . bash-ts-mode)
+          (js-mode         . js-ts-mode)
+          (json-mode       . json-ts-mode)
+          (yaml-mode       . yaml-ts-mode)
+          (c-mode          . c-ts-mode)
+          (python-mode     . python-ts-mode)
+          (css-mode        . css-ts-mode)
+          (html-mode       . html-ts-mode)
+          (typescript-mode . typescript-ts-mode)
+          (tsx-mode        . tsx-ts-mode)
+          (java-mode       . java-ts-mode)))
+
+  (setq auto-mode-alist
+        (append '(("\\.java\\'" . java-ts-mode)
+                  ("\\.js\\'" . js-ts-mode)
+                  ("\\.sh\\'" . bash-ts-mode)
+                  ("\\.css\\'" . css-ts-mode)
+                  ("\\.html?\\'" . html-ts-mode)
+                  ("\\.json\\'" . json-ts-mode)
+                  ("\\.ya?ml\\'" . yaml-ts-mode))
+                auto-mode-alist))
+
+  (message "Tree-sitter initialisiert."))
+
 
 ;; real autosave all buffer after timeout or lost focus
 (auto-save-mode -1)
