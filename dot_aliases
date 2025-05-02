@@ -1,12 +1,16 @@
 #
 # meine aliase. ne, is klar!
 #
-alias l='ls -lhFv --color=auto --group-directories-first'
-alias ll='ls -lhFva --color=auto --group-directories-first'
+alias ls='command ls --color=auto'
+alias l='command ls -lhFv --color=auto --group-directories-first'
+alias ll='command ls -lhFva --color=auto --group-directories-first'
+alias grep='command grep --color=auto'
 alias more='/usr/bin/bat'
 alias cd..='cd ..'
 alias cd='z'
 alias zz='zi'
+alias rd='rmdir'
+alias md='mkdir -p'
 alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
 alias docker='podman'
 

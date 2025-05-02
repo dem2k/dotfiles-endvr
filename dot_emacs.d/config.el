@@ -102,15 +102,37 @@
 (scroll-bar-mode -1)
 (file-name-shadow-mode +1)
 
-(add-to-list 'auto-mode-alist
-             '("\\.java\\'" . java-ts-mode)
-             ;; '("\\.js\\'" . js-ts-mode)
-             ;; '("\\.js\\'" . javascript-mode)
-             '("\\.yaml\\'" . yaml-ts-mode))
+;;(add-to-list 'major-mode-remap-alist
+;;             '(js-mode . js-ts-mode)
+;;             '(sh-mode . bash-ts-mode)
+;;             '(yaml-mode . yaml-ts-mode)
+;;             '(bash-mode . bash-ts-mode)
+;;             '(java-mode . java-ts-mode))
 
-(add-to-list 'major-mode-remap-alist
-             ;; '(js-mode . js-ts-mode)
-             '(java-mode . java-ts-mode))
+(setq major-mode-remap-alist
+      (append '((js-mode . js-ts-mode)
+                (sh-mode . bash-ts-mode)
+                (yaml-mode . yaml-ts-mode)
+                (bash-mode . bash-ts-mode)
+                (java-mode . java-ts-mode))
+              major-mode-remap-alist))
+
+
+;;(add-to-list 'auto-mode-alist
+;;             '("\\.java\\'" . java-ts-mode)
+;;             ;; '("\\.js\\'" . js-ts-mode)
+;;             ;; '("\\.sh\\'" . bash-ts-mode)
+;;             ;; '("\\.js\\'" . javascript-mode)
+;;             '("\\.ya?ml\\'" . yaml-ts-mode))
+
+(setq auto-mode-alist
+      (append '(("\\.java\\'" . java-ts-mode)
+                ("\\.js\\'" . js-ts-mode)
+                ("\\.sh\\'" . bash-ts-mode)
+                ("\\.js\\'" . javascript-mode)
+                ("\\.ya?ml\\'" . yaml-ts-mode))
+              auto-mode-alist))
+
 
 ;; real autosave all buffer after timeout or lost focus
 (auto-save-mode -1)
@@ -222,7 +244,7 @@
   :after evil
   :config
   (setq-default evil-surround-pairs-alist
-        (push '(?q . ("\"" . "\"")) evil-surround-pairs-alist))
+                (push '(?q . ("\"" . "\"")) evil-surround-pairs-alist))
   (global-evil-surround-mode +1))
 
 (use-package evil-goggles
@@ -351,7 +373,7 @@
    :preview-key '(:debounce 0.5 any)))
 
 (use-package embark
- 
+
   :bind (([remap describe-bindings] . embark-bindings)
          ("C-." . embark-act) ; In a French AZERTY keyboard, the ² key is right above TAB
          ("M-²" . embark-collect)
@@ -943,7 +965,7 @@
 (use-package rg
   :custom
   (rg-executable (if (eq system-type 'windows-nt)
-      "c:/scoop/apps/ripgrep/current/rg.exe" "rg"))
+                     "c:/scoop/apps/ripgrep/current/rg.exe" "rg"))
   :hook
   (rg-mode . (lambda () (switch-to-buffer-other-window "*rg*")))
   (rg-mode . wgrep-rg-setup))

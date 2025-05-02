@@ -115,9 +115,6 @@
     </MainToolbar>
     <MiddleToolbar>
       <Row>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
         <Menu>
           <ID>{18C4BA49-D1EF-4B88-9736-649F81C42F03}</ID>
           <MenuItems>
@@ -222,12 +219,6 @@
             </Command>
           </MenuItems>
         </Menu>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
-        <Separator>
-          <Style>True</Style>
-        </Separator>
         <Separator>
           <Style>True</Style>
         </Separator>
