@@ -102,13 +102,6 @@
 (scroll-bar-mode -1)
 (file-name-shadow-mode +1)
 
-;;(add-to-list 'major-mode-remap-alist
-;;             '(js-mode . js-ts-mode)
-;;             '(sh-mode . bash-ts-mode)
-;;             '(yaml-mode . yaml-ts-mode)
-;;             '(bash-mode . bash-ts-mode)
-;;             '(java-mode . java-ts-mode))
-
 (setq major-mode-remap-alist
       (append '((js-mode . js-ts-mode)
                 (sh-mode . bash-ts-mode)
@@ -117,14 +110,6 @@
                 (java-mode . java-ts-mode))
               major-mode-remap-alist))
 
-
-;;(add-to-list 'auto-mode-alist
-;;             '("\\.java\\'" . java-ts-mode)
-;;             ;; '("\\.js\\'" . js-ts-mode)
-;;             ;; '("\\.sh\\'" . bash-ts-mode)
-;;             ;; '("\\.js\\'" . javascript-mode)
-;;             '("\\.ya?ml\\'" . yaml-ts-mode))
-
 (setq auto-mode-alist
       (append '(("\\.java\\'" . java-ts-mode)
                 ("\\.js\\'" . js-ts-mode)
@@ -132,7 +117,6 @@
                 ("\\.js\\'" . javascript-mode)
                 ("\\.ya?ml\\'" . yaml-ts-mode))
               auto-mode-alist))
-
 
 ;; real autosave all buffer after timeout or lost focus
 (auto-save-mode -1)
