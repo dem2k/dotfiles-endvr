@@ -128,7 +128,7 @@
               <ID>{C8647CCC-448F-43DD-977B-0259288CE7CB}</ID>
               <Icon>/home/dk/bin/quick-actions.sh</Icon>
               <Hint>(&amp;Q) Run Quick-Actions on File</Hint>
-              <Command>/home/dk/bin/quick-actions.sh</Command>
+              <Command>/home/dk/.local/bin/quick-actions.sh</Command>
               <Params>%p</Params>
             </Program>
             <Separator>

@@ -981,10 +981,18 @@
 ;; Tree-sitter aktivieren, falls verfügbar
 (when (treesit-available-p)
   (require 'treesit)
-  ;; Manuell YAML-Repository hinzufügen (nicht standardmäßig enthalten)
+  ;; Manuell Repository hinzufügen (nicht standardmäßig enthalten)
   (add-to-list 'treesit-language-source-alist
-               '(yaml "https://github.com/ikatyang/tree-sitter-yaml"))
+               '(yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml"))
+  (add-to-list 'treesit-language-source-alist
+               '(toml "https://github.com/tree-sitter-grammars/tree-sitter-toml"))
+  ;; (add-to-list 'treesit-language-source-alist
+  ;;              '(csv "https://github.com/tree-sitter-grammars/tree-sitter-csv"))
+  (add-to-list 'treesit-language-source-alist
+               '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile"))
 
+
+  
   ;; Optional: Parser automatisch installieren, falls nicht vorhanden
   ;;  (dolist (lang '(bash c css html javascript json python ruby rust toml tsx typescript yaml java))
   ;;    (unless (treesit-language-available-p lang)
@@ -1006,13 +1014,14 @@
           (java-mode       . java-ts-mode)))
 
   (setq auto-mode-alist
-        (append '(("\\.java\\'" . java-ts-mode)
-                  ("\\.js\\'" . js-ts-mode)
-                  ("\\.sh\\'" . bash-ts-mode)
-                  ("\\.css\\'" . css-ts-mode)
-                  ("\\.html?\\'" . html-ts-mode)
-                  ("\\.json\\'" . json-ts-mode)
-                  ("\\.ya?ml\\'" . yaml-ts-mode))
+        (append '(("\\.java\\'"      . java-ts-mode)
+                  ("\\.js\\'"        . js-ts-mode)
+                  ("\\.sh\\'"        . bash-ts-mode)
+                  ("\\.css\\'"       . css-ts-mode)
+                  ("\\Dockerfile\\'" . dockerfile-ts-mode)
+                  ("\\.html?\\'"     . html-ts-mode)
+                  ("\\.json\\'"      . json-ts-mode)
+                  ("\\.ya?ml\\'"     . yaml-ts-mode))
                 auto-mode-alist))
 
   (message "Tree-sitter initialisiert."))
