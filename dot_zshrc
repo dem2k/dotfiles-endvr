@@ -11,6 +11,8 @@ export JAVA_HOME=/usr/lib/jvm/default
 export IDEA_JDK=$JAVA_HOME
 export IDEA_JFX=$JAVA_HOME
 
+# formatiert das datum bei ls.
+export TIME_STYLE="+%d-%b-%Y %H:%M:%S"
 # default pager is less.
 export PAGER="bat --paging=always"
 

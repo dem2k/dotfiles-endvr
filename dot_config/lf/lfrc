@@ -71,7 +71,6 @@ cmd pager ${{
 
 map i :pager
 
-
 cmd on-init :{{
     cmd on-redraw %{{
         if [ "$lf_width" -le 60 ]; then

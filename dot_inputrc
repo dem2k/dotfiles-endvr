@@ -30,11 +30,10 @@ $include /etc/inputrc
 # set show-mode-in-prompt on
 
 # Ctrl-Delete: delete next word
-# "\e[3;5~": shell-kill-word
+#"\e[3;5~": shell-kill-word
 
 # Ctrl-Backspace
 "\C-H":backward-kill-word
-# "\C-H":shell-backward-kill-word
 
 #
 # end

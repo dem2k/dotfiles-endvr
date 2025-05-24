@@ -13,6 +13,8 @@ alias rd='rmdir'
 alias md='mkdir -p'
 alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
 alias docker='podman'
+alias lxc='incus'
+alias dysk='dysk -c +ino'
 
 alias duh='du -sch * | sort -h'
 alias cls='clear'
@@ -21,3 +23,11 @@ lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+yay-ql() {
+    pacman -Ql "$1" | grep -v '/$'
+}
+
+yay-qil() {
+    pacman -Qi "$1"
+    pacman -Ql "$1" | grep -v '/$'
+}

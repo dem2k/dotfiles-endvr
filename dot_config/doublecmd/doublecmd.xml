@@ -291,7 +291,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>True</ShowSystemFiles>
+    <ShowSystemFiles>False</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -322,8 +322,8 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>Noto Sans Condensed Medium</Name>
-      <Size>12</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </Main>
@@ -364,20 +364,20 @@
       <Quality>2</Quality>
     </PathEdit>
     <FunctionButtons>
-      <Name>Noto Sans Condensed Medium</Name>
-      <Size>12</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </FunctionButtons>
     <SearchResults>
-      <Name>Noto Sans Condensed Medium</Name>
-      <Size>12</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </SearchResults>
     <TreeViewMenu>
-      <Name>Noto Sans Condensed Medium</Name>
-      <Size>12</Size>
+      <Name>Roboto Condensed</Name>
+      <Size>14</Size>
       <Style>0</Style>
       <Quality>2</Quality>
     </TreeViewMenu>
@@ -785,7 +785,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>tgz</LastUsedPacker>
+  <LastUsedPacker>zip</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -1035,7 +1035,7 @@
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
   <MultiRenamePresets>
-    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <LastPreset>Standart</LastPreset>
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
@@ -1043,8 +1043,29 @@
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find>-hidpi</Find>
-        <Replace>(hidpi)</Replace>
+        <Find/>
+        <Replace/>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <CaseSensitive>False</CaseSensitive>
+        <OnlyFirst>False</OnlyFirst>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+      <Preset>
+        <Name>Standart</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find/>
+        <Replace/>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>

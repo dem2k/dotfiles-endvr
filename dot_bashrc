@@ -114,3 +114,5 @@ shopt -s histappend
 
 export PATH=$HOME/.local/bin:$PATH
 
+# formatiert das datum bei ls.
+export TIME_STYLE="+%d-%b-%Y %H:%M:%S"

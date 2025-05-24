@@ -7,11 +7,16 @@ $HOME/.emacs.d/#*#
 $HOME/.config/google-chrome/
 $HOME/.config/JetBrains/
 $HOME/.local/share/JetBrains/
-$HOME/.local/share/Containers/
+$HOME/.local/share/containers/
 $HOME/.local/share/Trash/
 $HOME/.local/share/chezmoi/
 $HOME/.local/share/nvim/
 $HOME/.local/state/
 $HOME/.local/vm-images/
+$HOME/.vm-images/
 $HOME/Downloads/**/*.mkv
+$HOME/Downloads/**/*.iso
+$HOME/Downloads/**/*.img.xz
 $HOME/VirtualBox/
+$HOME/IdeaProjects/my-archlinux-iso/**/*.iso
+/etc/libvirt/
