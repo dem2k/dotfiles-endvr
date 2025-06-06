@@ -990,8 +990,6 @@
   ;;              '(csv "https://github.com/tree-sitter-grammars/tree-sitter-csv"))
   (add-to-list 'treesit-language-source-alist
                '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile"))
-
-
   
   ;; Optional: Parser automatisch installieren, falls nicht vorhanden
   ;;  (dolist (lang '(bash c css html javascript json python ruby rust toml tsx typescript yaml java))
@@ -1025,3 +1023,11 @@
                 auto-mode-alist))
 
   (message "Tree-sitter initialisiert."))
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cua-mode t))

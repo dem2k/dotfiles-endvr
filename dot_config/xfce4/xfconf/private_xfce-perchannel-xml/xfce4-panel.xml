@@ -113,7 +113,7 @@
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="popup-at-pointer" type="bool" value="true"/>
-        <property name="max-menu-items" type="uint" value="99"/>
+        <property name="max-menu-items" type="uint" value="100"/>
         <property name="reverse-menu-order" type="bool" value="false"/>
       </property>
       <property name="settings" type="empty">
@@ -183,16 +183,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="org.ksnip.ksnip.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="Scan to Paperless.desktop"/>
-        <value type="string" value="arronax.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="org.gnome.SimpleScan.desktop"/>
-        <value type="string" value="google-chrome.desktop"/>
-        <value type="string" value="xnviewmp.desktop"/>
-        <value type="string" value="qvidcap.desktop"/>
+        <value type="string" value="libreoffice-writer.desktop"/>
+        <value type="string" value="cups.desktop"/>
+        <value type="string" value="galculator.desktop"/>
+        <value type="string" value="org.xfce.Parole.desktop"/>
+        <value type="string" value="eos-quickstart.desktop"/>
+        <value type="string" value="xfce4-power-manager-settings.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

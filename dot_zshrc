@@ -148,3 +148,5 @@ bindkey '^H' backward-kill-word
 # load my aliases
 test -f ~/.aliases && source ~/.aliases
 
+
+source /home/dk/.config/broot/launcher/bash/br

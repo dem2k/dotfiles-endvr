@@ -12,15 +12,13 @@ set info size:time
 set cleaner ~/.config/lf/cleaner
 set previewer ~/.config/lf/previewer
 
+# Delete über trash-cli
+cmd trash ${{
+    for f in $fx; do
+        trash-put -- "$f"
+    done
+}}
 
-# make sure trash folder exists
-%mkdir -p ~/.local/share/lf/.trash
-# ${{ mkdir -p ~/.local/share/lf/.trash }}
-
-# move current file or selected files to trash folder
-# (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv -t ~/.local/share/lf/.trash $fx
-# cmd trash ${{ IFS="$(printf '\n\t')"; mv $fx ~/.local/share/lf/.trash }}
 map DD :trash
 
 # extract the current file with the right command

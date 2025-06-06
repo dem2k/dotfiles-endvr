@@ -23,9 +23,9 @@ lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
-yay-ql() {
-    pacman -Ql "$1" | grep -v '/$'
-}
+# yay-ql() {
+#     pacman -Ql "$1" | grep -v '/$'
+# }
 
 yay-qil() {
     pacman -Qi "$1"
