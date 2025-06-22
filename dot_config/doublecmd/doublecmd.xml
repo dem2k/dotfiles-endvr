@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.25 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.26 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -880,6 +880,64 @@
           <Font>
             <Name>Noto Sans Condensed Medium</Name>
             <Size>12</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+      </Columns>
+    </ColumnsSet>
+    <ColumnsSet UseFrameCursor="False">
+      <Name>&lt;Trash&gt;</Name>
+      <Unique/>
+      <CustomView>False</CustomView>
+      <FileSystem>Trash</FileSystem>
+      <PixelsPerInch>72</PixelsPerInch>
+      <CursorBorder Enabled="False"/>
+      <Columns>
+        <Column>
+          <Title>Name</Title>
+          <Unique>222A6A1F-9F8D-4851-B732-A421BA44142E</Unique>
+          <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
+          <Width>169</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Roboto Condensed</Name>
+            <Size>14</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Erw</Title>
+          <Unique>8529C4C0-6C8D-4ABC-AD36-24317DF65CB0</Unique>
+          <FuncString>[DC().GETFILEEXT{}]</FuncString>
+          <Width>84</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Roboto Condensed</Name>
+            <Size>14</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>True</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Ursprünglicher Pfad</Title>
+          <Unique>44EFD90E-7CE9-4A7B-920C-EA7B93558590</Unique>
+          <FuncString>[Plugin(FS).trash::orig-path{}]</FuncString>
+          <Width>310</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Roboto Condensed</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>

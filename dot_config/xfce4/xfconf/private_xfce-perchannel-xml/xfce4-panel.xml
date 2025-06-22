@@ -12,6 +12,7 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="size" type="uint" value="40"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="3"/>
         <value type="int" value="1"/>
         <value type="int" value="4"/>
         <value type="int" value="7"/>
@@ -21,7 +22,6 @@
         <value type="int" value="8"/>
         <value type="int" value="6"/>
         <value type="int" value="10"/>
-        <value type="int" value="3"/>
         <value type="int" value="11"/>
         <value type="int" value="14"/>
         <value type="int" value="15"/>
@@ -38,11 +38,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu">
-      <property name="show-button-title" type="bool" value="false"/>
-      <property name="show-generic-names" type="bool" value="false"/>
-      <property name="small" type="bool" value="false"/>
-    </property>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="bool" value="false"/>
       <property name="sort-order" type="uint" value="4"/>
@@ -106,6 +101,7 @@
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-24" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -184,15 +180,15 @@
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="libreoffice-writer.desktop"/>
-        <value type="string" value="cups.desktop"/>
-        <value type="string" value="galculator.desktop"/>
-        <value type="string" value="org.xfce.Parole.desktop"/>
-        <value type="string" value="eos-quickstart.desktop"/>
-        <value type="string" value="xfce4-power-manager-settings.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="Scan to Paperless.desktop"/>
+        <value type="string" value="org.ksnip.ksnip.desktop"/>
+        <value type="string" value="gparted.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="galculator.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="libreoffice-writer.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>
@@ -274,5 +270,6 @@
         <value type="double" value="1"/>
       </property>
     </property>
+    <property name="plugin-1" type="string" value="separator"/>
   </property>
 </channel>

@@ -116,6 +116,49 @@
               InactiveMarkColor : 255
             }
           ]
+        },
+        {
+          Unique : "",
+          Name : "<Trash>",
+          CursorBorderColor : 0,
+          Columns : [
+            {
+              Unique : "222A6A1F-9F8D-4851-B732-A421BA44142E",
+              Title : "Name",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
+            },
+            {
+              Unique : "8529C4C0-6C8D-4ABC-AD36-24317DF65CB0",
+              Title : "Erw",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
+            },
+            {
+              Unique : "44EFD90E-7CE9-4A7B-920C-EA7B93558590",
+              Title : "Ursprünglicher Pfad",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
+            }
+          ]
         }
       ],
       Highlighters : [
@@ -1772,6 +1815,49 @@
               CursorText : -2147483634,
               InactiveCursorColor : -2147483645,
               InactiveMarkColor : 128
+            }
+          ]
+        },
+        {
+          Unique : "",
+          Name : "<Trash>",
+          CursorBorderColor : 0,
+          Columns : [
+            {
+              Unique : "222A6A1F-9F8D-4851-B732-A421BA44142E",
+              Title : "Name",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
+            },
+            {
+              Unique : "8529C4C0-6C8D-4ABC-AD36-24317DF65CB0",
+              Title : "Erw",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
+            },
+            {
+              Unique : "44EFD90E-7CE9-4A7B-920C-EA7B93558590",
+              Title : "Ursprünglicher Pfad",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : 16771047,
+              InactiveMarkColor : 255
             }
           ]
         }
