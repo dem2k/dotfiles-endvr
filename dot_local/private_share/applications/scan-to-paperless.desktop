@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Icon=org.gnome.SimpleScan
+Name=Scan to Paperless
+Exec=/home/dk/.local/bin/scan-to-paperless.sh
+Terminal=true
+Hidden=false
+Categories=Office
+Comment=Scan and send PDF to Paperless-NGX
+StartupNotify=true
