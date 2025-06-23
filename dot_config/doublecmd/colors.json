@@ -118,45 +118,45 @@
           ]
         },
         {
-          Unique : "",
+          Unique : "43DEFDAB-37D5-4FF5-AC00-5644167A0BFD",
           Name : "<Trash>",
           CursorBorderColor : 0,
           Columns : [
             {
               Unique : "222A6A1F-9F8D-4851-B732-A421BA44142E",
               Title : "Name",
-              TextColor : -2147483640,
-              Background : -2147483643,
-              Background2 : -2147483643,
-              MarkColor : 255,
-              CursorColor : -2147483635,
-              CursorText : -2147483634,
-              InactiveCursorColor : 16771047,
-              InactiveMarkColor : 255
+              TextColor : 0,
+              Background : 0,
+              Background2 : 0,
+              MarkColor : 0,
+              CursorColor : 0,
+              CursorText : 0,
+              InactiveCursorColor : 0,
+              InactiveMarkColor : 0
             },
             {
               Unique : "8529C4C0-6C8D-4ABC-AD36-24317DF65CB0",
               Title : "Erw",
-              TextColor : -2147483640,
-              Background : -2147483643,
-              Background2 : -2147483643,
-              MarkColor : 255,
-              CursorColor : -2147483635,
-              CursorText : -2147483634,
-              InactiveCursorColor : 16771047,
-              InactiveMarkColor : 255
+              TextColor : 0,
+              Background : 0,
+              Background2 : 0,
+              MarkColor : 0,
+              CursorColor : 0,
+              CursorText : 0,
+              InactiveCursorColor : 0,
+              InactiveMarkColor : 0
             },
             {
               Unique : "44EFD90E-7CE9-4A7B-920C-EA7B93558590",
               Title : "Ursprünglicher Pfad",
-              TextColor : -2147483640,
-              Background : -2147483643,
-              Background2 : -2147483643,
-              MarkColor : 255,
-              CursorColor : -2147483635,
-              CursorText : -2147483634,
-              InactiveCursorColor : 16771047,
-              InactiveMarkColor : 255
+              TextColor : 0,
+              Background : 0,
+              Background2 : 0,
+              MarkColor : 0,
+              CursorColor : 0,
+              CursorText : 0,
+              InactiveCursorColor : 0,
+              InactiveMarkColor : 0
             }
           ]
         }

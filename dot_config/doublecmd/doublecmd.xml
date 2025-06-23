@@ -311,7 +311,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -891,7 +891,7 @@
     </ColumnsSet>
     <ColumnsSet UseFrameCursor="False">
       <Name>&lt;Trash&gt;</Name>
-      <Unique/>
+      <Unique>43DEFDAB-37D5-4FF5-AC00-5644167A0BFD</Unique>
       <CustomView>False</CustomView>
       <FileSystem>Trash</FileSystem>
       <PixelsPerInch>72</PixelsPerInch>
