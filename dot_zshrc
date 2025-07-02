@@ -11,9 +11,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 export IDEA_JDK=$JAVA_HOME
 export IDEA_JFX=$JAVA_HOME
 
-# All the AI stuff.
-export GEMINI_API_KEY="AIzaSyArqRbhfTmxUv7vWjxD9w1IX8gK0_YNj2A"
-
 # formatiert das datum bei ls.
 export TIME_STYLE="+%d-%b-%Y %H:%M:%S"
 # default pager is less.
@@ -148,7 +145,8 @@ bindkey '^H' backward-kill-word
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# load my aliases
+# load my aliases & secrets
 test -f ~/.aliases && source ~/.aliases
+test -f ~/.secrets && source ~/.secrets
 
 source /home/dk/.config/broot/launcher/bash/br
