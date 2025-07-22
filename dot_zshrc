@@ -149,4 +149,4 @@ bindkey '^H' backward-kill-word
 test -f ~/.aliases && source ~/.aliases
 test -f ~/.secrets && source ~/.secrets
 
-source /home/dk/.config/broot/launcher/bash/br
+source ~/.config/broot/launcher/bash/br
