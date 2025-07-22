@@ -11,3 +11,4 @@ README.md
 .local/share/nvim
 .local/share/lf
 .local/state
+.secrets
