@@ -29,3 +29,11 @@ yay-update-all() {
     sudo pacman -Su
   fi
 }
+
+yay-browse-installed-packages.sh() {
+  pacman -Qq | fzf --preview-window=right:70% --preview 'pacman -Qi {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | grep -v "/$" | bat --paging=always)'
+}
+
+yay-last-installed-packages.sh() {
+  grep -E '(installed)' /var/log/pacman.log | sort -hr | head -n 30
+}
