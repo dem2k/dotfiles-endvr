@@ -8,7 +8,7 @@ sudo systemctl enable --now ly.service
 
 ## install packages
 ```
-mkdir -p ~/{bin,Bilder,Desktop,Dokumente,Downloads,IdeaProjects,Musik,Videos}
+mkdir -p ~/{Bilder,Desktop,Dokumente,Downloads,IdeaProjects,Musik,Videos}
 sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide \
    chezmoi bat tmux ttf-jetbrains-mono-nerd ranger rofi autoconf texinfo emacs zsh gcc ripgrep lf
 ```
