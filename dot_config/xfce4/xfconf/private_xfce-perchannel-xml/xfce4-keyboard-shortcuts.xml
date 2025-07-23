@@ -42,9 +42,6 @@
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Alt&gt;asciicircum" type="string" value="xfce4-clipman-history"/>
-      <property name="&lt;Super&gt;space" type="string" value="rofi -font &quot;JetBrainsMono Nerd Font Regular 24&quot; -modes drun,window,combi -show-icons -markup -show drun">
-        <property name="startup-notify" type="bool" value="true"/>
-      </property>
       <property name="Pause" type="string" value="xfce4-popup-whiskermenu -c"/>
     </property>
   </property>

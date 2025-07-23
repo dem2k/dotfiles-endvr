@@ -667,9 +667,9 @@
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
-    <ImageStretch>False</ImageStretch>
+    <ImageStretch>True</ImageStretch>
     <ImageExifRotate>True</ImageExifRotate>
-    <ImageStretchLargeOnly>True</ImageStretchLargeOnly>
+    <ImageStretchLargeOnly>False</ImageStretchLargeOnly>
     <ImageShowTransparency>False</ImageShowTransparency>
     <ImageCenter>True</ImageCenter>
     <CopyMovePath1/>
@@ -1117,7 +1117,7 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>##[N]</Filename>
+        <Filename>jpg_##[N]</Filename>
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>

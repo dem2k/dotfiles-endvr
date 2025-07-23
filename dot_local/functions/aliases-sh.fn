@@ -1,0 +1,25 @@
+#
+# meine aliase. ne, is klar!
+#
+alias ls='command ls --color=auto'
+alias l='command ls -lhFv --color=auto --group-directories-first'
+alias ll='command ls -lhFva --color=auto --group-directories-first'
+alias grep='command grep --color=auto'
+alias more='/usr/bin/bat'
+alias cd..='cd ..'
+alias cd='z'
+alias zz='zi'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias rm='rm -v'
+alias rd='rmdir'
+alias md='mkdir -p'
+alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
+alias docker='podman'
+alias lxc='incus'
+alias dysk='dysk -c +ino'
+alias duh='du -sch * | sort -h'
+alias cls='clear'
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'

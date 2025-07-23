@@ -12,3 +12,5 @@ README.md
 .local/share/lf
 .local/state
 .secrets
+.local/functions/secrets*
+
