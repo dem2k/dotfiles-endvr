@@ -14,7 +14,7 @@ README.md
 .secrets
 .local/functions/secrets*
 
-{{- if ne .chezmoi.os "linux" -}}
+{{- if ne .chezmoi.os "xlinux" -}}
 .config/xfce4
 .local/share/themes
 .local/share/applications
