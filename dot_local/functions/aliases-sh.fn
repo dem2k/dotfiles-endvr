@@ -22,4 +22,7 @@ alias duh='du -sch * | sort -h'
 alias cls='clear'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
+# alias np='nano -w PKGBUILD'
+alias gpl='git pull'
+alias gpu='git push'
+
