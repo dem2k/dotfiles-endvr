@@ -15,10 +15,10 @@ README.md
 .local/functions/secrets*
 
 {{- if ne .chezmoi.os "linux" -}}
-.config/xfce4/**
-.local/share/themes/**
-.local/share/applications/**
-.config/doublecmd/**
+.config/xfce4
+.local/share/themes
+.local/share/applications
+.config/doublecmd
 .config/gtk-2.0
 .config/lxqt
 .config/polybar
