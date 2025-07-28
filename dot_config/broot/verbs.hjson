@@ -112,11 +112,21 @@ verbs: [
     #     execution: ":focus ~"
     # }
 
+    {
+        key: Right
+        execution: ":open_stay"
+    }
+
+    {
+        key: Left
+        execution: ":back"
+    }
+
     # Here's going to the work-dir root of the current git repository
-    # {
-    #     invocation: gtr
-    #     execution: ":focus {git-root}"
-    # }
+    {
+        invocation: gtr
+        execution: ":focus {git-root}"
+    }
 
     # A popular set of shortcuts for going up and down:
     #
@@ -146,15 +156,15 @@ verbs: [
 
     # You can reproduce the bindings of Norton Commander
     # on copying or moving to the other panel:
-    # {
-    #     key: F5
-    #     external: "cp -r {file} {other-panel-directory}"
-    #     leave_broot: false
-    # }
-    # {
-    #     key: F6
-    #     external: "mv {file} {other-panel-directory}"
-    #     leave_broot: false
-    # }
+    {
+        key: F5
+        external: "cp -r {file} {other-panel-directory}"
+        leave_broot: false
+    }
+    {
+        key: F6
+        external: "mv {file} {other-panel-directory}"
+        leave_broot: false
+    }
 ]
 

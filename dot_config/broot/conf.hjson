@@ -59,7 +59,7 @@ date_time_format: %Y-%m-%d %R
 ###############################################################
 # Whether to mark the selected line with a triangle
 #
-show_selection_mark: false
+show_selection_mark: true
 
 ###############################################################
 # Column order
@@ -94,7 +94,7 @@ cols_order: [
 # (see https://dystroy.org/broot/icons for installation and
 # troubleshooting)
 #
-icon_theme: vscode
+icon_theme: nerdfont
 
 ###############################################################
 # Special paths
@@ -131,7 +131,7 @@ special_paths: {
 # to cancel (for example when you just opened broot), uncomment
 # this parameter
 # 
-quit_on_last_cancel: true
+# quit_on_last_cancel: true
 
 ###############################################################
 # Search modes

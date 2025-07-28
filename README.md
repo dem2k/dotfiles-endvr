@@ -36,7 +36,7 @@ and try again. final option: install ubuntu!
 
 ## install dotfiles
 ```
-chezmoi init https://github.com/dem2k/dotfiles-endvr --apply
+chezmoi init --apply https://github.com/dem2k/dotfiles-endvr
 ```
 
 ## change shell
