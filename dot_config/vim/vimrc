@@ -26,17 +26,17 @@ set synmaxcol   =200       " Only highlight the first 200 columns.
 
 set relativenumber number
 set nowrap
-set updatetime=500
+set updatetime  =500
 
 " Put all temporary files under the same directory.
 set nobackup
 set nowritebackup
-set undodir     =$HOME/.vim/files/undo/
-set directory   =$HOME/.vim/files/swap/
-set viewdir     =$HOME/.vim/files/view/
-set backupdir   =$HOME/.vim/files/backup/
+set undodir     =$HOME/.local/state/vim/undo/
+set directory   =$HOME/.local/state/vim/swap/
+set viewdir     =$HOME/.local/state/vim/view/
+set backupdir   =$HOME/.local/state/vim/backup/
 set updatecount =100
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+set viminfo     ='100,n$HOME/.local/state/vim/info/viminfo
 
 colorscheme catppuccin_mocha
 
