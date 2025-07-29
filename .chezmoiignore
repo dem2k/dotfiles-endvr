@@ -1,33 +1,37 @@
 /README.md
 **/*.zwc
-**/powerlevel10k/gitstatus/
-/.jd/**
+/.jd/
 /.m2/
 /.secrets
-/.config/ohmyzsh/lib/tests/
 /.zsh_history
-/.config/xnviewmp/*.db
-
-/.cache/
-/.local/state/
-/.local/functions/secrets*
 /.zcompdump*
 
+/.cache/
 /.local/share/
-!/.local/share/applications/
-!/.local/share/themes/
+/.local/state/
+/.local/functions/secrets*
 
+/.config/xnviewmp/*.db
 /.config/doublecmd/*.tmp
+/.config/ohmyzsh/lib/tests/
+/**/powerlevel10k/gitstatus/
 
-{{- if ne .chezmoi.os "linux" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{ end }}
+
+{{- if eq .chezmoi.hostname "archlinux" }}
+/.emacs.d/
 /.config/xfce4/
-/.local/share/themes/
-/.local/share/applications/
 /.config/doublecmd/
 /.config/gtk-2.0/
 /.config/lxqt/
 /.config/polybar/
 /.config/rofi/
 /.config/xnviewmp/
+/.local/share/applications/
+/.local/share/themes/
+{{ elseif }}
+!/.local/share/applications/
+!/.local/share/themes/
 {{ end }}
 
