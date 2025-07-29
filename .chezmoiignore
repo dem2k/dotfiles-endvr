@@ -8,7 +8,7 @@
 
 /.cache/
 /.local/share/
-#/.local/state/
+/.local/state/
 !/.local/state/vim/
 /.local/functions/secrets*
 
