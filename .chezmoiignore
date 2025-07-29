@@ -30,7 +30,7 @@
 /.config/xnviewmp/
 /.local/share/applications/
 /.local/share/themes/
-{{ elseif }}
+{{ else }}
 !/.local/share/applications/
 !/.local/share/themes/
 {{ end }}
