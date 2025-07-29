@@ -1,12 +1,14 @@
 /README.md
 **/*.zwc
-**/powerlevel10k/gitstatus
+**/powerlevel10k/gitstatus/
 /.jd/**
 /.m2/
 /.secrets
-/.cache/
 /.config/ohmyzsh/lib/tests/
+/.zsh_history
+/.config/xnviewmp/*.db
 
+/.cache/
 /.local/state/
 /.local/functions/secrets*
 /.zcompdump*
