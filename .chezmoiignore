@@ -5,6 +5,7 @@
 /.m2/
 /.secrets
 /.cache/
+/.config/ohmyzsh/lib/tests/
 
 /.local/state/
 /.local/functions/secrets*
