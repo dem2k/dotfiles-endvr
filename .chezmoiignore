@@ -23,11 +23,13 @@
 /.emacs.d/
 /.config/xfce4/
 /.config/doublecmd/
-/.config/gtk-2.0/
+/.config/gtk-*/
 /.config/lxqt/
 /.config/polybar/
 /.config/rofi/
 /.config/xnviewmp/
+/.config/mimeapps.list
+/.config/user-dirs.dirs
 /.local/share/applications/
 /.local/share/themes/
 {{ else }}
