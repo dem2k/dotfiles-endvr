@@ -20,9 +20,8 @@
 /**/powerlevel10k/gitstatus/
 
 {{- if eq .chezmoi.os "darwin" }}
-{{ end }}
-
-{{- if eq .chezmoi.hostname "archlinux" }}
+/.dmrc
+/.Xresources
 /.emacs.d/
 /.config/xfce4/
 /.config/doublecmd/
@@ -35,6 +34,5 @@
 /.config/user-dirs.dirs
 /.local/share/themes/
 /.local/share/applications/
-{{ else }}
 {{ end }}
 
