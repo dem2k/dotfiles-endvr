@@ -1,0 +1,13 @@
+[Default Applications]
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+image/jpeg=XnView.desktop
+image/png=XnView.desktop
+image/avif=XnView.desktop
+image/gif=XnView.desktop
+image/svg=XnView.desktop
+image/webp=XnView.desktop;
+image/bmp=XnView.desktop;
+application/pdf=org.pwmt.zathura.desktop
+application/oxps=mupdf.desktop
+

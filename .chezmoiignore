@@ -7,7 +7,9 @@
 /.zcompdump*
 
 /.cache/
-/.local/share/
+#/.local/share/
+#!/.local/share/applications/
+#!/.local/share/themes/
 #/.local/state/
 #!/.local/state/vim/
 /.local/functions/secrets*
@@ -31,10 +33,8 @@
 /.config/xnviewmp/
 /.config/mimeapps.list
 /.config/user-dirs.dirs
-/.local/share/applications/
 /.local/share/themes/
+/.local/share/applications/
 {{ else }}
-!/.local/share/applications/
-!/.local/share/themes/
 {{ end }}
 
