@@ -10,4 +10,9 @@ image/webp=XnView.desktop;
 image/bmp=XnView.desktop;
 application/pdf=org.pwmt.zathura.desktop
 application/oxps=mupdf.desktop
+application/x-fictionbook+xml=org.pwmt.zathura.desktop;
+image/heif=XnView.desktop;
 
+[Added Associations]
+application/x-fictionbook+xml=org.pwmt.zathura.desktop;
+image/heif=XnView.desktop;

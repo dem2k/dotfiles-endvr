@@ -1,11 +1,11 @@
 #
 # meine aliase. ne, is klar!
 #
-alias ls='eza'
-alias l='eza -lhF'
-alias ll='eza -alhF'
-alias grep='grep --color=auto'
-alias more='bat'
+
+unalias l ll la
+l() { eza -lhF "$@"; }
+ll() { eza -alhF "$@"; }
+
 alias cd..='cd ..'
 alias cd='z'
 alias zz='zi'
@@ -15,9 +15,6 @@ alias rm='rm -v'
 alias rd='rmdir'
 alias md='mkdir -p'
 alias ec='emacsclient -n -r --alternate-editor "alacritty -e /usr/bin/nvim"'
-# alias docker='podman'
-# alias lxc='incus'
-alias dysk='dysk -c +ino'
 alias df='df -h'                          # human-readable sizes
 alias duh='du -sch * | sort -h'
 alias cls='clear'
@@ -25,4 +22,9 @@ alias free='free -m'                      # show sizes in MB
 # alias np='nano -w PKGBUILD'
 alias gpl='git pull'
 alias gpu='git push'
+alias more='bat'
+alias grep='grep --color=auto'
 
+# alias docker='podman'
+# alias lxc='incus'
+alias dysk='dysk -c +ino'

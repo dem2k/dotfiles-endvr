@@ -17,6 +17,7 @@ $HOME/.vm-images/
 $HOME/Downloads/**/*.mkv
 $HOME/Downloads/**/*.iso
 $HOME/Downloads/**/*.img.xz
+$HOME/Downloads/**/*.raw.xz
 $HOME/VirtualBox/
-$HOME/IdeaProjects/my-archlinux-iso/**/*.iso
+$HOME/IdeaProjects/**/*.iso
 /etc/libvirt/

@@ -16,7 +16,6 @@ if ! mountpoint -q "$MOUNT_POINT"; then
     echo "Festplatte ist nicht eingehängt. Versuche zu mounten..."
     
     # Annahme: Die Festplatte hat den Label "WD4TB" oder eine eindeutige UUID
-    # Diese Zeile müsstest du möglicherweise anpassen, je nach deinem System und der Festplatte
     sudo mount /dev/disk/by-label/WD4TB "$MOUNT_POINT" || sudo mount -L WD4TB "$MOUNT_POINT"
     
     # Prüfen, ob das Mounten erfolgreich war
@@ -25,8 +24,6 @@ if ! mountpoint -q "$MOUNT_POINT"; then
         exit 1
     fi
     echo "Festplatte erfolgreich eingehängt."
-# else
-    # echo "Festplatte ist bereits unter $MOUNT_POINT eingehängt."
 fi
 
 echo "."
