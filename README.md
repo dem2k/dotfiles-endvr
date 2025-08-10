@@ -17,8 +17,7 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide \
 if you’re getting an error similar to “Can’t update: signature from *** is marginal trust” or “invalid or corrupted package”:
 ```
 sudo rm /var/cache/pacman/pkg/*.part # to remove any partial downloads.
-sudo pacman -Sy archlinux-keyring endeavouros-keyring
-sudo pacman -Syu
+sudo pacman -Syu archlinux-keyring endeavouros-keyring
 ```
 still got errors?  clear out the pacman keyring and start fresh:
 ```
