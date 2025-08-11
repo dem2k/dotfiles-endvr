@@ -12,7 +12,9 @@ application/pdf=org.pwmt.zathura.desktop
 application/oxps=mupdf.desktop
 application/x-fictionbook+xml=org.pwmt.zathura.desktop;
 image/heif=XnView.desktop;
+image/x-nikon-nef=XnView.desktop;
 
 [Added Associations]
 application/x-fictionbook+xml=org.pwmt.zathura.desktop;
 image/heif=XnView.desktop;
+image/x-nikon-nef=XnView.desktop;

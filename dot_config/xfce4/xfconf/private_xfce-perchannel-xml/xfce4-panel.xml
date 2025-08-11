@@ -182,16 +182,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="jdownloader.desktop"/>
+        <value type="string" value="virt-viewer.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="dupeguru.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="jdownloader.desktop"/>
         <value type="string" value="idea.desktop"/>
         <value type="string" value="org.ksnip.ksnip.desktop"/>
         <value type="string" value="qr-from-clipboard.desktop"/>
-        <value type="string" value="xcolor.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

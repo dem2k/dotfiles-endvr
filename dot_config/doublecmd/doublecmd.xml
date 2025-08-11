@@ -311,7 +311,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -1117,12 +1117,12 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>##PXL_[YYYY][MM][DD]_[hh][nn][ss]</Filename>
-        <Extension>[E]</Extension>
-        <FilenameStyle>0</FilenameStyle>
-        <ExtensionStyle>0</ExtensionStyle>
-        <Find>-</Find>
-        <Replace>_</Replace>
+        <Filename>[N]</Filename>
+        <Extension>ps1</Extension>
+        <FilenameStyle>2</FilenameStyle>
+        <ExtensionStyle>2</ExtensionStyle>
+        <Find/>
+        <Replace/>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>
