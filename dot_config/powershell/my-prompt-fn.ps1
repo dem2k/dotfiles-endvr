@@ -18,20 +18,18 @@ function prompt {
     Set-PSReadLineOption -PromptText @("> ","# ")[$IsAdmin]
     Set-PSReadLineOption -ContinuationPrompt (">> {0}" -f $(" " * ($nestedPromptLevel + 1)))
     $host.ui.RawUI.WindowTitle = $Identity
+    
     $PSReadLineOption = Get-PSReadLineOption
 
     $Path       = "{0}{1}" -f $PSReadLineOption.KeywordColor,
-                                $ExecutionContext.SessionState.Path.CurrentLocation.ProviderPath.Replace($Home, "~")
+                      $ExecutionContext.SessionState.Path.CurrentLocation.ProviderPath.Replace($Home, "~")
     $Timestamp  = "`e[2m{0}{1}`e[0m" -f $PSReadLineOption.CommandColor,
-                                [datetime]::Now.ToString('dd.MM.yyyy, HH:mm:ss')
-    $HostInfo   = "{0}{1}" -f $PSReadLineOption.StringColor,
-                                $Identity
-    $PSVersion  = "{0}PS{1}{2}.{3}" -f $PSReadLineOption.TypeColor,
-                                        $PSReadLineOption.EmphasisColor,
-                                        $PSVersionTable.PSVersion.Major,
-                                        $PSVersionTable.PSVersion.Minor
+                      [datetime]::Now.ToString('dd.MM.yyyy, HH:mm:ss')
+    $PSVersion  = "{0}PS{1}{2}.{3}" -f $PSReadLineOption.TypeColor, $PSReadLineOption.EmphasisColor,
+                      $PSVersionTable.PSVersion.Major, $PSVersionTable.PSVersion.Minor
     $Prompt     = "{0}{1}" -f $PSReadLineOption.TypeColor,
-                                [string]$PSReadLineOption.PromptText
+                      [string]$PSReadLineOption.PromptText
+    $HostInfo   = "{0}{1}" -f $PSReadLineOption.StringColor, $Identity
 
     # $GitStatus = {
     #     try {
@@ -70,7 +68,5 @@ function prompt {
     # }
     # catch {}
 
-    "`r" +
-    "${Timestamp} ${Path}`n" +
-    "${PoshGit}" + "${PSVersion}${Prompt}"
+    "`r" + "${HostInfo} ${PoshGit}${Path}`n" + "${Prompt}"
 }
