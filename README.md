@@ -24,8 +24,7 @@ still got errors?  clear out the pacman keyring and start fresh:
 sudo rm /etc/pacman.d/gnupg
 sudo pacman-key --init
 sudo pacman-key --populate archlinux endeavouros
-sudo pacman -Syy archlinux-keyring endeavouros-keyring
-sudo pacman -Syyu
+sudo pacman -Syyu archlinux-keyring endeavouros-keyring
 ```
 still doesn't work?
 ```
