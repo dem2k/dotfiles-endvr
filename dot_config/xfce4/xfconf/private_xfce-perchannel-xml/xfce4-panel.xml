@@ -45,7 +45,10 @@
       <property name="window-scrolling" type="bool" value="false"/>
       <property name="switch-workspace-on-unminimize" type="bool" value="false"/>
     </property>
-    <property name="plugin-4" type="string" value="pager"/>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
+    </property>
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
@@ -53,6 +56,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="taskmanager"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (88%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (74%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (82%)"/>
@@ -182,16 +186,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="idea.desktop"/>
-        <value type="string" value="bcompare.desktop"/>
-        <value type="string" value="google-chrome.desktop"/>
-        <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="virt-viewer.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="dupeguru.desktop"/>
         <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="jdownloader.desktop"/>
-        <value type="string" value="org.ksnip.ksnip.desktop"/>
+        <value type="string" value="Alacritty.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="idea.desktop"/>
+        <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="bcompare.desktop"/>
+        <value type="string" value="virt-viewer.desktop"/>
+        <value type="string" value="dupeguru.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

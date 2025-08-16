@@ -7,4 +7,6 @@
   <property name="misc-copy-on-select" type="bool" value="true"/>
   <property name="shortcuts-no-menukey" type="bool" value="true"/>
   <property name="misc-tab-close-middle-click" type="bool" value="false"/>
+  <property name="misc-toolbar-default" type="bool" value="false"/>
+  <property name="misc-right-click-action" type="string" value="TERMINAL_RIGHT_CLICK_ACTION_PASTE_SELECTION"/>
 </channel>
