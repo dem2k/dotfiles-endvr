@@ -120,7 +120,8 @@
         <property name="reverse-menu-order" type="bool" value="false"/>
       </property>
       <property name="settings" type="empty">
-        <property name="show-qr-code" type="bool" value="false"/>
+        <property name="show-qr-code" type="bool" value="true"/>
+        <property name="enable-actions" type="bool" value="false"/>
       </property>
     </property>
     <property name="notes" type="empty">
@@ -172,7 +173,7 @@
     </property>
     <property name="plugin-3" type="string" value="whiskermenu">
       <property name="menu-height" type="int" value="995"/>
-      <property name="menu-width" type="int" value="10"/>
+      <property name="menu-width" type="int" value="975"/>
       <property name="view-mode" type="int" value="1"/>
       <property name="launcher-icon-size" type="int" value="4"/>
       <property name="category-show-name" type="bool" value="true"/>
@@ -186,16 +187,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="xfce4-terminal.desktop"/>
+        <value type="string" value="XnView.desktop"/>
+        <value type="string" value="dev.zed.Zed.desktop"/>
+        <value type="string" value="qt6ct.desktop"/>
+        <value type="string" value="qr-from-clipboard.desktop"/>
+        <value type="string" value="com.microsoft.edit.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="idea.desktop"/>
+        <value type="string" value="xfce4-clipman.desktop"/>
+        <value type="string" value="xfce4-clipman-settings.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
-        <value type="string" value="bcompare.desktop"/>
-        <value type="string" value="virt-viewer.desktop"/>
-        <value type="string" value="dupeguru.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>
