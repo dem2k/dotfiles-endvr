@@ -1,0 +1,17 @@
+del()
+{
+    if [ $# -eq 0 ]; then
+        echo "Usage: del <files...>";
+        return 1;
+    fi;
+    if command -v trash > /dev/null 2>&1; then
+        trash put "$@";
+    elif command -v trash-put > /dev/null 2>&1; then
+        trash-put "$@";
+    else
+        local trash_dir="$HOME/.local/share/Trash/mv@$(date +%Y%m%d%H%M%S)";
+        mkdir -p "$trash_dir";
+        mv "$@" "$trash_dir";
+        echo "-> moved to $trash_dir";
+    fi
+}
