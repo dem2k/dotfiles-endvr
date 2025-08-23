@@ -187,16 +187,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="XnView.desktop"/>
-        <value type="string" value="dev.zed.Zed.desktop"/>
-        <value type="string" value="qt6ct.desktop"/>
-        <value type="string" value="qr-from-clipboard.desktop"/>
-        <value type="string" value="com.microsoft.edit.desktop"/>
-        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="xfce4-clipman.desktop"/>
-        <value type="string" value="xfce4-clipman-settings.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="XnView.desktop"/>
+        <value type="string" value="org.gnome.SimpleScan.desktop"/>
+        <value type="string" value="io.github.thetumultuousunicornofdarkness.cpu-x.desktop"/>
+        <value type="string" value="xfce4-about.desktop"/>
+        <value type="string" value="com.microsoft.edit.desktop"/>
+        <value type="string" value="dev.zed.Zed.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>
