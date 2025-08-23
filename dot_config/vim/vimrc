@@ -32,11 +32,11 @@ set updatetime=500
 set nobackup
 set nowritebackup
 set undodir     =$HOME/.config/vim/undo/
-set directory   =$HOME/.vim/files/swap/
-set viewdir     =$HOME/.vim/files/view/
-set backupdir   =$HOME/.vim/files/backup/
+set directory   =$HOME/.config/vim/swap/
+set viewdir     =$HOME/.config/vim/view/
+set backupdir   =$HOME/.config/vim/backup/
 set updatecount =100
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+set viminfo     ='100,n$HOME/.config/vim/info/viminfo
 
 colorscheme catppuccin_mocha
 
