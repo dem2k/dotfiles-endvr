@@ -14,8 +14,23 @@ set previewer ~/.config/lf/previewer
 
 # Delete über trash-cli
 cmd trash ${{
+    trash_dir=
+    if command -v trash >/dev/null 2>&1; then
+        del_cmd=(trash put)
+    elif command -v trash-put >/dev/null 2>&1; then
+        del_cmd=(trash-put)
+    else
+        del_cmd=(mv)
+        trash_dir="$HOME/.local/share/Trash/mv@$(date +%Y%m%d%H)"
+        mkdir -p "$trash_dir"
+    fi
+
     for f in $fx; do
-        trash-put -- "$f"
+        if [[ -z $trash_dir ]]; then
+            "${del_cmd[@]}" -- "$f"
+        else
+            "${del_cmd[@]}" -- "$f" "$trash_dir"
+        fi
     done
 }}
 
