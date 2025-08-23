@@ -13,6 +13,16 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide ttf-zed-mono-ner
    chezmoi bat tmux ttf-jetbrains-mono-nerd autoconf texinfo emacs zsh gcc ripgrep lf
 ```
 
+### install fonts manually if they are not in your distro's repo
+```
+nfrel=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
+  | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') \
+  && wget -P ~/.local/share/fonts "https://github.com/ryanoasis/nerd-fonts/releases/download/$nfrel/ZedMono.zip"
+  && cd ~/.local/share/fonts \
+  && unzip *.zip && rm *.zip \
+  && fc-cache -fv
+```
+
 ## in case of errors
 if you’re getting an error similar to “Can’t update: signature from *** is marginal trust” or “invalid or corrupted package”:
 ```
