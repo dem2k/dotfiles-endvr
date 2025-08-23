@@ -31,7 +31,7 @@ set updatetime=500
 " Put all temporary files under the same directory.
 set nobackup
 set nowritebackup
-set undodir     =$HOME/.vim/files/undo/
+set undodir     =$HOME/.config/vim/undo/
 set directory   =$HOME/.vim/files/swap/
 set viewdir     =$HOME/.vim/files/view/
 set backupdir   =$HOME/.vim/files/backup/
