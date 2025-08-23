@@ -17,8 +17,8 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide ttf-zed-mono-ner
 ```
 FONTURL=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
   | grep -i "browser_download_url.*ZedMono.zip" | awk -F'"' '{print $4}') \
-  && wget -P ~/.local/share/fonts "$FONTURL"
-  && cd ~/.local/share/fonts && unzip *.zip && rm *.zip && fc-cache -fv
+  && mkdir -p ~/.local/share/fonts && cd ~/.local/share/fonts \
+  && curl -OL "$FONTURL" && unzip *.zip && rm *.zip && fc-cache -fv
 ```
 
 ## in case of errors
