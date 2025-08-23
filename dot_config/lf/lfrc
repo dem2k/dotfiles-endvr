@@ -25,7 +25,7 @@ cmd trash ${{
         mkdir -p "$trash_dir"
     fi
 
-    for f in $fx; do
+    for f in "$fx"; do
         if [[ -z $trash_dir ]]; then
             "${del_cmd[@]}" -- "$f"
         else
