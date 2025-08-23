@@ -15,12 +15,10 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide ttf-zed-mono-ner
 
 ### install fonts manually if they are not in your distro's repo
 ```
-nfrel=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
-  | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') \
-  && wget -P ~/.local/share/fonts "https://github.com/ryanoasis/nerd-fonts/releases/download/$nfrel/ZedMono.zip"
-  && cd ~/.local/share/fonts \
-  && unzip *.zip && rm *.zip \
-  && fc-cache -fv
+FONTURL=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
+  | grep -i "browser_download_url.*ZedMono.zip" | awk -F'"' '{print $4}') \
+  && wget -P ~/.local/share/fonts "https://github.com/ryanoasis/nerd-fonts/releases/download/$FONTURL/ZedMono.zip"
+  && cd ~/.local/share/fonts && unzip *.zip && rm *.zip && fc-cache -fv
 ```
 
 ## in case of errors
