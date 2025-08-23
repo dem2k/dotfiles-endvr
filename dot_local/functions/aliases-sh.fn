@@ -2,9 +2,31 @@
 # meine aliase. ne, is klar!
 #
 
-unalias l ll la
-l() { eza -lhF "$@"; }
-ll() { eza -alhF "$@"; }
+unalias l ll la &> /dev/null
+
+# Beim Laden der Shell einmal prüfen
+if command -v eza >/dev/null 2>&1; then
+    export EZA_EXIST=true
+else
+    export EZA_EXIST=false
+fi
+
+l() {
+    if [[ $EZA_EXIST ]]; then
+        eza -lhF "$@"
+    else
+        ls -lhvF --color=auto "$@"
+    fi
+}
+
+l() {
+    if [[ $EZA_EXIST ]]; then
+        eza -lhF "$@"
+    else
+        ls -alhvF --color=auto "$@"
+    fi
+}
+
 
 alias ls='ls -F'
 alias cd..='cd ..'
