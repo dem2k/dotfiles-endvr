@@ -1,18 +1,25 @@
-del()
-{
-    if [ $# -eq 0 ]; then
-        echo "Usage: del <files...>";
-        return 1;
-    fi;
+# Einmalige Prüfung beim Laden der Shell
+if command -v trash >/dev/null 2>&1; then
+    export TRASH_CMD=(trash put)
+elif command -v trash-put >/dev/null 2>&1; then
+    export TRASH_CMD=(trash-put)
+else
+    export TRASH_CMD=()
+fi
 
-    if command -v trash > /dev/null 2>&1; then
-        trash put "$@";
-    elif command -v trash-put > /dev/null 2>&1; then
-        trash-put "$@";
+# Funktion mit Fallback
+del() {
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: del <files...>"
+        return 1
+    fi
+
+    if [[ ${#TRASH_CMD[@]} -gt 0 ]]; then
+        "${TRASH_CMD[@]}" "$@"
     else
-        local trash_dir="$HOME/.local/share/Trash/mv@$(date +%Y%m%d%H%M%S)";
-        mkdir -p "$trash_dir";
-        mv "$@" "$trash_dir";
-        echo "-> moved to $trash_dir";
+        local trash_dir="$HOME/.local/share/Trash/mv@$(date +%Y%m%d%H%M%S)"
+        mkdir -p "$trash_dir"
+        mv "$@" "$trash_dir"
+        echo "-> moved to $trash_dir"
     fi
 }
