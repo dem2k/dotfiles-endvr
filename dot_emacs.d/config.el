@@ -65,6 +65,10 @@
  isearchp-regexp-quote-yank-flag nil
  )
 
+;; Всегда отключать system caret (мешает внешнему виду курсора)
+(when (eq system-type 'windows-nt)
+  (setq w32-use-visible-system-caret nil))
+
 ;; Do not allow the cursor in the minibuffer prompt
 (setq minibuffer-prompt-properties
 	  '(read-only t cursor-intangible t face minibuffer-prompt))
@@ -341,7 +345,6 @@
    :preview-key '(:debounce 0.5 any)))
 
 (use-package embark
-
   :bind (([remap describe-bindings] . embark-bindings)
          ("C-." . embark-act) ; In a French AZERTY keyboard, the ² key is right above TAB
          ("M-²" . embark-collect)
@@ -362,8 +365,7 @@
   :demand t
   :config
   (setq-default format-all-formatters '(("Emacs Lisp" (emacs-lisp))
-                                        ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0"))))
-  )
+          ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
 
 (defun dual-format-function ()
   "Format code using lsp-format if lsp-mode is active, otherwise use format-all."
@@ -450,7 +452,7 @@
 
 (add-hook 'nxml-mode-hook
           (lambda() (interactive)
-            (define-key nxml-mode-map (kbd "C-ö w") 'my-kmacro-anwinfo)))
+            (define-key nxml-mode-map (kbd "C-ö ö") 'my-kmacro-anwinfo)))
 
 (use-package drag-stuff
   :diminish
@@ -666,7 +668,7 @@
     "g v" '(vc-next-action :wk "VC next Action")
     "g s" '(magit-stage-file :wk "Git stage File")
     "g t" '(git-timemachine :wk "Git time Machine")
-    "g u" '(magit-stage-file :wk "Git unstAge File")
+    "g u" '(magit-stage-file :wk "Git unstage File")
     "g i" '(magit-init :wk "Initialize Git Repo")
     )
 
@@ -962,7 +964,7 @@
 
 (evil-set-initial-state 'eshell-mode 'emacs)
 
-;; -- work but if switch bufer and byck to eshell evil is on again...
+;; -- it work but if switch bufer and back to eshell evil is on again...
 ;; (add-hook 'eshell-mode-hook
 ;;           (lambda ()
 ;;             (evil-local-mode -1)))
@@ -1023,7 +1025,6 @@
                 auto-mode-alist))
 
   (message "Tree-sitter initialisiert."))
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

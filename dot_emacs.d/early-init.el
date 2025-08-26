@@ -212,7 +212,7 @@ turned on.")
 ;;; UI elements
 
 (setq default-frame-alist '((background-color . "black") ;; (top . 48) (left . 256)
-                            (width . 170) (height . 48) (font . "JetBrainsMono NF-14")))
+                            (width . 170) (height . 48) (font . "ZedMono NF-16")))
 
 ;; (setq frame-title-format minimal-emacs-frame-title-format
 ;;       icon-title-format minimal-emacs-frame-title-format)
