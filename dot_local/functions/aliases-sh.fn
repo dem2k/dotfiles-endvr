@@ -19,9 +19,9 @@ l() {
     fi
 }
 
-l() {
+ll() {
     if [[ $EZA_EXIST ]]; then
-        eza -lhF "$@"
+        eza -alhF "$@"
     else
         ls -alhvF --color=auto "$@"
     fi
