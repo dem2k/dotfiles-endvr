@@ -1,8 +1,8 @@
 # Einmalige Prüfung beim Laden der Shell
-if command -v trash >/dev/null 2>&1; then
-    export TRASH_CMD=(trash put)
-elif command -v trash-put >/dev/null 2>&1; then
+if command -v trash-put >/dev/null 2>&1; then
     export TRASH_CMD=(trash-put)
+elif command -v trash >/dev/null 2>&1; then
+    export TRASH_CMD=(trash put)
 else
     export TRASH_CMD=()
 fi
