@@ -116,7 +116,7 @@ cmd toggle_hex_view &{{
     fi
 }}
 
-map zx :toggle_hex_view
+
 
 # funktioniert nicht wenn datei mit leerzeichen im namen...
 # cmd paste &{{
@@ -139,6 +139,11 @@ map zx :toggle_hex_view
 #     esac
 # }}
 #
+
+map zx :toggle_hex_view
+
+map <f-3> $$PAGER "$f"
+map <f-4> $$EDITOR "$f"
 
 cmd yank-file &printf '%s' "$f" | xclip -i -selection clipboard
 cmd yank-paths &printf '%s' "$fx" | xclip -i -selection clipboard
