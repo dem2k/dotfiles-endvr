@@ -5,4 +5,5 @@ history
 projectile-*
 recentf
 elpa
-
+transient
+tree-sitter
