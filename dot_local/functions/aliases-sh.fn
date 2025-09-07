@@ -50,3 +50,9 @@ alias grep='grep --color=auto'
 # alias docker='podman'
 # alias lxc='incus'
 alias dysk='dysk -c +ino'
+
+# colorized man pages.
+if command -v batman >/dev/null 2>&1; then
+    eval "$(batman --export-env)"
+fi
+
