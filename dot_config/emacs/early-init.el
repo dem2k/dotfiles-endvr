@@ -210,9 +210,14 @@ turned on.")
 (setq byte-compile-verbose minimal-emacs-debug)
 
 ;;; UI elements
-
+; (set-fontset-font t 'unicode "Symbols Nerd Font" nil 'prepend)
 (setq default-frame-alist '((background-color . "black") ;; (top . 48) (left . 256)
-                            (width . 170) (height . 48) (font . "ZedMono NF-16")))
+                           ;; (width . 170) (height . 48) (font . "ZedMono NF-16")))
+                           (width . 170) (height . 48) (font . "MesloLGS Nerd Font-16")))
+                           ;; (width . 170) (height . 48) (font . "Iosevka NF-16")))
+                           ;; (width . 170) (height . 48) (font . "Hack Nerd Font-15")))
+                           ;; (width . 170) (height . 48) (font . "Monoid Nerd Font-14")))
+                           ;; (width . 170) (height . 48) (font . "JetBrainsMono NF-14")))
 
 ;; (setq frame-title-format minimal-emacs-frame-title-format
 ;;       icon-title-format minimal-emacs-frame-title-format)

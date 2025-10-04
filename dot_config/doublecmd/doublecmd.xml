@@ -727,7 +727,7 @@
     <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
   </SyncDirs>
   <InternalAssociations>
-    <OfferToAddNewFileType>False</OfferToAddNewFileType>
+    <OfferToAddNewFileType>True</OfferToAddNewFileType>
     <LastCustomAction>Custom action</LastCustomAction>
     <ExpandedContextMenu>False</ExpandedContextMenu>
     <DefaultContextActions>True</DefaultContextActions>
@@ -1113,16 +1113,16 @@
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
   <MultiRenamePresets>
-    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <LastPreset>Standart</LastPreset>
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
         <Filename>[N]</Filename>
         <Extension>ps1</Extension>
-        <FilenameStyle>2</FilenameStyle>
-        <ExtensionStyle>2</ExtensionStyle>
-        <Find/>
-        <Replace/>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find>#-#</Find>
+        <Replace>##</Replace>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>

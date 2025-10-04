@@ -441,7 +441,7 @@
   (setq avy-timeout-seconds 0.45))
 
 (use-package targets
-  :load-path "~/.emacs.d/pkgs"
+  :load-path "~/.config/emacs/pkgs"
   :init
   (setq targets-user-text-objects '((double-quote "\"" nil quote :more-keys "q")))
   :config
@@ -629,10 +629,10 @@
     "f f" '(find-file :wk "Find file")
     ;; "f D" '(dirvish-side :wk "Dirvish")
     "f c" '((lambda () (interactive)
-              (find-file "~/.emacs.d/config.el"))
+              (find-file "~/.config/emacs/config.el"))
             :wk "Open User-Config File")
     "f e" '((lambda () (interactive)
-              (dired "~/.emacs.d/"))
+              (dired "~/.config/emacs/"))
             :wk "Open user-emacs-directory in dired")
     "f d" '(find-grep-dired :wk "Search for string in files in DIR")
     "f j" '(counsel-file-jump :wk "Jump to a File below current Directory")
@@ -885,7 +885,7 @@
 (use-package flycheck)
 
 (use-package lsp-java-lombok
-  :load-path "~/.emacs.d/pkgs")
+  :load-path "~/.config/emacs/pkgs")
 
 (use-package lsp-mode
   :custom
@@ -915,8 +915,8 @@
 (use-package lsp-java
   :after lsp-mode
   :custom
-  (lsp-java-workspace-dir (expand-file-name "~/.emacs.d/eclipse.jdt.ls/workspace/"))
-  (lsp-java-server-install-dir (expand-file-name "~/.emacs.d/eclipse.jdt.ls/server/"))
+  (lsp-java-workspace-dir (expand-file-name "~/.config/emacs/eclipse.jdt.ls/workspace/"))
+  (lsp-java-server-install-dir (expand-file-name "~/.config/emacs/eclipse.jdt.ls/server/"))
   (lsp-java-vmargs '("-Xmx2G" "-Xms1G" "-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true"))
   :config
   (add-hook 'java-mode-hook 'lsp))
@@ -946,7 +946,7 @@
   (golden-ratio-mode +1))
 
 (use-package evil-better-visual-line
-  :load-path "~/.emacs.d/pkgs"
+  :load-path "~/.config/emacs/pkgs"
   :config
   (evil-better-visual-line-on))
 

@@ -13,7 +13,7 @@ fi
 
 l() {
     if [[ $EZA_EXIST ]]; then
-        eza -lhF "$@"
+        eza --icons=auto -lhF "$@"
     else
         ls -lhvF --color=auto "$@"
     fi
@@ -21,7 +21,7 @@ l() {
 
 ll() {
     if [[ $EZA_EXIST ]]; then
-        eza -alhF "$@"
+        eza --icons=auto -alhF "$@"
     else
         ls -alhvF --color=auto "$@"
     fi
@@ -49,7 +49,9 @@ alias grep='grep --color=auto'
 
 # alias docker='podman'
 # alias lxc='incus'
+
 alias dysk='dysk -c +ino'
+alias lsblk='lsblk -o"name,pttype,fstype,label,size,fsused,fsuse%,mountpoints,uuid"'
 
 # colorized man pages.
 if command -v batman >/dev/null 2>&1; then

@@ -14,9 +14,11 @@ application/x-fictionbook+xml=org.pwmt.zathura.desktop;
 image/heif=XnView.desktop;
 image/x-nikon-nef=XnView.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+application/x-powershell=org.xfce.mousepad.desktop;
 
 [Added Associations]
 application/x-fictionbook+xml=org.pwmt.zathura.desktop;
 image/heif=XnView.desktop;
 image/x-nikon-nef=XnView.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
+application/x-powershell=org.xfce.mousepad.desktop;

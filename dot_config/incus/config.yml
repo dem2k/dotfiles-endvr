@@ -1,5 +1,9 @@
 default-remote: local
 remotes:
+  docker:
+    addr: https://docker.io
+    protocol: oci
+    public: true
   images:
     addr: https://images.linuxcontainers.org
     protocol: simplestreams
@@ -9,3 +13,7 @@ remotes:
     protocol: incus
     public: false
 aliases: {}
+defaults:
+  list_format: ""
+  console_type: ""
+  console_spice_command: ""
