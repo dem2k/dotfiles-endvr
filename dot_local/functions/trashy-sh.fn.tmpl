@@ -1,13 +1,13 @@
 {{- if eq .chezmoi.os "darwin" }}
-    export TRASH_CMD=(trash)
+    _TRASH_CMD=(trash)
 {{ else }}
 # Einmalige Prüfung beim Laden der Shell
 if command -v trash-put >/dev/null 2>&1; then
-    export TRASH_CMD=(trash-put)
+    _TRASH_CMD=(trash-put)
 elif command -v trash >/dev/null 2>&1; then
-    export TRASH_CMD=(trash put)
+    _TRASH_CMD=(trash put)
 else
-    export TRASH_CMD=()
+    _TRASH_CMD=()
 fi
 {{- end }}
 
@@ -18,8 +18,8 @@ del() {
         return 1
     fi
 
-    if [[ ${#TRASH_CMD[@]} -gt 0 ]]; then
-        "${TRASH_CMD[@]}" "$@"
+    if [[ ${#_TRASH_CMD[@]} -gt 0 ]]; then
+        "${_TRASH_CMD[@]}" "$@"
     else
         local trash_dir="$HOME/.local/share/Trash/mv@$(date +%Y%m%d%H%M%S)"
         mkdir -p "$trash_dir"
