@@ -365,7 +365,7 @@
   :demand t
   :config
   (setq-default format-all-formatters '(("Emacs Lisp" (emacs-lisp))
-          ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
+                                        ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
 
 (defun dual-format-function ()
   "Format code using lsp-format if lsp-mode is active, otherwise use format-all."
@@ -446,9 +446,6 @@
   (setq targets-user-text-objects '((double-quote "\"" nil quote :more-keys "q")))
   :config
   (targets-setup t))
-
-(defalias 'my-kmacro-anwinfo
-  (kmacro "/ a n w i n f o <return> <home> / b e n u t z e r i d = <return> w w v i \" p <home> / a n w = <return> w w c i \" A e n d <escape> <home> : s / i n - 0 / I N - / <return> & & & & & <home>"))
 
 (add-hook 'nxml-mode-hook
           (lambda() (interactive)
@@ -568,8 +565,15 @@
     :states '(normal insert visual emacs)
     :keymaps 'override
     :prefix "SPC" ;; set leader
-    :global-prefix "M-SPC" ;; access leader in insert mode
-    )
+    :global-prefix "M-SPC") ;; access leader in insert mode
+
+  ;; 2. RET ohne Leader im Normal‑/Visual‑State binden
+  (general-define-key
+   :states '(normal visual)
+   "RET" 'avy-goto-char-timer)
+
+  ;; (my-leader-keys
+  ;;   "RET" '(avy-goto-char-timer :wk "Easy Jump"))
 
   (my-leader-keys
     ;; "SPC" '(counsel-M-x :wk "Counsel M-x")
@@ -703,9 +707,6 @@
     "h v" '(helpful-variable :wk "Describe variable")
     "h w" '(where-is :wk "Prints keybinding for command if set")
     "h x" '(describe-command :wk "Display full documentation for command"))
-
-  (my-leader-keys
-    "RET" '(avy-goto-char-timer :wk "Easy Jump"))
 
   (my-leader-keys
     "m" '(:ignore t :wk "Org")
@@ -992,7 +993,7 @@
   ;;              '(csv "https://github.com/tree-sitter-grammars/tree-sitter-csv"))
   (add-to-list 'treesit-language-source-alist
                '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile"))
-  
+
   ;; Optional: Parser automatisch installieren, falls nicht vorhanden
   ;;  (dolist (lang '(bash c css html javascript json python ruby rust toml tsx typescript yaml java))
   ;;    (unless (treesit-language-available-p lang)
