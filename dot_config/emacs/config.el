@@ -365,7 +365,7 @@
   :demand t
   :config
   (setq-default format-all-formatters '(("Emacs Lisp" (emacs-lisp))
-                                        ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
+          ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
 
 (defun dual-format-function ()
   "Format code using lsp-format if lsp-mode is active, otherwise use format-all."
