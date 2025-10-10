@@ -2,32 +2,6 @@
 # meine aliase. ne, is klar!
 #
 
-unalias l ll la &> /dev/null
-
-# Beim Laden der Shell einmal prüfen
-if command -v eza >/dev/null 2>&1; then
-    export EZA_EXIST=true
-else
-    export EZA_EXIST=false
-fi
-
-l() {
-    if [[ $EZA_EXIST ]]; then
-        eza --icons=auto -lhF "$@"
-    else
-        ls -lhvF --color=auto "$@"
-    fi
-}
-
-ll() {
-    if [[ $EZA_EXIST ]]; then
-        eza --icons=auto -alhF "$@"
-    else
-        ls -alhvF --color=auto "$@"
-    fi
-}
-
-
 alias ls='ls -F'
 alias cd..='cd ..'
 alias cd='z'
@@ -44,17 +18,20 @@ alias cls='clear'
 alias free='free -m'                  # show sizes in MB
 alias gpl='git pull'
 alias gpu='git push'
-alias more='bat'
 alias grep='grep --color=auto'
 
-# alias docker='podman'
 # alias lxc='incus'
+# alias docker='podman'
 
 alias dysk='dysk -c +ino'
-alias lsblk='lsblk -o"name,pttype,fstype,label,size,fsused,fsuse%,mountpoints,uuid"'
+alias lsblk='lsblk -o"name,pttype,fstype,size,fsused,fsuse%,label,mountpoints,uuid"'
 
 # colorized man pages.
 if command -v batman >/dev/null 2>&1; then
     eval "$(batman --export-env)"
 fi
 
+# linux file manager
+lf () {
+    cd "$(command lf -print-last-dir "$@")"
+}
