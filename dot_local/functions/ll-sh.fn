@@ -1,0 +1,18 @@
+# alte aliase entfernen
+unalias l ll la &> /dev/null
+
+# Beim Laden der Shell einmal prüfen und Command speichern
+if command -v eza >/dev/null 2>&1; then
+    _LS_CMD=(eza --icons=auto)
+else
+    _LS_CMD=(ls --color=auto)
+fi
+
+l() {
+    "${_LS_CMD[@]}" -lhF "$@"
+}
+
+ll() {
+    "${_LS_CMD[@]}" -alhF "$@"
+}
+

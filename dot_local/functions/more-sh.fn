@@ -1,0 +1,13 @@
+# Einmalig beim Laden prüfen und Command speichern
+if command -v bat &> /dev/null; then
+    _MORE_CMD=(bat)
+elif command -v batcat &> /dev/null; then
+    _MORE_CMD=(batcat)
+else
+    _MORE_CMD=(command more)
+fi
+
+# Funktion verwendet die gespeicherte Variable
+more() {
+    "${_MORE_CMD[@]}" "$@"
+}
