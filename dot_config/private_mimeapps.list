@@ -22,3 +22,4 @@ image/heif=XnView.desktop;
 image/x-nikon-nef=XnView.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
 application/x-powershell=org.xfce.mousepad.desktop;
+image/tiff=XnView.desktop;
