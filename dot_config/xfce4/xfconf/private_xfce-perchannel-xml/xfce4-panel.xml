@@ -173,15 +173,15 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="org.ksnip.ksnip.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="start-emacs-daemon.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="gparted.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="org.ksnip.ksnip.desktop"/>
         <value type="string" value="io.github.thetumultuousunicornofdarkness.cpu-x.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="redshift-gtk.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="bssh.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
