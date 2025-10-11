@@ -4,8 +4,6 @@
 
 alias ls='ls -F'
 alias cd..='cd ..'
-# alias cd='z'
-# alias zz='zi'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias rm='rm -v'
@@ -21,7 +19,7 @@ alias gpu='git push'
 alias grep='grep --color=auto'
 
 alias dysk='dysk -c +ino'
-alias lsblk='lsblk -o"name,pttype,fstype,size,fsused,fsuse%,label,mountpoints,uuid"'
+alias lsblk='lsblk -o"name,pttype,fstype,size,fsused,fsuse%,vendor,model,label,mountpoints,uuid"'
 
 # colorized man pages.
 if command -v batman >/dev/null 2>&1; then
