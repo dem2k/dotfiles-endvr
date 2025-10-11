@@ -73,36 +73,6 @@ if [[ -z "$DEST" ]]; then
     exit 1
   fi
 
-# # DISKS Array mit column formatieren (alle Labels zusammen)
-#   TEMP_FILE=$(mktemp)
-#   for ((i=1; i<${#DISKS[@]}; i+=2)); do
-#     echo "${DISKS[$i]}" >> "$TEMP_FILE"
-#   done
-#   
-#   FORMATTED_LABELS=($(column -ts';' "$TEMP_FILE"))
-#   cat $TEMP_FILE|column -ts';'
-#   rm -f "$TEMP_FILE"
-#   echo $FORMATTED_LABELS
-#   exit
-#   
-#   # Neues Array mit formatierten Labels erstellen
-#   FORMATTED_DISKS=()
-#   label_idx=0
-#   for ((i=0; i<${#DISKS[@]}; i+=2)); do
-#     FORMATTED_DISKS+=("${DISKS[$i]}" "${FORMATTED_LABELS[$label_idx]}")
-#     ((label_idx++))
-#   done
-#   DISKS=("${FORMATTED_DISKS[@]}")
-
-  # # DISKS Array mit column formatieren
-  # FORMATTED_DISKS=()
-  # for ((i=0; i<${#DISKS[@]}; i+=2)); do
-  #   devpath="${DISKS[$i]}"
-  #   label=$(echo "${DISKS[$i+1]}" | column -ts';')
-  #   FORMATTED_DISKS+=("$devpath" "$label")
-  # done
-  # DISKS=("${FORMATTED_DISKS[@]}")
-  
   # Dialog-Menü anzeigen
   DEST=$(dialog --clear --title "Zielgerät auswählen" \
     --menu "Wähle das Zielgerät (SD-Karte, USB-Stick):" 20 70 10 "${DISKS[@]}" 3>&1 1>&2 2>&3)
@@ -115,43 +85,43 @@ if [[ -z "$DEST" ]]; then
 fi
  
 # Bestätigung anzeigen
-dialog --title "Bestätigung" --yesno "Quelle: $SOURCE\nZiel: $DEST\n\nFortfahren?" 10 70
+dialog --title "Bestätigung" --yesno "Quelle : $SOURCE\nZiel   : $DEST\n\nFortfahren?" 10 70
 response=$?
 if [[ $response -ne 0 ]]; then
   echo "Abgebrochen."
   exit 1
 fi
  
-# Gesamtgröße der Input-Datei
-TOTAL_SIZE=$(stat -c %s "$SOURCE")
-LOGFILE="/tmp/ddd.log"
-BLOCKSIZE=4M
-TITLE="📦 DDD: Schreibe ISO"
-TEXT="Kopiere '$SOURCE' nach '$DEST'..."
- 
-# Starte dd im Hintergrund
-dd if="$SOURCE" of="$DEST" bs=$BLOCKSIZE status=progress conv=fsync 2> "$LOGFILE" &
-DD_PID=$!
- 
-# Fortschritt anzeigen
-(
-  while kill -0 $DD_PID 2>/dev/null; do
-    sleep 1
-    CURRENT=$(grep -oP '[0-9]+ bytes' "$LOGFILE" | tail -1 | awk '{print $1}')
-    if [[ -n "$CURRENT" && "$CURRENT" -gt 0 ]]; then
-      PERCENT=$(( CURRENT * 100 / TOTAL_SIZE ))
-      echo $PERCENT
-      echo "# $TEXT ($PERCENT%)"
-    fi
-  done
-  echo 100
-  echo "# ✅ Fertig: ISO wurde erfolgreich geschrieben."
-)
-# | dialog --title "$TITLE" --gauge "$TEXT" 10 70 0
- 
-# Aufräumen
-# rm -f "$LOGFILE"
- 
-dialog --title "Fertig" --msgbox "✅ ISO erfolgreich geschrieben auf:\n$DEST" 10 70
- 
-exit 0
+# LOGFILE="/tmp/ddd.log"
+# TITLE="📦 DDD Schreibet ... "
+# TEXT="Kopiere '$SOURCE' nach '$DEST'..."
+# # Gesamtgröße der Input-Datei
+# TOTAL_SIZE=$(stat -c %s "$SOURCE")
+# # Starte dd im Hintergrund
+# LANG=C dd if="$SOURCE" of="$DEST" bs=4M status=progress oflag=sync 2> "$LOGFILE" &
+# DD_PID=$!
+# # Fortschritt anzeigen
+# ( while kill -0 $DD_PID 2>/dev/null; do
+#     # # Fordere Statusausgabe an
+#     # kill -USR1 "$DD_PID" 2>/dev/null
+#     sleep 1
+#     # Letzte Zeile mit "bytes" aus dem Log
+#     LAST_LINE=$(grep -oPi '[0-9]+ bytes.*' "$LOGFILE" | tail -1)
+#     # Extrahiere aktuell kopierte Bytes für Fortschritt
+#     CURRENT=$(echo "$LAST_LINE" | grep -oP '[0-9]+' )
+#     if [[ -n "$CURRENT" && "$CURRENT" -gt 0 ]]; then
+#       PERCENT=$(( CURRENT * 100 / TOTAL_SIZE ))
+#       echo "XXX"
+#       echo "$LAST_LINE"  
+#       echo "XXX"
+#       echo "$PERCENT"
+#     fi
+#   done
+#   echo 100
+#   echo "# ✅ Fertig: ISO wurde erfolgreich geschrieben."
+# ) | dialog --title "$TITLE" --gauge "$TEXT" 10 70 0
+# # dialog --title "Fertig" --msgbox "✅ ISO erfolgreich geschrieben auf:\n$DEST" 10 70
+
+reset && clear
+
+pv "$SOURCE" | dd of="$DEST" bs=4M status=progress oflag=sync
