@@ -1,16 +1,22 @@
 #!/usr/bin/bash
 
-# ==========[ DDD - DD mit Dialog ]===========
+# ==========[ DDD - DD mit fzf ]===========
 
 # ┌──────────────────────────────────────────────┐
 # │ Einfacher Wrapper für dd mit Fortschritts-   │
-# │ anzeige via dialog --gauge                   │
+# │ anzeige via pv und Auswahl via fzf          │
 # └──────────────────────────────────────────────┘
 
 # Prüfen, ob das Skript in einem Terminal läuft
 if [[ ! -t 0 || ! -t 1 ]]; then
   echo "❌ Fehler: Dieses Skript muss in einem Terminal ausgeführt werden."
   echo "   Bitte öffne ein Terminal und führe das Skript dort aus."
+  exit 1
+fi
+
+# Prüfen, ob fzf installiert ist
+if ! command -v fzf &> /dev/null; then
+  echo "❌ Fehler: fzf ist nicht installiert."
   exit 1
 fi
 
@@ -46,13 +52,15 @@ fi
 
 # Wenn -of fehlt → interaktive Auswahl anzeigen
 if [[ -z "$DEST" ]]; then
-  DISKS=()
+  echo "🔍 Suche verfügbare Geräte..."
+  
+  DISK_LIST="DEVICE;GRÖSSE;VENDOR;MODEL;LABEL"$'\n'
   for devpath in /dev/sd?; do
     if [[ -b "$devpath" ]]; then
       devname=$(basename "$devpath")
       # Größe in Bytes → formatiert
       SIZE=$(lsblk -b -dn -o SIZE "$devpath" 2>/dev/null)
-      SIZE_H=$(numfmt --to=iec-i --suffix=B "$SIZE")
+      SIZE_H=$(numfmt --to=iec-i --suffix=B "$SIZE" 2>/dev/null || echo "Unbekannt")
       # Vendor, Model und Label mit udevadm
       VENDOR=$(udevadm info --query=all --name="$devpath" 2>/dev/null | grep "ID_VENDOR=" | cut -d= -f2)
       MODEL=$(udevadm info --query=all --name="$devpath" 2>/dev/null | grep "ID_MODEL=" | cut -d= -f2)
@@ -61,67 +69,61 @@ if [[ -z "$DEST" ]]; then
       
       [[ -z "$VENDOR" ]] && VENDOR="Unbekannt"
       [[ -z "$MODEL" ]] && MODEL="Unbekannt"
-      [[ -z "$LABEL" ]] && LABEL="(kein Label)"
+      [[ -z "$LABEL" ]] && LABEL="(Kein Label)"
       
-      # Label für dialog menu mit column formatiert
-      DISKS+=("$devpath" "${SIZE_H}; ${VENDOR}; ${MODEL}; ${LABEL}")
+      # Zeile für fzf formatieren
+      DISK_LIST+="${devpath};${SIZE_H};${VENDOR};${MODEL};${LABEL}"$'\n'
     fi
   done
 
-  if [[ ${#DISKS[@]} -eq 0 ]]; then
+  if [[ -z "$DISK_LIST" ]]; then
     echo "❌ Keine geeigneten Zielgeräte gefunden (z.B. /dev/sdX)."
     exit 1
   fi
 
-  # Dialog-Menü anzeigen
-  DEST=$(dialog --clear --title "Zielgerät auswählen" \
-    --menu "Wähle das Zielgerät (SD-Karte, USB-Stick):" 20 70 10 "${DISKS[@]}" 3>&1 1>&2 2>&3)
+  # fzf-Auswahl mit Header
+  SELECTION=$(echo -n "$DISK_LIST" | column -ts';' | fzf \
+    --header="Wähle das Zielgerät (SD-Karte, USB-Stick)" \
+    --header-first --header-lines=1 \
+    --height=40% --border --reverse --ansi)
  
   # Prüfen, ob abgebrochen
-  if [[ -z "$DEST" ]]; then
+  if [[ -z "$SELECTION" ]]; then
     echo "Abgebrochen."
     exit 1
   fi
+  
+  # Device-Pfad extrahieren (erstes Feld vor |)
+  DEST=$(echo "$SELECTION" | awk '{print $1}' | tr -d '[:space:]')
 fi
- 
-# Bestätigung anzeigen
-dialog --title "Bestätigung" --yesno "Quelle : $SOURCE\nZiel   : $DEST\n\nFortfahren?" 10 70
-response=$?
-if [[ $response -ne 0 ]]; then
-  echo "Abgebrochen."
+
+# Validierung des Zielgeräts
+if [[ ! -b "$DEST" ]]; then
+  echo "❌ Fehler: Zielgerät '$DEST' ist kein gültiges Block-Device."
   exit 1
 fi
  
-# LOGFILE="/tmp/ddd.log"
-# TITLE="📦 DDD Schreibet ... "
-# TEXT="Kopiere '$SOURCE' nach '$DEST'..."
-# # Gesamtgröße der Input-Datei
-# TOTAL_SIZE=$(stat -c %s "$SOURCE")
-# # Starte dd im Hintergrund
-# LANG=C dd if="$SOURCE" of="$DEST" bs=4M status=progress oflag=sync 2> "$LOGFILE" &
-# DD_PID=$!
-# # Fortschritt anzeigen
-# ( while kill -0 $DD_PID 2>/dev/null; do
-#     # # Fordere Statusausgabe an
-#     # kill -USR1 "$DD_PID" 2>/dev/null
-#     sleep 1
-#     # Letzte Zeile mit "bytes" aus dem Log
-#     LAST_LINE=$(grep -oPi '[0-9]+ bytes.*' "$LOGFILE" | tail -1)
-#     # Extrahiere aktuell kopierte Bytes für Fortschritt
-#     CURRENT=$(echo "$LAST_LINE" | grep -oP '[0-9]+' )
-#     if [[ -n "$CURRENT" && "$CURRENT" -gt 0 ]]; then
-#       PERCENT=$(( CURRENT * 100 / TOTAL_SIZE ))
-#       echo "XXX"
-#       echo "$LAST_LINE"  
-#       echo "XXX"
-#       echo "$PERCENT"
-#     fi
-#   done
-#   echo 100
-#   echo "# ✅ Fertig: ISO wurde erfolgreich geschrieben."
-# ) | dialog --title "$TITLE" --gauge "$TEXT" 10 70 0
-# # dialog --title "Fertig" --msgbox "✅ ISO erfolgreich geschrieben auf:\n$DEST" 10 70
+# Bestätigung anzeigen
+echo ""
+echo "══════════════════════════════════════════════════════════════════════════════"
+echo "  Quelle: $SOURCE"
+echo "  Ziel  : $DEST"
+echo "══════════════════════════════════════════════════════════════════════════════"
+echo ""
+read -p "⚠️ WARNUNG: Alle Daten auf $DEST werden überschrieben! Fortfahren? [j/N] " -n 1 -r
+echo ""
 
-reset && clear
+if [[ ! $REPLY =~ ^[Jj]$ ]]; then
+  echo "Abgebrochen."
+  exit 1
+fi
 
-pv "$SOURCE" | dd of="$DEST" bs=4M status=progress oflag=sync
+echo ""
+echo "🚀 Starte Kopiervorgang..."
+echo ""
+ 
+pv "$SOURCE" | dd of="$DEST" bs=1M oflag=sync
+
+echo ""
+echo "✅ Kopiervorgang abgeschlossen!"
+echo ""
