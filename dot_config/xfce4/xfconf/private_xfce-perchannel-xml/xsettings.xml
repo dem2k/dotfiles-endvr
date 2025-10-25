@@ -2,7 +2,7 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Adwaita"/>
+    <property name="ThemeName" type="string" value="HighContrast"/>
     <property name="IconThemeName" type="string" value="buuf-nestort"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
@@ -24,14 +24,14 @@
     <property name="CanChangeAccels" type="empty"/>
     <property name="ColorPalette" type="empty"/>
     <property name="FontName" type="string" value="Noto Sans 14"/>
-    <property name="MonospaceFontName" type="string" value="ZedMono Nerd Font Propo 14"/>
+    <property name="MonospaceFontName" type="string" value="JetBrainsMono Nerd Font 14"/>
     <property name="IconSizes" type="empty"/>
     <property name="KeyThemeName" type="empty"/>
     <property name="MenuImages" type="empty"/>
     <property name="ButtonImages" type="empty"/>
     <property name="MenuBarAccel" type="empty"/>
     <property name="CursorThemeName" type="string" value="Qogir"/>
-    <property name="CursorThemeSize" type="int" value="45"/>
+    <property name="CursorThemeSize" type="int" value="40"/>
     <property name="DecorationLayout" type="string" value="icon,menu:minimize,maximize,close"/>
     <property name="DialogsUseHeader" type="empty"/>
     <property name="TitlebarMiddleClick" type="empty"/>

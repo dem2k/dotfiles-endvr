@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.28 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.29 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -126,7 +126,7 @@
             </Command>
             <Program>
               <ID>{C8647CCC-448F-43DD-977B-0259288CE7CB}</ID>
-              <Icon>/home/dk/bin/quick-actions.sh</Icon>
+              <Icon>/home/dk/.local/icons/quick-actions.ico</Icon>
               <Hint>(&amp;Q) Run Quick-Actions on File</Hint>
               <Command>/home/dk/.local/bin/quick-actions.sh</Command>
               <Params>%p</Params>
@@ -139,7 +139,7 @@
               <Icon>cm_changedir</Icon>
               <Hint>(&amp;M) Home Dir</Hint>
               <Command>cm_ChangeDir</Command>
-              <Param>/home/dk/</Param>
+              <Param>/home/dk</Param>
             </Command>
             <Command>
               <ID>{1F1741C1-871D-43D1-B4F4-BF510A5D7442}</ID>
@@ -167,12 +167,19 @@
               <Icon>cm_changedir</Icon>
               <Hint>(&amp;A) Tools</Hint>
               <Command>cm_ChangeDir</Command>
-              <Param>/home/dk/bin</Param>
+              <Param>/home/dk/Tools</Param>
             </Command>
             <Menu>
               <ID>{0358C6E5-7965-4321-BF7A-1E89846CFA0F}</ID>
               <Hint>(&amp;L) Local</Hint>
               <MenuItems>
+                <Command>
+                  <ID>{1236C64F-3FC2-4A07-9D9D-32991ED79966}</ID>
+                  <Icon>cm_changedir</Icon>
+                  <Hint>(&amp;L) dot_local</Hint>
+                  <Command>cm_ChangeDir</Command>
+                  <Param>/home/dk/.local</Param>
+                </Command>
                 <Command>
                   <ID>{F48BB8B2-CE49-4A15-B305-AE196C8DAD04}</ID>
                   <Icon>cm_changedir</Icon>
@@ -311,7 +318,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -448,7 +455,7 @@
     <DriveBar1>False</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>False</DriveBarFlat>
-    <DrivesListButton Enabled="False">
+    <DrivesListButton Enabled="True">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
       <ShowFreeSpace>True</ShowFreeSpace>
@@ -560,7 +567,7 @@
       <Overwrite>False</Overwrite>
     </Extract>
     <MultiRename>
-      <MulRenShowMenuBarOnTop>True</MulRenShowMenuBarOnTop>
+      <MulRenShowMenuBarOnTop>False</MulRenShowMenuBarOnTop>
       <MulRenInvalidCharReplacement>_</MulRenInvalidCharReplacement>
       <MulRenLaunchBehavor>0</MulRenLaunchBehavor>
       <MulRenExitModifiedPreset>0</MulRenExitModifiedPreset>
@@ -664,6 +671,7 @@
     <HotDir Name="(&amp;w) 1xTmp" Path="/home/dk/x-tmp"/>
     <HotDir Name="(&amp;d) Downloads" Path="/home/dk/Downloads"/>
     <HotDir Name="(&amp;c) dot_config" Path="/home/dk/.config"/>
+    <HotDir Name="(&amp;L) dot_local" Path="/home/dk/.local"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
@@ -671,7 +679,7 @@
     <ImageExifRotate>True</ImageExifRotate>
     <ImageStretchLargeOnly>False</ImageStretchLargeOnly>
     <ImageShowTransparency>False</ImageShowTransparency>
-    <ImageCenter>True</ImageCenter>
+    <ImageCenter>False</ImageCenter>
     <CopyMovePath1/>
     <CopyMovePath2/>
     <CopyMovePath3/>
@@ -1113,16 +1121,16 @@
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
   <MultiRenamePresets>
-    <LastPreset>Standart</LastPreset>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
         <Filename>[N]</Filename>
-        <Extension>ps1</Extension>
-        <FilenameStyle>0</FilenameStyle>
+        <Extension>[E]</Extension>
+        <FilenameStyle>1</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find>#-#</Find>
-        <Replace>##</Replace>
+        <Find/>
+        <Replace/>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>
@@ -1133,7 +1141,7 @@
         <Log>
           <Enabled>False</Enabled>
           <Append>False</Append>
-          <File/>
+          <File>/home/dk/Downloads/_todo_sortiere__kripta_crypto_trading_orders_/default.log</File>
         </Log>
       </Preset>
       <Preset>

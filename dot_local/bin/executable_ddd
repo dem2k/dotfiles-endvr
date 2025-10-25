@@ -125,7 +125,7 @@ fi
 # echo -e "${GREEN}START:${RESET} Starte Kopiervorgang..."
 echo ""
 
-pv "$SOURCE" | dd of="$DEST" bs=1M oflag=sync 2>/dev/null
+pv "$SOURCE" | dd of="$DEST" bs=4M oflag=sync 2>/dev/null
 
 # echo ""
 # echo -e "${GREEN}ERFOLG:${RESET} Kopiervorgang abgeschlossen!"

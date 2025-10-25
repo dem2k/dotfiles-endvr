@@ -127,6 +127,7 @@
 (use-package wgrep)
 (use-package buffer-move)
 (use-package git-timemachine)
+(use-package systemd)
 
 (use-package dashboard
   :init
@@ -560,20 +561,21 @@
   :config
   (general-evil-setup)
 
+  (general-define-key
+   :states '(normal visual)
+   :predicate '(not (or (derived-mode-p 'dired-mode)
+                        (derived-mode-p 'occur-mode)))
+   "RET" #'avy-goto-char-timer)
+
+  ;; (my-leader-keys
+  ;;   "RET" '(avy-goto-char-timer :wk "Easy Jump"))
+
   ;; set up 'SPC' as the global leader key
   (general-create-definer my-leader-keys
     :states '(normal insert visual emacs)
     :keymaps 'override
     :prefix "SPC" ;; set leader
     :global-prefix "M-SPC") ;; access leader in insert mode
-
-  ;; 2. RET ohne Leader im Normal‑/Visual‑State binden
-  (general-define-key
-   :states '(normal visual)
-   "RET" 'avy-goto-char-timer)
-
-  ;; (my-leader-keys
-  ;;   "RET" '(avy-goto-char-timer :wk "Easy Jump"))
 
   (my-leader-keys
     ;; "SPC" '(counsel-M-x :wk "Counsel M-x")

@@ -66,6 +66,13 @@
         <value type="string" value="xfce4-power-manager"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="-_hCNjlddZ"/>
+        <value type="string" value="oG81mvwrvE"/>
+        <value type="string" value="plnkzxEZFD"/>
+        <value type="string" value="virt-manager"/>
+        <value type="string" value="fEIaHhABB-"/>
+        <value type="string" value="ErF1ZT-8EE"/>
+        <value type="string" value="hm1ufujJbK"/>
         <value type="string" value="redshift"/>
         <value type="string" value="ksnip"/>
         <value type="string" value="blueman"/>
@@ -90,6 +97,7 @@
       <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
       <property name="digital-date-font" type="string" value="Sans 9"/>
       <property name="digital-time-font" type="string" value="Sans 14"/>
+      <property name="timezone" type="string" value="Europe/Berlin"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -173,16 +181,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="org.ksnip.ksnip.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="start-emacs-daemon.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="gparted.desktop"/>
-        <value type="string" value="io.github.thetumultuousunicornofdarkness.cpu-x.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="redshift-gtk.desktop"/>
-        <value type="string" value="bssh.desktop"/>
+        <value type="string" value="org.xfce.mousepad.desktop"/>
+        <value type="string" value="org.ksnip.ksnip.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="Alacritty.desktop"/>
+        <value type="string" value="start-emacs-daemon.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
+        <value type="string" value="localsend.desktop"/>
+        <value type="string" value="idea.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

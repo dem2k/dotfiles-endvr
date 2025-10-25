@@ -21,3 +21,8 @@ $HOME/Downloads/**/*.raw.xz
 $HOME/VirtualBox/
 $HOME/IdeaProjects/**/*.iso
 /etc/libvirt/
+/home/dk/PROJEKTE/archiso-live-usb/work/
+/home/dk/PROJEKTE/archiso-live-usb/out/
+/home/dk/PROJEKTE/archiso-alis-installer/archiso/
+/home/dk/PROJEKTE/archiso-alis-installer/tmp/
+/home/dk/PROJEKTE/**/*.iso
