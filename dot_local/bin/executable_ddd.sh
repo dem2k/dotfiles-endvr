@@ -1,0 +1,143 @@
+#!/usr/bin/bash
+
+################################################
+# ==========[ DDD - DD mit Dialog ]=========== #
+################################################
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+RESET='\033[0m'
+
+# Prüfen, ob das Skript in einem Terminal läuft
+if [[ ! -t 0 || ! -t 1 ]]; then
+  echo -e "${RED}FEHLER:${RESET} Dieses Skript muss in einem Terminal ausgeführt werden."
+  echo "        Bitte öffne ein Terminal und führe das Skript dort aus."
+  exit 1
+fi
+
+# Prüfen, ob fzf installiert ist
+if ! command -v fzf &> /dev/null; then
+  echo -e "${RED}FEHLER:${RESET} fzf ist nicht installiert."
+  exit 1
+fi
+
+# Parameter parsen
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -if)
+      SOURCE="$2"
+      shift 2
+      ;;
+    -of)
+      DEST="$2"
+      shift 2
+      ;;
+    -*)
+      echo -e "${RED}FEHLER:${RESET} Unbekannter Parameter: $1"
+      echo "        Benutzung: ddd <inputfile> [-of <outputdevice>]"
+      exit 1
+      ;;
+    *)
+      if [[ -z "$SOURCE" ]]; then
+        SOURCE="$1"
+        shift 1
+      else
+        echo -e "${RED}FEHLER:${RESET} Zu viele Parameter."
+        echo "        Benutzung: ddd <inputfile> [-of <outputdevice>]"
+        exit 1
+      fi
+      ;;
+  esac
+done
+
+# Validierung: Input-Datei
+if [[ -z "$SOURCE" ]]; then
+  echo -e "${RED}FEHLER:${RESET} Input-Datei muss angegeben werden."
+  echo "        Benutzung: ddd <inputfile> [-of <outputdevice>]"
+  exit 1
+fi
+ 
+if [[ ! -f "$SOURCE" ]]; then
+  echo -e "${RED}FEHLER:${RESET} Input-Datei '$SOURCE' existiert nicht."
+  exit 1
+fi
+
+# Wenn -of fehlt → interaktive Auswahl anzeigen
+if [[ -z "$DEST" ]]; then
+  echo -e "${CYAN}INFO:${RESET} Suche verfügbare Geräte..."
+  
+  DISK_LIST="DEVICE;GRÖSSE;VENDOR;MODEL;LABEL"$'\n'
+  for devpath in /dev/sd?; do
+    if [[ -b "$devpath" ]]; then
+      devname=$(basename "$devpath")
+      # Größe in Bytes → formatiert
+      SIZE=$(lsblk -b -dn -o SIZE "$devpath" 2>/dev/null)
+      SIZE_H=$(numfmt --to=iec-i --suffix=B "$SIZE" 2>/dev/null || echo "Unbekannt")
+      # Vendor, Model und Label mit udevadm
+      VENDOR=$(udevadm info --query=all --name="$devpath" 2>/dev/null | grep "ID_VENDOR=" | cut -d= -f2)
+      MODEL=$(udevadm info --query=all --name="$devpath" 2>/dev/null | grep "ID_MODEL=" | cut -d= -f2)
+      # Label von der ersten Partition holen
+      LABEL=$(lsblk -n -o LABEL "${devpath}1" 2>/dev/null | head -1 | tr -d '[:space:]')
+      
+      [[ -z "$VENDOR" ]] && VENDOR="Unbekannt"
+      [[ -z "$MODEL" ]] && MODEL="Unbekannt"
+      [[ -z "$LABEL" ]] && LABEL="(Kein Label)"
+      
+      # Zeile für fzf formatieren
+      DISK_LIST+="${devpath};${SIZE_H};${VENDOR};${MODEL};${LABEL}"$'\n'
+    fi
+  done
+
+  if [[ -z "$DISK_LIST" ]]; then
+    echo -e "${RED}FEHLER:${RESET} Keine geeigneten Zielgeräte gefunden (z.B. /dev/sdX)."
+    exit 1
+  fi
+
+  # fzf-Auswahl mit Header
+  SELECTION=$(echo -n "$DISK_LIST" | column -ts';' | fzf \
+    --header="Wähle das Zielgerät (SD-Karte, USB-Stick)" \
+    --header-first --header-lines=1 \
+    --height=40% --border --reverse --ansi \
+    --color="header:cyan,prompt:green,pointer:green")
+ 
+  # Prüfen, ob abgebrochen
+  if [[ -z "$SELECTION" ]]; then
+    echo -e "${YELLOW}ABBRUCH:${RESET} Vorgang abgebrochen."
+    exit 1
+  fi
+  
+  # Device-Pfad extrahieren (erstes Feld vor |)
+  DEST=$(echo "$SELECTION" | awk '{print $1}' | tr -d '[:space:]')
+fi
+
+# Validierung des Zielgeräts
+if [[ ! -b "$DEST" ]]; then
+  echo -e "${RED}FEHLER:${RESET} Zielgerät '$DEST' ist kein gültiges Block-Device."
+  exit 1
+fi
+ 
+# Bestätigung anzeigen
+echo ""
+echo "══════════════════════════════════════════════════════════════════════════════"
+echo "  Quelle: $SOURCE"
+echo "  Ziel  : $DEST"
+echo "══════════════════════════════════════════════════════════════════════════════"
+echo ""
+read -r -p "$(echo -e "${YELLOW}WARNUNG:${RESET} Alle Daten auf $DEST werden überschrieben! Fortfahren? [j/N] ")" REPLY
+
+if [[ ! $REPLY =~ ^[JjYy]$ ]]; then
+  echo -e "${YELLOW}ABBRUCH:${RESET} Vorgang abgebrochen."
+  exit 1
+fi
+
+# echo ""
+# echo -e "${GREEN}START:${RESET} Starte Kopiervorgang..."
+echo ""
+
+pv "$SOURCE" | dd of="$DEST" bs=4M oflag=sync 2>/dev/null
+
+# echo ""
+# echo -e "${GREEN}ERFOLG:${RESET} Kopiervorgang abgeschlossen!"
+# echo ""
