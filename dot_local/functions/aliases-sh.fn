@@ -17,6 +17,7 @@ alias free='free -m'                  # show sizes in MB
 alias gpl='git pull'
 alias gpu='git push'
 alias grep='grep --color=auto'
+alias git-yolo-commit='git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'
 
 alias dysk='dysk -c +ino'
 alias lsblk='lsblk -o"name,pttype,fstype,size,fsused,fsuse%,vendor,model,label,mountpoints,uuid"'

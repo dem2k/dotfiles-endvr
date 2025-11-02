@@ -144,9 +144,9 @@
             <Command>
               <ID>{1F1741C1-871D-43D1-B4F4-BF510A5D7442}</ID>
               <Icon>cm_changedir</Icon>
-              <Hint>(&amp;W) Working Dir</Hint>
+              <Hint>(&amp;W) Temp Working Dir</Hint>
               <Command>cm_ChangeDir</Command>
-              <Param>/home/dk/x-tmp</Param>
+              <Param>/home/dk/xx-tmp</Param>
             </Command>
             <Command>
               <ID>{C3FFA075-8142-42A8-8A5B-1D8B99AF7CC2}</ID>
@@ -254,6 +254,13 @@
           <Icon>/usr/share/icons/Qogir/scalable/apps/meld.svg</Icon>
           <Hint>Vergleichen</Hint>
           <Command>meld</Command>
+          <Params>%pl %pr</Params>
+        </Program>
+        <Program>
+          <ID>{4254A2F3-DDB0-400B-B1DE-C3C768ABFCD5}</ID>
+          <Icon>/usr/bin/bcompare</Icon>
+          <Hint>Bynd Compare</Hint>
+          <Command>/usr/bin/bcompare</Command>
           <Params>%pl %pr</Params>
         </Program>
       </Row>
@@ -667,10 +674,11 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="(&amp;h) Home" Path="/home/dk"/>
-    <HotDir Name="(&amp;w) 1xTmp" Path="/home/dk/x-tmp"/>
-    <HotDir Name="(&amp;d) Downloads" Path="/home/dk/Downloads"/>
-    <HotDir Name="(&amp;c) dot_config" Path="/home/dk/.config"/>
+    <HotDir Name="(&amp;H) Home" Path="/home/dk"/>
+    <HotDir Name="(&amp;W) xx-tmp" Path="/home/dk/xx-tmp"/>
+    <HotDir Name="(&amp;P) PROJEKTE" Path="/home/dk/PROJEKTE"/>
+    <HotDir Name="(&amp;D) Downloads" Path="/home/dk/Downloads"/>
+    <HotDir Name="(&amp;C) dot_config" Path="/home/dk/.config"/>
     <HotDir Name="(&amp;L) dot_local" Path="/home/dk/.local"/>
   </DirectoryHotList>
   <Viewer>
@@ -813,7 +821,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>tgz</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
