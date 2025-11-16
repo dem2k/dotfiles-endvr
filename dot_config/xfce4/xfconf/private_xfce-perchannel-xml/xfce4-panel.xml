@@ -183,8 +183,8 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="com.microsoft.edit.desktop"/>
         <value type="string" value="org.ksnip.ksnip.desktop"/>
+        <value type="string" value="com.microsoft.edit.desktop"/>
         <value type="string" value="jdownloader.desktop"/>
         <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="libreoffice-calc.desktop"/>
