@@ -38,8 +38,12 @@ if [ -z "$USER" ] || [ -z "$HOST" ]; then
     show_help
 fi
 
+# HOST bereinigen: Sonderzeichen durch Unterstriche ersetzen
+#HOST_CLEAN=$(echo "$HOST" | tr -c '[:alnum:]' '_' | sed 's/_$//')
+HOST_CLEAN="${HOST//[^a-zA-Z0-9]/_}"
+
 # SSH-Key-Dateiname mit Benutzer und Host
-KEY_NAME="id_ed25519_${USER}_${HOST}"
+KEY_NAME="id_ed25519_${USER}_${HOST_CLEAN}"
 KEY_PATH="$HOME/.ssh/$KEY_NAME"
 
 # Überprüfen, ob der Schlüssel bereits existiert
@@ -95,7 +99,7 @@ echo "SSH-Schlüssel wurde erfolgreich auf $USER@$HOST kopiert."
 
 # Automatisch Eintrag in SSH-Config erstellen
 CONFIG_FILE="$HOME/.ssh/config"
-HOST_ALIAS="${USER}_${HOST}"
+HOST_ALIAS="${USER}_${HOST_CLEAN}"
 
 echo "Füge SSH-Konfiguration automatisch hinzu..."
 # Überprüfen, ob die Config-Datei existiert, und gegebenenfalls erstellen
