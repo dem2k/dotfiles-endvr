@@ -675,6 +675,7 @@
   </IgnoreList>
   <DirectoryHotList>
     <HotDir Name="(&amp;H) Home" Path="/home/dk"/>
+    <HotDir Name="hp800g3 - mnt - sdb1" Path="wfx://FTP/hp800g3/mnt/sdb1/"/>
     <HotDir Name="(&amp;W) xx-tmp" Path="/home/dk/xx-tmp"/>
     <HotDir Name="(&amp;P) PROJEKTE" Path="/home/dk/PROJEKTE"/>
     <HotDir Name="(&amp;D) Downloads" Path="/home/dk/Downloads"/>
@@ -1133,7 +1134,7 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>[N]</Filename>
+        <Filename>0[N]</Filename>
         <Extension>[E]</Extension>
         <FilenameStyle>1</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>

@@ -13,9 +13,7 @@ resize_increments = true
 [font]
 size = 16
 offset = { y=-2 }
-
-[font.normal]
-family = "ZedMono Nerd Font"
+normal = {family = "ZedMono Nerd Font"}
 
 [cursor]
 style = { shape = "Block", blinking = "On" }
