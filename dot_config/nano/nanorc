@@ -1,0 +1,27 @@
+# https://habr.com/ru/articles/963940/
+
+include "/usr/share/nano/*.nanorc"
+
+set linenumbers
+set tabsize 4
+set autoindent
+set tabstospaces
+#set smooth
+set mouse
+set positionlog
+#set rebinddelete
+#set rebindkeypad
+set softwrap
+set atblanks
+set indicator
+set historylog
+set casesensitive
+set regexp
+set fill 132
+set breaklonglines
+
+set titlecolor white,black
+set statuscolor brightcyan,black
+set errorcolor brightred,white
+set selectedcolor black,cyan
+set numbercolor white,black
