@@ -13,7 +13,7 @@ sudo pacman -S --needed git fzf alacritty lazygit neovim zoxide ttf-zed-mono-ner
    chezmoi bat tmux ttf-jetbrains-mono-nerd autoconf texinfo emacs zsh gcc ripgrep lf
 ```
 
-### install fonts manually if they are not in your distro's repo
+## install fonts manually if they are not in your distro's repo
 ```
 FONTURL=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
   | grep -i "browser_download_url.*ZedMono.zip" | awk -F'"' '{print $4}') \
