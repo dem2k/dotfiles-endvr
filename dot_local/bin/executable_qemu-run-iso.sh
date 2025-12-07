@@ -1,0 +1,249 @@
+#!/usr/bin/env bash
+#
+# Copyright (C) 2020 David Runge <dvzrv@archlinux.org>
+# Copyright (C) 2021 Laurent Jourden <laurent85@enarel.fr>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# A simple script to run a bootable iso image or a bootable usb drive
+# using qemu. Both BIOS and UEFI booting is supported.
+#
+# Requirements:
+# - qemu
+# - edk2-ovmf (when UEFI booting)
+
+set -eu
+
+isoimage=''
+ramsize=''
+usbdrive=''
+
+print_help() {
+    local usagetext
+    IFS='' read -r -d '' usagetext <<EOF || true
+Usage:
+    qemu-run-iso [options] [image_name]
+
+Options:
+    -a                         set accessibility support using brltty (console profile only)
+    -b, --bios                 set boot type to 'BIOS' (default)
+    -d, --device device_name   set usb block device to boot from
+    -h, --help                 print help
+    -i, --iso image_name       image to boot into (optional if image is the last argument)
+    --hd                       set image type to hard disk instead of optical disc
+    -r, --ram integer[g/G]     set vm ram size in GiB (Default: 3)
+    -s, --sb                   use Secure Boot (only relevant when using UEFI)
+    -u, --uefi                 set boot type to 'UEFI'
+    -v, --vnc                  use VNC display (instead of default SDL)
+
+Examples:
+    Run an image using UEFI (positional argument):
+    $ qemu-run-iso --uefi aui-xfce-linux_5_10_5-0108-x64.iso
+
+    Run an image using explicitly defined flag:
+    $ qemu-run-iso --uefi --iso aui-xfce-linux_5_10_5-0108-x64.iso 
+    
+    Run a bootable usb drive using UEFI:
+    $ sudo qemu-run-iso --uefi --device /dev/sdc
+EOF
+    printf '%s' "${usagetext}"
+}
+
+cleanup_working_dir() {
+    if [[ -d "${working_dir}" ]]; then
+        rm -rf -- "${working_dir}"
+    fi
+}
+
+copy_ovmf_vars() {
+    if [[ ! -f '/usr/share/edk2/x64/OVMF_VARS.4m.fd' ]]; then
+        printf 'ERROR: %s\n' "OVMF_VARS.4m.fd not found. Install edk2-ovmf."
+        exit 1
+    fi
+    cp -av -- '/usr/share/edk2/x64/OVMF_VARS.4m.fd' "${working_dir}/"
+}
+
+_checks() {
+    if [[ -z "${isoimage}" && -z "${usbdrive}" ]]; then
+        printf 'ERROR: %s\n' "No iso image or usb device specified!"
+        exit 1
+    fi
+    if [[ -n "${isoimage}" && -n "${usbdrive}" ]]; then
+        printf 'ERROR: %s\n' "iso image and usb device are mutually exclusive!"
+        exit 1
+    fi
+    if [[ -n "${isoimage}" && ! -f "$image" ]]; then
+        printf 'ERROR: %s\n' "Image file (${image}) does not exist."
+        exit 1
+    fi
+    if [[ -n "${usbdrive}" && ! $(stat -c %t "${device}" 2> /dev/null) -eq 8 ]]; then
+        echo "Error: ${device} is not a block device!"
+        exit 1
+    fi
+    if [[ -n "${usbdrive}" && ! ( $(lsblk -dnro rm      "${device}" 2> /dev/null) -eq 1 || \
+                                  $(lsblk -dnro hotplug "${device}" 2> /dev/null) -eq 1    ) ]]; then
+        echo "Error: ${device} is not a removable block device!"
+        exit 1
+    fi
+    if [[ -n "${usbdrive}" && ! "$(lsblk -dnro tran "${device}" 2> /dev/null)" == 'usb' ]]; then
+        echo "Error: ${device} is not a usb device!"
+        exit 1
+    fi
+    if ! pacman -Q qemu &> /dev/null; then
+        echo 'qemu not installed, aborting!'
+        exit 0
+    fi
+    if [[ -n "${ramsize}" ]]; then
+        if ! [[ "${ramsize}" =~ ^[1-9][0-9]?+$ ]]; then
+            echo "RAM size invalid argument (GiB): ${ramsize}"
+            exit 1
+        fi
+        ramsize=$(( ramsize * 1024 ))
+    else
+        ramsize=3072
+    fi
+}
+
+_run() {
+    if [[ "$boot_type" == 'uefi' ]]; then
+        if ! pacman -Q edk2-ovmf &> /dev/null; then
+            echo 'edk2-ovmf not installed, aborting!'
+            exit 0
+        fi
+        copy_ovmf_vars
+        if [[ "${secure_boot}" == 'on' ]]; then
+            printf '%s\n' 'Using Secure Boot'
+            local ovmf_code='/usr/share/edk2/x64/OVMF_CODE.secboot.4m.fd'
+        else
+            local ovmf_code='/usr/share/edk2/x64/OVMF_CODE.4m.fd'
+        fi
+        qemu_options+=('-drive' "if=pflash,format=raw,unit=0,file=${ovmf_code},read-only=on"
+                       '-drive' "if=pflash,format=raw,unit=1,file=${working_dir}/OVMF_VARS.4m.fd"
+                       '-global' "driver=cfi.pflash01,property=secure,value=${secure_boot}")
+    fi
+
+    if [[ "${accessibility}" == 'on' ]]; then
+        qemu_options+=('-chardev' 'braille,id=brltty'
+                       '-device' 'usb-braille,id=usbbrl,chardev=brltty')
+    fi
+
+    if [[ "${isoimage}" == 'yes' ]]; then
+        qemu_options+=('-device' 'virtio-scsi-pci,id=scsi0'
+                       '-device' "scsi-${mediatype%rom},bus=scsi0.0,drive=${mediatype}0"
+                       '-drive' "id=${mediatype}0,if=none,format=raw,media=${mediatype/hd/disk},read-only=on,file=${image}")
+    fi
+
+    if [[ "${usbdrive}" == 'yes' ]]; then
+        device="/sys/block/${device##*/}"
+        device="$(readlink "${device}")"
+        device="${device#*usb}"
+        device="${device#*\/}"
+        device="${device%%/*}"
+        device="$(grep DEVNAME /sys/bus/usb/devices/"${device}"/uevent)"
+        device="${device/DEVNAME=//dev/}"
+        qemu_options+=('-device' 'qemu-xhci,id=xhci'
+                       '-device' "usb-host,bus=xhci.0,hostdevice=${device}")
+    fi
+
+        # -vga none -device virtio-vga,xres=1920,yres=1080 \
+        # -device VGA,edid=on,xres=1920,yres=1440 \
+        # -vga none -device virtio-vga,edid=on,xres=1920,yres=1080 \
+        #    -vga none -device qxl-vga,xres=1920,yres=1440 \
+    qemu-system-x86_64 \
+        -boot order=d,menu=on,reboot-timeout=5000 \
+        -m "size=${ramsize},slots=0,maxmem=$((ramsize*1024*1024))" \
+        -k de \
+        -name archiso,process=archiso_0 \
+        -display "${display}" \
+        -vga none -device qxl-vga,xres=2560,yres=1600 \
+        -device virtio-net-pci,romfile=,netdev=net0 -netdev user,id=net0 \
+        -global ICH9-LPC.disable_s3=1 \
+        -enable-kvm \
+        "${qemu_options[@]}" \
+        -serial stdio \
+        -no-reboot 
+}
+
+accessibility=''
+boot_type='bios'
+display='gtk,gl=on,grab-on-hover=off'
+image=''
+mediatype='cdrom'
+qemu_options=()
+secure_boot='off'
+working_dir="$(mktemp -dt auirun.XXXXXXXX)"
+trap cleanup_working_dir EXIT
+
+OPTS=$(getopt -o     'abd:hi:r:suv' \
+              --long 'bios,device:,hd,help,iso:,ram:,sb,uefi,vnc' \
+              -n 'qemu-run-iso' -- "$@")
+[[ $? -eq 0 ]] || { print_help; exit 1; }
+eval set -- "${OPTS}"
+
+unset OPTS
+
+while true; do
+    case "${1}" in
+        '-a')
+            accessibility='on'
+            shift ;;
+        '-b'|'--bios')
+            boot_type='bios'
+            shift ;;
+        '-d'|'--device')
+            usbdrive='yes'
+            device="${2}"
+            shift 2 ;;
+        '-h'|'--help')
+            print_help
+            exit 0
+            ;;
+        '-i'|'--iso')
+            isoimage='yes'
+            image="${2}"
+            shift 2 ;;
+        '--hd')
+            mediatype='hd'
+            shift ;;
+        '-r'|'--ram')
+            ramsize="${2/[gG]}"
+            shift 2 ;;
+        '-s'|'--sb')
+            secure_boot='on'
+            shift ;;
+        '-u'|'--uefi')
+            boot_type='uefi'
+            shift ;;
+        '-v'|'--vnc')
+            display='none'
+            qemu_options+=(-vnc 'vnc=0.0.0.0:0,vnc=[::]:0')
+            shift ;;
+        '--')
+            shift
+            break ;;
+    esac
+done
+
+# NEU: Prüfen auf Positionsargumente (ISO Image ohne -i)
+# Wenn Argumente übrig sind ($1 existiert) UND noch kein Image/Device gesetzt wurde:
+if [[ -n "${1:-}" ]]; then
+    if [[ -z "${isoimage}" && -z "${usbdrive}" ]]; then
+        isoimage='yes'
+        image="${1}"
+    fi
+fi
+
+if (( EUID != 0 )); then
+    # Enable sound
+    qemu_options+=('-audiodev' 'pa,id=snd0'
+                   '-device' 'ich9-intel-hda'
+                   '-device' 'hda-output,audiodev=snd0'
+                   '-machine' 'type=q35,smm=on,accel=kvm,usb=on,pcspk-audiodev=snd0')
+else
+    qemu_options+=('-machine' 'type=q35,smm=on,accel=kvm,usb=on')
+fi
+
+_checks
+_run
+
+# vim:ts=4:sw=4:et:
