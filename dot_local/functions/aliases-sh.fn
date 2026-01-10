@@ -2,6 +2,8 @@
 # meine aliase. ne, is klar!
 #
 
+export DELTA_FEATURES=+side-by-side
+
 alias ls='ls -F'
 alias cd..='cd ..'
 alias mv='mv -iv'
