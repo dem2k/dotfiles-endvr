@@ -12,9 +12,9 @@ yay-update-all() {
   if [ $installedver != $currentver ]; then
     echo " Arch Linux PGP Keyring is out of date."
     echo " Updating before full system upgrade."
-{{ if eq .chezmoi.osRelease.id "endeavouros" }}    
+{{- if eq .chezmoi.osRelease.id "endeavouros" }}    
     sudo pacman -S --needed --noconfirm archlinux-keyring endeavouros-keyring
-{{ else }}
+{{ else -}}
     sudo pacman -S --needed --noconfirm archlinux-keyring
 {{ end }}
   else
