@@ -15,7 +15,7 @@ yay-update-all() {
 {{- if eq .chezmoi.osRelease.id "endeavouros" }}    
     sudo pacman -S --needed --noconfirm archlinux-keyring endeavouros-keyring
 {{ else }}
-    sudo pacman -S --needed --noconfirm archlinux-keyring
+    sudo pacman -S --needed --noconfirm archlinux-keyring  xx
 {{- end }}
   else
     echo " Arch Linux PGP Keyring is up to date."
