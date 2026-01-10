@@ -1,6 +1,8 @@
 #
 # https://nano-editor.org/dist/latest/nanorc.5.html
 # https://habr.com/ru/articles/963940/
+# https://manpages.ubuntu.com/manpages/noble/de/man5/nanorc.5.html
+# https://man.archlinux.org/man/nanorc.5.de
 #
 include "/usr/share/nano/*.nanorc"
 #
