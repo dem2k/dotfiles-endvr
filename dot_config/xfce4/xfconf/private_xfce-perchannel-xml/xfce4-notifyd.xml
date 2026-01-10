@@ -5,6 +5,7 @@
   <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="antigravity"/>
       <value type="string" value="blueman"/>
       <value type="string" value="EndeavourOS notification"/>
       <value type="string" value="eos-reboot-required3"/>
@@ -18,6 +19,9 @@
       <value type="string" value="Xfce volume control"/>
       <value type="string" value="Xfce4-notifyd settings"/>
       <value type="string" value="xfce4-settings-helper"/>
+    </property>
+    <property name="muted_applications" type="array">
+      <value type="string" value="antigravity"/>
     </property>
   </property>
   <property name="notify-location" type="string" value="bottom-right"/>

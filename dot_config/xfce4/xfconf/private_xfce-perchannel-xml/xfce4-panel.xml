@@ -186,16 +186,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="io.github.cboxdoerfer.FSearch.desktop"/>
+        <value type="string" value="io.github.mpc_qt.mpc-qt.desktop"/>
         <value type="string" value="jdownloader.desktop"/>
-        <value type="string" value="arronax.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="sshd-starten.desktop"/>
         <value type="string" value="org.ksnip.ksnip.desktop"/>
-        <value type="string" value="com.microsoft.edit.desktop"/>
+        <value type="string" value="org.xfce.Parole.desktop"/>
+        <value type="string" value="mpv.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
+        <value type="string" value="org.gnome.SimpleScan.desktop"/>
+        <value type="string" value="start-emacs-daemon.desktop"/>
+        <value type="string" value="emacsclient.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>
