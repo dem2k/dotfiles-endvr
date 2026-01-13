@@ -776,6 +776,7 @@
     "t n" '(display-line-numbers-mode :wk "Toggle line Numbers")
     "t o" '(org-mode :wk "Toggle Org Mode")
     "t r" '(rainbow-mode :wk "Toggle Rainbow Mode")
+    "t w" '(whitespace-mode :wk "Toggle invisible character")
     "t t" '(visual-line-mode :wk "Toggle Truncated Lines")
     "t v" '(vterm-toggle :wk "Toggle VTerm"))
 
