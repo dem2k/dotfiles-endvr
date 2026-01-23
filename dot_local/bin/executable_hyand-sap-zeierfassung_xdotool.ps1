@@ -109,16 +109,15 @@ if ($sortedWorkEntries.Count -gt 1) {
         if($choise -eq "" -or $choise -ieq "j"){
             @"
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 275 895 click 1 sleep 1
-key --delay 100 Tab Tab Tab
-type --delay 100 DE0081
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1459 693 click 1 sleep 1
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1431 1277 click 1 sleep 1 
+key --delay 50 Tab Tab
 sleep 1
-key --delay 100 Down Return Tab Tab
+type --delay 50 $($_.Von)
+key --delay 50 Tab
 sleep 1
-type --delay 100 $($_.Von)
-key --delay 100 Tab
-sleep 1
-type --delay 100 $($_.Bis)
-key --delay 100 Tab
+type --delay 50 $($_.Bis)
+key --delay 50 Tab
 sleep 1
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2145 1665 click 1 sleep 1
 "@ | xdotool -            
