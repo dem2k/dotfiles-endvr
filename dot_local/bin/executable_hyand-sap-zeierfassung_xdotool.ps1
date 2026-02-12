@@ -69,7 +69,7 @@ sleep 1
 key --delay 50 Return
 sleep 1
 key --delay 50 --repeat 8 Tab
-type --delay 50 "Ticketbearbeitung und Fehlerbehebung."
+type --delay 20 "Ticketbearbeitung und Fehlerbehebung."
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2150 1665 click 1 sleep 1
 "@ | xdotool -
         }

@@ -771,12 +771,12 @@
 
   (my-leader-keys
     "t" '(:ignore t :wk "Toggle")
-    "t e" '(eshell-toggle :wk "Toggle eshell")
-    "t f" '(flycheck-mode :wk "Toggle flycheck")
-    "t n" '(display-line-numbers-mode :wk "Toggle line Numbers")
+    "t e" '(eshell-toggle :wk "Toggle eShell")
+    "t f" '(flycheck-mode :wk "Toggle Flycheck Mode")
+    "t n" '(display-line-numbers-mode :wk "Toggle Line Numbers")
     "t o" '(org-mode :wk "Toggle Org Mode")
     "t r" '(rainbow-mode :wk "Toggle Rainbow Mode")
-    "t w" '(whitespace-mode :wk "Toggle invisible character")
+    "t w" '(whitespace-mode :wk "Toggle Whitespace Mode")
     "t t" '(visual-line-mode :wk "Toggle Truncated Lines")
     "t v" '(vterm-toggle :wk "Toggle VTerm"))
 
