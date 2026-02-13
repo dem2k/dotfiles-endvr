@@ -58,6 +58,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (79%)"/>
         <value type="string" value="javaembeddedframe"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (82%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (86%)"/>
@@ -68,6 +70,8 @@
         <value type="string" value="xfce4-power-manager"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="autokey-qt"/>
+        <value type="string" value="remmina-icon"/>
         <value type="string" value="oG81mvwrvE"/>
         <value type="string" value="-_hCNjlddZ"/>
         <value type="string" value="plnkzxEZFD"/>
@@ -186,16 +190,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="jdownloader.desktop"/>
+        <value type="string" value="antigravity.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="sshd-starten.desktop"/>
+        <value type="string" value="idea.desktop"/>
         <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="io.github.mpc_qt.mpc-qt.desktop"/>
         <value type="string" value="org.ksnip.ksnip.desktop"/>
-        <value type="string" value="org.xfce.Parole.desktop"/>
-        <value type="string" value="mpv.desktop"/>
-        <value type="string" value="org.gnome.SimpleScan.desktop"/>
-        <value type="string" value="start-emacs-daemon.desktop"/>
+        <value type="string" value="galculator.desktop"/>
+        <value type="string" value="libreoffice-calc.desktop"/>
+        <value type="string" value="designer.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

@@ -6,6 +6,7 @@
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="antigravity"/>
+      <value type="string" value="autokey-qt"/>
       <value type="string" value="blueman"/>
       <value type="string" value="EndeavourOS notification"/>
       <value type="string" value="eos-reboot-required3"/>
