@@ -182,6 +182,8 @@
   :config
   ;; (evil-select-search-module 'evil-search-module 'evil-search)
   (unbind-key "<deletechar>" evil-normal-state-map) ;; DEL soll nicht ins Clipboard löschen.
+  (define-key evil-motion-state-map (kbd "C-v") nil) ;; 1. altes C-v entfernen
+  (define-key evil-normal-state-map (kbd "C-S-v") #'evil-visual-block) ;; 2. neues C-S-v einrichten
   (evil-mode +1))
 
 (use-package evil-collection
@@ -341,8 +343,6 @@
   (consult-customize
    consult-theme consult-ripgrep consult-git-grep consult-grep
    consult-bookmark consult-recent-file consult-xref
-   consult--source-bookmark consult--source-file-register
-   consult--source-recent-file consult--source-project-recent-file
    :preview-key '(:debounce 0.5 any)))
 
 (use-package embark

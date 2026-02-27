@@ -15,6 +15,7 @@ $HOME/.local/state/
 $HOME/.local/vm-images/
 $HOME/.vm-images/
 $HOME/Downloads/**/*.mkv
+$HOME/Downloads/**/*.avi
 $HOME/Downloads/**/*.iso
 $HOME/Downloads/**/*.img.xz
 $HOME/Downloads/**/*.raw.xz
