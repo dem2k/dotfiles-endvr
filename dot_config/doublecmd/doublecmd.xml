@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.1 beta" ConfigVersion="15">
+<doublecmd DCVersion="1.2.4 beta" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -132,7 +132,7 @@
               <Params>%p</Params>
             </Program>
             <Separator>
-              <Style>False</Style>
+              <Style>0</Style>
             </Separator>
             <Command>
               <ID>{68235F3F-14E7-4436-8526-DAB1230655A5}</ID>
@@ -194,10 +194,17 @@
                   <Command>cm_ChangeDir</Command>
                   <Param>/home/dk/.local/share</Param>
                 </Command>
+                <Command>
+                  <ID>{638370F7-B6BC-4CBF-A406-3D5E5F557CDB}</ID>
+                  <Icon>cm_changedir</Icon>
+                  <Hint>(&amp;F) functions</Hint>
+                  <Command>cm_ChangeDir</Command>
+                  <Param>/home/dk/.local/functions</Param>
+                </Command>
               </MenuItems>
             </Menu>
             <Separator>
-              <Style>False</Style>
+              <Style>0</Style>
             </Separator>
             <Menu>
               <ID>{16F5C088-831F-4911-91FB-6EDACEE0B6FE}</ID>
@@ -236,7 +243,7 @@
               </MenuItems>
             </Menu>
             <Separator>
-              <Style>True</Style>
+              <Style>1</Style>
             </Separator>
             <Command>
               <ID>{386374F0-04D7-4C24-9387-1EA3754DE564}</ID>
@@ -247,7 +254,7 @@
           </MenuItems>
         </Menu>
         <Separator>
-          <Style>True</Style>
+          <Style>1</Style>
         </Separator>
         <Program>
           <ID>{D1ECD496-23B4-4A11-A9F1-A62F662C52BD}</ID>
@@ -326,7 +333,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -722,6 +729,7 @@
     <SynEditRightEdge>132</SynEditRightEdge>
     <SynEditBlockIndent>2</SynEditBlockIndent>
     <FindWordAtCursor>True</FindWordAtCursor>
+    <SynEditSpecialChars>5</SynEditSpecialChars>
   </Editor>
   <Differ>
     <IgnoreCase>False</IgnoreCase>
@@ -1218,11 +1226,12 @@
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
         <Filename>[N]</Filename>
-        <Extension>[E]</Extension>
+        <Extension>txt</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find>.repack</Find>
+        <Find/>
         <Replace/>
+        <RepExt>True</RepExt>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>
@@ -1244,6 +1253,7 @@
         <ExtensionStyle>0</ExtensionStyle>
         <Find/>
         <Replace/>
+        <RepExt>True</RepExt>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <CaseSensitive>False</CaseSensitive>

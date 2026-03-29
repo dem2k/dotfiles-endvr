@@ -1,4 +1,8 @@
 $HOME/.jd/
+$HOME/.cache/
+$HOME/.cargo/
+$HOME/.pub-cache/
+$HOME/.antigravity/
 $HOME/.java/
 $HOME/.emacs.d/eln-cache/
 $HOME/.emacs.d/elpa/
@@ -6,6 +10,7 @@ $HOME/.emacs.d/autosave/
 $HOME/.emacs.d/#*#
 $HOME/.config/google-chrome/
 $HOME/.config/JetBrains/
+$HOME/.config/Antigravity/
 $HOME/.local/share/JetBrains/
 $HOME/.local/share/containers/
 $HOME/.local/share/Trash/
@@ -15,6 +20,7 @@ $HOME/.local/state/
 $HOME/.local/vm-images/
 $HOME/.vm-images/
 $HOME/Downloads/**/*.mkv
+$HOME/Downloads/**/*.mp4
 $HOME/Downloads/**/*.avi
 $HOME/Downloads/**/*.iso
 $HOME/Downloads/**/*.img.xz
@@ -22,8 +28,10 @@ $HOME/Downloads/**/*.raw.xz
 $HOME/VirtualBox/
 $HOME/IdeaProjects/**/*.iso
 /etc/libvirt/
-/home/dk/PROJEKTE/archiso-live-usb/work/
-/home/dk/PROJEKTE/archiso-live-usb/out/
-/home/dk/PROJEKTE/archiso-alis-installer/archiso/
-/home/dk/PROJEKTE/archiso-alis-installer/tmp/
-/home/dk/PROJEKTE/**/*.iso
+$HOME/PROJEKTE/archiso-live-usb/work/
+$HOME/PROJEKTE/archiso-live-usb/out/
+$HOME/PROJEKTE/archiso-alis-installer/archiso/
+$HOME/PROJEKTE/archiso-alis-installer/tmp/
+$HOME/PROJEKTE/**/*.iso
+$HOME/**/node_modules/
+

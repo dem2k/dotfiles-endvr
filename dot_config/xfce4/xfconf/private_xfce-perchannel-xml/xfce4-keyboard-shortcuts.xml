@@ -51,6 +51,12 @@
       <property name="&lt;Super&gt;Return" type="string" value="exo-open --launch TerminalEmulator">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="Print" type="string" value="flameshot full">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Primary&gt;Print" type="string" value="flameshot gui">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">

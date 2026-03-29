@@ -47,6 +47,14 @@
         ModifiedColor : 16755370,
         ModifiedBinaryColor : 255
       },
+      ProgressBar : {
+        RunColor1 : 11266507,
+        RunColor2 : 5296274,
+        WaitColor1 : 6605567,
+        WaitColor2 : 301567,
+        StopColor1 : 9804287,
+        StopColor2 : 6778623
+      },
       TreeViewMenu : {
         BackgroundColor : -2147483617,
         ShortcutColor : 255,
@@ -1767,6 +1775,14 @@
         DeletedColor : 6383296,
         ModifiedColor : 12622689,
         ModifiedBinaryColor : 6383296
+      },
+      ProgressBar : {
+        RunColor1 : 2260279,
+        RunColor2 : 1014543,
+        WaitColor1 : 1988285,
+        WaitColor2 : 1392050,
+        StopColor1 : 6383296,
+        StopColor2 : 1845432
       },
       TreeViewMenu : {
         BackgroundColor : -2147483617,
