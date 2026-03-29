@@ -4,8 +4,8 @@
 # Einmalige Prüfung beim Laden der Shell
 if command -v trash-put >/dev/null 2>&1; then
     _TRASH_CMD=(trash-put)
-elif command -v trash >/dev/null 2>&1; then
-    _TRASH_CMD=(trash put)
+elif command -v trashy >/dev/null 2>&1; then
+    _TRASH_CMD=(trashy put)
 else
     _TRASH_CMD=()
 fi
