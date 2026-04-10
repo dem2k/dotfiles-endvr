@@ -108,7 +108,6 @@ if ($sortedWorkEntries.Count -gt 1) {
         Write-Host
         Set-FocusThisWindow
         Write-Host "       Pause :      $($_.Von) - $($_.Bis) ($($_.Dauer) Min)"
-
         $choise = Read-Host "Markiere den Tag und drücke <Enter/J> zum ausführen. (<N> zum überspringen) [J/n] "
         if($choise -eq "" -or $choise -ieq "j"){
             @"
@@ -131,7 +130,6 @@ search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --windo
 
         Write-Host
         Set-FocusThisWindow
-
         $choise = Read-Host "Nächster Tag? <Enter/J> zum ausführen. (<N> zum überspringen) [J/n] "
         if($choise -eq "" -or $choise -ieq "j"){
             $countNextDay = if ($dayInfo.Tag -eq "Fr") { 3 } else { 1 }
