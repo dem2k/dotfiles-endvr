@@ -58,6 +58,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (74%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (79%)"/>
         <value type="string" value="javaembeddedframe"/>
@@ -70,6 +71,8 @@
         <value type="string" value="xfce4-power-manager"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="u2pKVbINnG"/>
+        <value type="string" value="CopyQ_copyq"/>
         <value type="string" value="flameshot"/>
         <value type="string" value="autokey-qt"/>
         <value type="string" value="remmina-icon"/>
@@ -145,7 +148,7 @@
       </property>
       <property name="msl" type="int" value="98"/>
       <property name="timezone" type="string" value="Europe/Berlin"/>
-      <property name="offset" type="string" value="+01:00"/>
+      <property name="offset" type="string" value="+02:00"/>
       <property name="cache-max-age" type="int" value="172800"/>
       <property name="power-saving" type="bool" value="true"/>
       <property name="units" type="empty">
@@ -191,16 +194,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="jdownloader.desktop"/>
+        <value type="string" value="FreeFileSync.desktop"/>
+        <value type="string" value="io.github.cboxdoerfer.FSearch.desktop"/>
+        <value type="string" value="virt-viewer.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="com.github.hluk.copyq.desktop"/>
         <value type="string" value="antigravity.desktop"/>
         <value type="string" value="sshd-starten.desktop"/>
         <value type="string" value="com.microsoft.edit.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="doublecmd.desktop"/>
-        <value type="string" value="io.github.cboxdoerfer.FSearch.desktop"/>
-        <value type="string" value="libreoffice-calc.desktop"/>
-        <value type="string" value="scan-to-paperless.desktop"/>
-        <value type="string" value="eos-update.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

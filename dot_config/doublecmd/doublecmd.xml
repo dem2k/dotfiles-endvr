@@ -1226,11 +1226,11 @@
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
         <Filename>[N]</Filename>
-        <Extension>txt</Extension>
+        <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
         <Find/>
-        <Replace/>
+        <Replace>_</Replace>
         <RepExt>True</RepExt>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>

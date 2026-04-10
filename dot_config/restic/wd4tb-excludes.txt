@@ -18,20 +18,24 @@ $HOME/.local/share/chezmoi/
 $HOME/.local/share/nvim/
 $HOME/.local/state/
 $HOME/.local/vm-images/
+$HOME/.m2/
 $HOME/.vm-images/
+$HOME/**/node_modules/
+$HOME/xx-tmp/
 $HOME/Downloads/**/*.mkv
 $HOME/Downloads/**/*.mp4
 $HOME/Downloads/**/*.avi
 $HOME/Downloads/**/*.iso
+$HOME/Downloads/**/*.exe
 $HOME/Downloads/**/*.img.xz
 $HOME/Downloads/**/*.raw.xz
+$HOME/Downloads/**/*.qcow*
 $HOME/VirtualBox/
 $HOME/IdeaProjects/**/*.iso
 /etc/libvirt/
+$HOME/PROJEKTE/**/*.iso
 $HOME/PROJEKTE/archiso-live-usb/work/
 $HOME/PROJEKTE/archiso-live-usb/out/
 $HOME/PROJEKTE/archiso-alis-installer/archiso/
 $HOME/PROJEKTE/archiso-alis-installer/tmp/
-$HOME/PROJEKTE/**/*.iso
-$HOME/**/node_modules/
 

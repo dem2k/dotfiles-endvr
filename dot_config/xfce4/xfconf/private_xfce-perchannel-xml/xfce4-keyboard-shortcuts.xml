@@ -37,7 +37,6 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;Escape" type="string" value="xfce4-taskmanager"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Alt&gt;asciicircum" type="string" value="xfce4-clipman-history"/>
       <property name="Pause" type="string" value="xfce4-popup-whiskermenu -c"/>
       <property name="&lt;Super&gt;e" type="string" value="exo-open --launch FileManager">
         <property name="startup-notify" type="bool" value="true"/>

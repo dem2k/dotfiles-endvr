@@ -56,21 +56,25 @@ $processedData | Group-Object -Property Datum | ForEach-Object {
         $choise = Read-Host "Markiere den Tag und drücke <Enter/J> zum ausführen. (<N> zum überspringen) [J/n] "
         if($choise -eq "" -or $choise -ieq "j"){
             @"
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 275 895 click 1 sleep 2
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1462 631 click 1 sleep 2
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1340 950 click 1 sleep 2
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1050 860 click 1 sleep 0.5
+# zeiterfass. hinzufügen klicken
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 265 900   click 1 sleep 2
+# arbeitspaket auswahl
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1455 630  click 1 sleep 2
+# paket klicken
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1335 955  click 1 sleep 2
+key  --delay 50 --repeat 4 Tab
 type --delay 50 $ein
 key Tab
 type --delay 50 $aus
-key --delay 50 Tab Tab
+key  --delay 50 --repeat 2 Tab
 type --delay 50 ZDE29
+sleep 1.5
+key  --delay 50 Return
 sleep 1
-key --delay 50 Return
-sleep 1
-key --delay 50 --repeat 8 Tab
+key  --delay 50 --repeat 8 Tab
 type "Ticketbearbeitung und Fehlerbehebung."
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2150 1665 click 1 sleep 1
+# ok button klicken
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2145 1665 click 1 sleep 2
 "@ | xdotool -
         }
 
@@ -108,17 +112,17 @@ if ($sortedWorkEntries.Count -gt 1) {
         $choise = Read-Host "Markiere den Tag und drücke <Enter/J> zum ausführen. (<N> zum überspringen) [J/n] "
         if($choise -eq "" -or $choise -ieq "j"){
             @"
+# zeiterfass. hinzufügen klicken
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 275 895 click 1 sleep 1
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1459 693 click 1 sleep 1
-search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1431 1277 click 1 sleep 1 
-key --delay 50 Tab Tab
+key --delay 50 --repeat 3 Tab
+type --delay 50 DE0081
 sleep 1
+key --delay 50 Enter
+key --delay 50 --repeat 2 Tab
 type --delay 50 $($_.Von)
 key --delay 50 Tab
-sleep 1
 type --delay 50 $($_.Bis)
-key --delay 50 Tab
-sleep 1
+# sleep 1
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2145 1665 click 1 sleep 1
 "@ | xdotool -            
         }
