@@ -113,13 +113,14 @@ if ($sortedWorkEntries.Count -gt 1) {
             @"
 # zeiterfass. hinzufügen klicken
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 275 895 click 1 sleep 1
-key --delay 50 --repeat 3 Tab
+sleep 1
+key  --delay 50 --repeat 3 Tab
 type --delay 50 DE0081
 sleep 1
-key --delay 50 Enter
-key --delay 50 --repeat 2 Tab
+key  --delay 50 Enter
+key  --delay 50 --repeat 2 Tab
 type --delay 50 $($_.Von)
-key --delay 50 Tab
+key  --delay 50 Tab
 type --delay 50 $($_.Bis)
 # sleep 1
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2145 1665 click 1 sleep 1

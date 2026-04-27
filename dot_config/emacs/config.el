@@ -369,11 +369,17 @@
           ("XML" (html-tidy "-xml" "-raw" "-indent" "-quiet" "-wrap" "0")))))
 
 (defun dual-format-function ()
-  "Format code using lsp-format if lsp-mode is active, otherwise use format-all."
+  "Format code using lsp-format if lsp-mode is active, otherwise use built-in JSON functions or format-all."
   (interactive)
-  (if (bound-and-true-p lsp-mode)
-	  (lsp-format-buffer)
-	(format-all-region-or-buffer)))
+  (cond
+   ((bound-and-true-p lsp-mode)
+    (lsp-format-buffer))
+   ((derived-mode-p 'json-mode 'json-ts-mode)
+    (if (use-region-p)
+        (json-pretty-print (region-beginning) (region-end))
+      (json-pretty-print-buffer)))
+   (t
+    (format-all-region-or-buffer))))
 
 (use-package dired-gitignore
   :demand t
