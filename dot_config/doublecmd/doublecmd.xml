@@ -687,7 +687,7 @@
     <HotDir Name="(&amp;H) Home" Path="/home/dk"/>
     <HotDir Name="(&amp;3) hp800g3 - mnt - sdb1" Path="wfx://FTP/hp800g3/mnt/sdb1/"/>
     <HotDir Name="(&amp;W) xx-tmp" Path="/home/dk/xx-tmp"/>
-    <HotDir Name="(&amp;P) PROJEKTE" Path="/home/dk/PROJEKTE"/>
+    <HotDir Name="(&amp;P) PROJEKTE" Path="/home/dk/Projekte"/>
     <HotDir Name="(&amp;D) Downloads" Path="/home/dk/Downloads"/>
     <HotDir Name="(&amp;C) dot_config" Path="/home/dk/.config"/>
     <HotDir Name="(&amp;L) dot_local" Path="/home/dk/.local"/>
