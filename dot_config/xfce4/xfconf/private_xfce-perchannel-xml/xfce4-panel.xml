@@ -194,6 +194,8 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="scan-to-paperless.desktop"/>
+        <value type="string" value="idea.desktop"/>
         <value type="string" value="blueman-manager.desktop"/>
         <value type="string" value="antigravity.desktop"/>
         <value type="string" value="virt-manager.desktop"/>
@@ -202,8 +204,6 @@
         <value type="string" value="FreeFileSync.desktop"/>
         <value type="string" value="virt-viewer.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="com.github.hluk.copyq.desktop"/>
-        <value type="string" value="sshd-starten.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

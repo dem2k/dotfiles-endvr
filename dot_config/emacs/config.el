@@ -571,6 +571,8 @@
    :states '(normal visual)
    :predicate '(not (or (derived-mode-p 'dired-mode)
                         (derived-mode-p 'dashboard-mode)
+                        (derived-mode-p 'helpful-mode)
+                        (derived-mode-p 'Custom-mode)
                         (derived-mode-p 'occur-mode)))
    "RET" #'avy-goto-char-timer)
 
