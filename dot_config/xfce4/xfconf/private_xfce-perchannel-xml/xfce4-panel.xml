@@ -58,6 +58,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (84%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (74%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (83%)"/>
         <value type="string" value="funknetzwerkverbindung mit »r2d2link« ist aktiv: r2d2link (79%)"/>
@@ -194,16 +195,16 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="libreoffice-calc.desktop"/>
+        <value type="string" value="org.flameshot.Flameshot.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="scan-to-paperless.desktop"/>
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="xfce4-about.desktop"/>
         <value type="string" value="idea.desktop"/>
         <value type="string" value="blueman-manager.desktop"/>
-        <value type="string" value="antigravity.desktop"/>
         <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="io.github.cboxdoerfer.FSearch.desktop"/>
-        <value type="string" value="jdownloader.desktop"/>
-        <value type="string" value="FreeFileSync.desktop"/>
-        <value type="string" value="virt-viewer.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>
