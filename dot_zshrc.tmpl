@@ -1,3 +1,7 @@
+# Skip interactive-only init when running without a TTY (e.g. OMP shell snapshots).
+# Exports and PATH are still set; ZLE/completion widgets are not.
+[[ -o interactive && ! -t 0 && ! -t 1 ]] && setopt NO_ZLE 2>/dev/null; true
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$PATH
 
@@ -101,11 +105,13 @@ zstyle ':omz:update' mode disabled    # disable automatic updates
 {{- if eq .chezmoi.os "darwin" }}
 plugins=(git zoxide fzf aliases fzf-tab)
 {{ else }}
-plugins=(git zoxide fzf aliases fzf-tab atuin archlinux)
+plugins=(git zoxide fzf aliases fzf-tab archlinux atuin)
 {{- end }}
 
-source $ZSH/oh-my-zsh.sh
-
+if [[ -o interactive ]]; then
+  source $ZSH/oh-my-zsh.sh
+fi
+ 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -138,7 +144,7 @@ fi
 # bindkey '^H' delete-word-back-or-current  # Ctrl+Bksp to delete current or previous word
 
 # CTRL-BKSP kill word to the left.
-bindkey '^H' backward-kill-word
+[[ -o interactive ]] && bindkey '^H' backward-kill-word
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
