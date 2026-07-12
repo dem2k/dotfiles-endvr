@@ -1225,12 +1225,12 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>[N1:4]-[N5:6]-[N7:8]_[N10:15]</Filename>
+        <Filename>[N]</Filename>
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find/>
-        <Replace>_</Replace>
+        <Find Value="best fit"/>
+        <Replace Value="A.I. Fitness"/>
         <RepExt>True</RepExt>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
@@ -1251,8 +1251,8 @@
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find/>
-        <Replace/>
+        <Find Value=""/>
+        <Replace Value=""/>
         <RepExt>True</RepExt>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
