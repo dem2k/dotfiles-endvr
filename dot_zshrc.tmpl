@@ -108,9 +108,7 @@ plugins=(git zoxide fzf aliases fzf-tab)
 plugins=(git zoxide fzf aliases fzf-tab archlinux atuin)
 {{- end }}
 
-if [[ -o interactive ]]; then
-  source $ZSH/oh-my-zsh.sh
-fi
+[[ -o interactive ]] && source $ZSH/oh-my-zsh.sh
  
 # User configuration
 
