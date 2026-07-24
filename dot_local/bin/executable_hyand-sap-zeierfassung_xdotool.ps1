@@ -1,10 +1,46 @@
 #!/usr/bin/pwsh
 
-param([parameter(mandatory=$true)]$CsvFile)
+param([parameter(mandatory=$true)]$InputFile)
 
 function Set-FocusThisWindow {
     xdotool search --class "Alacritty" windowactivate
 }
+
+# Prüfe ob Datei existiert
+if (-not (Test-Path $InputFile)) {
+    Write-Host "Fehler: Datei '$InputFile' nicht gefunden!" -ForegroundColor Red
+    exit 1
+}
+
+# Konvertiere XLS zu CSV falls nötig
+$fileExtension = [System.IO.Path]::GetExtension($InputFile).ToLower()
+$CsvFile = $InputFile
+
+if ($fileExtension -eq ".xls" -or $fileExtension -eq ".xlsx") {
+    Write-Host "Konvertiere XLS-Datei zu CSV..." -ForegroundColor Cyan
+    $csvOutputPath = [System.IO.Path]::ChangeExtension($InputFile, ".csv")
+    
+    try {
+        & xls2csv_libreoffice.sh "$InputFile"
+        if (-not (Test-Path $csvOutputPath)) {
+            Write-Host "Fehler: CSV-Konvertierung fehlgeschlagen!" -ForegroundColor Red
+            exit 1
+        }
+        $CsvFile = $csvOutputPath
+        Write-Host "CSV-Datei erfolgreich erstellt: $CsvFile" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Fehler bei der Konvertierung: $_" -ForegroundColor Red
+        exit 1
+    }
+} elseif ($fileExtension -ne ".csv") {
+    Write-Host "Fehler: Dateityp '$fileExtension' nicht unterstützt! (Erwartet: .csv, .xls oder .xlsx)" -ForegroundColor Red
+    exit 1
+}
+
+xdg-open "https://my332714.sapbydesign.com/" | Out-Null
+Write-Host "Zeiterfassung im Browser geöffnet?"
+Pause
 
 xdotool search --name "SAP Business ByDesign" windowactivate windowsize 3000 2000
 

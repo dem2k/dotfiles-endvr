@@ -196,10 +196,10 @@
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
         <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="jdownloader.desktop"/>
         <value type="string" value="libreoffice-calc.desktop"/>
         <value type="string" value="gparted.desktop"/>
-        <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="blueman-manager.desktop"/>
         <value type="string" value="scan-to-paperless.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
