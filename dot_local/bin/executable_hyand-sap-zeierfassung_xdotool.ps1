@@ -38,7 +38,7 @@ if ($fileExtension -eq ".xls" -or $fileExtension -eq ".xlsx") {
     exit 1
 }
 
-xdg-open "https://my332714.sapbydesign.com/" | Out-Null
+xdg-open "$(pass MY_SAPBYD_URL)" | Out-Null
 Write-Host "Zeiterfassung im Browser geöffnet?"
 Pause
 

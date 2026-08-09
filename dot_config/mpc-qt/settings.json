@@ -15,6 +15,9 @@
     "audioSpdifCodecs": "",
     "audioStreamSilence": false,
     "audioWaitTime": 0,
+    "avifCrf": 23,
+    "avifLossless": false,
+    "avifSpeed": 8,
     "borderSize": 3,
     "ccGamutMapping": 0,
     "ccHdrClipParam": 1,
@@ -108,7 +111,7 @@
     "fullscreenShowWhen": 1,
     "fullscreenShowWhenDuration": 2500,
     "fullscreenWindowedAtEnd": false,
-    "hwdecAll": false,
+    "hwdecAv1": true,
     "hwdecBackendAuto": true,
     "hwdecBackendCrystalHd": false,
     "hwdecBackendCuda": false,
@@ -117,6 +120,7 @@
     "hwdecBackendNvdec": false,
     "hwdecBackendVaapi": false,
     "hwdecBackendVdpau": false,
+    "hwdecCodecsMode": 0,
     "hwdecEnable": false,
     "hwdecH263": false,
     "hwdecH264": true,
@@ -126,6 +130,7 @@
     "hwdecMpeg2Video": true,
     "hwdecMpeg4": false,
     "hwdecVc1": true,
+    "hwdecVp8": true,
     "hwdecVp9": true,
     "hwdecWmv3": true,
     "interfaceIconsCustomFolder": "",
@@ -133,106 +138,107 @@
     "interfaceWidgetCustom": false,
     "interfaceWidgetCustomPalette": [
         [
-            "#000000",
-            "#7d7c7c",
-            "#929595"
+            "#ff000000",
+            "#ff7d7c7c",
+            "#ff929595"
         ],
         [
-            "#faf9f8",
-            "#faf9f8",
-            "#faf9f8"
+            "#fffaf9f8",
+            "#fffaf9f8",
+            "#fffaf9f8"
         ],
         [
-            "#ffffff",
-            "#ffffff",
-            "#ffffff"
+            "#ffffffff",
+            "#ffffffff",
+            "#ffffffff"
         ],
         [
-            "#ffffff",
-            "#ffffff",
-            "#ffffff"
+            "#ffffffff",
+            "#ffffffff",
+            "#ffffffff"
         ],
         [
-            "#dbdada",
-            "#dbdada",
-            "#dbdada"
+            "#ffdbdada",
+            "#ffdbdada",
+            "#ffdbdada"
         ],
         [
-            "#ffffff",
-            "#ffffff",
-            "#ffffff"
+            "#ffffffff",
+            "#ffffffff",
+            "#ffffffff"
         ],
         [
-            "#000000",
-            "#7d7c7c",
-            "#000000"
+            "#ff000000",
+            "#ff7d7c7c",
+            "#ff000000"
         ],
         [
-            "#ffffff",
-            "#ffffff",
-            "#ffffff"
+            "#ffffffff",
+            "#ffffffff",
+            "#ffffffff"
         ],
         [
-            "#000000",
-            "#7d7c7c",
-            "#000000"
+            "#ff000000",
+            "#ff7d7c7c",
+            "#ff000000"
         ],
         [
-            "#faf9f8",
-            "#faf9f8",
-            "#faf9f8"
+            "#fffaf9f8",
+            "#fffaf9f8",
+            "#fffaf9f8"
         ],
         [
-            "#faf9f8",
-            "#faf9f8",
-            "#faf9f8"
+            "#fffaf9f8",
+            "#fffaf9f8",
+            "#fffaf9f8"
         ],
         [
-            "#0c0c0c",
-            "#0c0c0c",
-            "#0c0c0c"
+            "#ff0c0c0c",
+            "#ff0c0c0c",
+            "#ff0c0c0c"
         ],
         [
-            "#3584e4",
-            "#3584e4",
-            "#3584e4"
+            "#ff3584e4",
+            "#ff3584e4",
+            "#ff3584e4"
         ],
         [
-            "#ffffff",
-            "#000000",
-            "#ffffff"
+            "#ffffffff",
+            "#ff000000",
+            "#ffffffff"
         ],
         [
-            "#0000ff",
-            "#0000ff",
-            "#0000ff"
+            "#ff0000ff",
+            "#ff0000ff",
+            "#ff0000ff"
         ],
         [
-            "#ff00ff",
-            "#ff00ff",
-            "#ff00ff"
+            "#ffff00ff",
+            "#ffff00ff",
+            "#ffff00ff"
         ],
         [
-            "#eae9e8",
-            "#eae9e8",
-            "#eae9e8"
+            "#ffeae9e8",
+            "#ffeae9e8",
+            "#ffeae9e8"
         ],
         [
-            "#000000",
-            "#000000",
-            "#000000"
+            "#ff000000",
+            "#ff000000",
+            "#ff000000"
         ],
         [
-            "#ffffdc",
-            "#ffffdc",
-            "#ffffdc"
+            "#ffffffdc",
+            "#ffffffdc",
+            "#ffffffdc"
         ],
         [
-            "#000000",
-            "#000000",
-            "#000000"
+            "#ff000000",
+            "#ff000000",
+            "#ff000000"
         ]
     ],
+    "interfaceWidgetDark": false,
     "interfaceWidgetHighContast": false,
     "ipcMpris": true,
     "jackAutostart": false,
@@ -260,6 +266,7 @@
     "miscGamma": 0,
     "miscHue": 0,
     "miscSaturation": 0,
+    "optionsSearchField": "",
     "ossMixerChannel": "pcm",
     "ossMixerDevice": "/dev/mixer",
     "pipewireBuffer": 20,
@@ -287,7 +294,7 @@
     "playerDisableScreensaver": true,
     "playerKeepHistory": true,
     "playerKeepHistoryOnlyForVideos": true,
-    "playerLanguageComboBox_v2": 0,
+    "playerLanguageForceEnglish": false,
     "playerLimitProportions": true,
     "playerOSD": false,
     "playerOpenNew": false,
@@ -301,7 +308,7 @@
     "playerTitleDisplayFullPath": false,
     "playerTitleDontPrefix": false,
     "playerTitleFileNameOnly": true,
-    "playerTitleReplaceName": true,
+    "playerTitleFileTitle": false,
     "playerTrayIcon": false,
     "playlistFormat": "",
     "pngColorspace": false,
@@ -309,6 +316,10 @@
     "pngFilter": 5,
     "pulseBuffer": 250,
     "pulseLatency": false,
+    "replayGainClip": true,
+    "replayGainFallback": 0,
+    "replayGainMode": 0,
+    "replayGainPreamp": 0,
     "scaleAntiRingSet": false,
     "scaleAntiRingValue": 0,
     "scaleBlurSet": false,
@@ -369,10 +380,6 @@
     "subsShadowColorValue": "000000",
     "subsShadowEnabled": false,
     "subsShadowOffset": 1,
-    "subtitlePlacementX": 1,
-    "subtitlePlacementY": 2,
-    "subtitlesAssOverride": 0,
-    "subtitlesAutoloadExternal": true,
     "subtitlesAutoloadMatch": 0,
     "subtitlesAutoloadPath": "",
     "subtitlesClearOnSeek": false,
@@ -381,12 +388,9 @@
     "subtitlesFixTiming": true,
     "subtitlesForceGrayscale": false,
     "subtitlesIgnoreEmbedded": false,
-    "subtitlesOverridePlacement": false,
-    "subtitlesPosition": 100,
     "subtitlesPreferDefaultForced_v3": true,
     "subtitlesPreferExternal": true,
     "subtitlesRemoveSdh": false,
-    "subtitlesUseMargins": true,
     "syncAudioDropSize": 0.02,
     "syncMaxAudioChange": 0.12,
     "syncMaxVideoChange": 1,
@@ -409,6 +413,7 @@
     "tscaleWindowSet": false,
     "tscaleWindowValue": 0,
     "tweaksFastSeek": true,
+    "tweaksLoopFolder": false,
     "tweaksMpvKeyEvents": false,
     "tweaksMpvMouseEvents": false,
     "tweaksMpvOptionsChkBox": false,
@@ -421,7 +426,6 @@
     "tweaksPreferWayland": false,
     "tweaksSeekFramedrop": false,
     "tweaksShowChapterMarks": true,
-    "tweaksTimeShort": true,
     "tweaksTimeTooltip": false,
     "tweaksTimeTooltipLocation": 0,
     "tweaksVideoPreview": true,

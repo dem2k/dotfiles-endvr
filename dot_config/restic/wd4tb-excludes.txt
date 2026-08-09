@@ -33,9 +33,9 @@ $HOME/Downloads/**/*.qcow*
 $HOME/VirtualBox/
 $HOME/IdeaProjects/**/*.iso
 /etc/libvirt/
-$HOME/PROJEKTE/**/*.iso
-$HOME/PROJEKTE/archiso-live-usb/work/
-$HOME/PROJEKTE/archiso-live-usb/out/
-$HOME/PROJEKTE/archiso-alis-installer/archiso/
-$HOME/PROJEKTE/archiso-alis-installer/tmp/
+$HOME/Projekte/**/*.iso
+$HOME/Projekte/archiso-live-usb/work/
+$HOME/Projekte/archiso-live-usb/out/
+$HOME/Projekte/archiso-alis-installer/archiso/
+$HOME/Projekte/archiso-alis-installer/tmp/
 

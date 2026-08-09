@@ -195,6 +195,8 @@
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="mpc-qt.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
         <value type="string" value="doublecmd.desktop"/>
         <value type="string" value="jdownloader.desktop"/>
@@ -203,8 +205,6 @@
         <value type="string" value="blueman-manager.desktop"/>
         <value type="string" value="scan-to-paperless.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
-        <value type="string" value="xfce4-about.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="category-icon-size" type="int" value="3"/>

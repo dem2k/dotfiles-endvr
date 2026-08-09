@@ -1373,6 +1373,14 @@
               ],
               Ranges : [
                 {
+                  Name : "Remark //",
+                  Attributes : "$00A00000,$80000005;False:True."
+                },
+                {
+                  Name : "Remark /*...*/",
+                  Attributes : "$00A00000,$80000005;False:True."
+                },
+                {
                   Name : "Strings \"..\"",
                   Attributes : "$00000080,$80000005;False:True.",
                   KeyLists : [

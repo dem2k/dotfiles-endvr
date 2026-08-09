@@ -1,38 +1,38 @@
-/README.md
 **/*.zwc
-/.jd/
-/.m2/
-/.secrets
-/.zsh_history
-/.zcompdump*
+.jd/
+.m2/
+.secrets
+.zsh_history
+.zcompdump*
+README.md
 
-/.cache/
+.cache/
 #/.local/share/
 #!/.local/share/applications/
 #!/.local/share/themes/
 #/.local/state/
 #!/.local/state/vim/
-/.local/functions/secrets*
+.local/functions/secrets*
 
-/.config/xnviewmp/*.db
-/.config/doublecmd/*.tmp
-/.config/ohmyzsh/lib/tests/
-/**/powerlevel10k/gitstatus/
+.config/xnviewmp/*.db
+.config/doublecmd/*.tmp
+.config/ohmyzsh/lib/tests/
+**/powerlevel10k/gitstatus/
 
 {{- if eq .chezmoi.os "darwin" }}
-/.dmrc
-/.Xresources
-/.emacs.d/
-/.config/xfce4/
-/.config/doublecmd/
-/.config/gtk-*/
-/.config/lxqt/
-/.config/polybar/
-/.config/rofi/
-/.config/xnviewmp/
-/.config/mimeapps.list
-/.config/user-dirs.dirs
-/.local/share/themes/
-/.local/share/applications/
+.dmrc
+.Xresources
+.emacs.d/
+.config/xfce4/
+.config/doublecmd/
+.config/gtk-*/
+.config/lxqt/
+.config/polybar/
+.config/rofi/
+.config/xnviewmp/
+.config/mimeapps.list
+.config/user-dirs.dirs
+.local/share/themes/
+.local/share/applications/
 {{ end }}
 

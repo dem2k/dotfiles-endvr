@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.6 beta" ConfigVersion="15">
+<doublecmd DCVersion="1.2.7 gamma" ConfigVersion="16">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -683,15 +683,6 @@
   <IgnoreList Enabled="False">
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
-  <DirectoryHotList>
-    <HotDir Name="(&amp;H) Home" Path="/home/dk"/>
-    <HotDir Name="(&amp;3) hp800g3 - mnt - sdb1" Path="wfx://FTP/hp800g3/mnt/sdb1/"/>
-    <HotDir Name="(&amp;W) xx-tmp" Path="/home/dk/xx-tmp"/>
-    <HotDir Name="(&amp;P) PROJEKTE" Path="/home/dk/Projekte"/>
-    <HotDir Name="(&amp;D) Downloads" Path="/home/dk/Downloads"/>
-    <HotDir Name="(&amp;C) dot_config" Path="/home/dk/.config"/>
-    <HotDir Name="(&amp;L) dot_local" Path="/home/dk/.local"/>
-  </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
     <ImageStretch>False</ImageStretch>
@@ -833,7 +824,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>7z</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>

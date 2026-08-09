@@ -4,13 +4,13 @@ unalias l ll la &> /dev/null
 # Beim Laden der Shell einmal prüfen und Command speichern
 if command -v eza >/dev/null 2>&1; then
     export EZA_ICON_SPACING=2
-    _LS_CMD=(eza --icons --no-quotes)
+    _LS_CMD=(eza --icons --no-quotes --classify=auto)
 else
     _LS_CMD=(ls --color=auto)
 fi
 
 l() {
-    "${_LS_CMD[@]}" -lhF "$@"
+    "${_LS_CMD[@]}" -lh "$@"
 }
 
 ll() {
