@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# damit wird nur ein backend geladen. aktuell "brother5"
+export SANE_CONFIG_DIR=~/.config/sane.d
+
 scanimage --batch=Scan_page%03d.tiff --progress --format=tiff -x 210 -y 297 \
           --source="Automatic Document Feeder(center aligned,Duplex)" \
           --mode="Gray[Error Diffusion]" --resolution="300" \

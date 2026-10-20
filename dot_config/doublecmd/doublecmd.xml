@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.7 gamma" ConfigVersion="16">
+<doublecmd DCVersion="1.2.9 gamma" ConfigVersion="16">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -824,7 +824,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>1</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>7z</LastUsedPacker>
+  <LastUsedPacker>zip</LastUsedPacker>
   <LastDoAnyCommand>cm_ConfigDirHotList</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -1216,8 +1216,8 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>[N]</Filename>
-        <Extension>[E]</Extension>
+        <Filename>Metro_2033_[C]</Filename>
+        <Extension>html</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
         <Find Value="best fit"/>
@@ -1229,7 +1229,7 @@
         <OnlyFirst>False</OnlyFirst>
         <Counter>1</Counter>
         <Interval>1</Interval>
-        <Width>0</Width>
+        <Width>1</Width>
         <Log>
           <Enabled>False</Enabled>
           <Append>False</Append>

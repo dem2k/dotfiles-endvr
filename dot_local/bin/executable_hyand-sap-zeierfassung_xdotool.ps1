@@ -94,20 +94,24 @@ $processedData | Group-Object -Property Datum | ForEach-Object {
             @"
 # zeiterfass. hinzufügen klicken
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 265 900   click 1 sleep 2
+# Datum eintragen (experimentel!)
+#key  --delay 50 Tab
+#key  --delay 50 $dayInfo.Datum
 # arbeitspaket auswahl
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1455 630  click 1 sleep 2
 # paket klicken
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 1335 955  click 1 sleep 2
-key  --delay 50 --repeat 4 Tab
+key  --delay 50 --repeat 5 Tab
 type --delay 50 $ein
 key Tab
 type --delay 50 $aus
-key  --delay 50 --repeat 2 Tab
+key  --delay 50 --repeat 3 Tab
 type --delay 50 ZDE29
 sleep 1.5
 key  --delay 50 Return
 sleep 1
-key  --delay 50 --repeat 8 Tab
+# arbeitsbeschreibung feld klicken
+search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 900 1400  click 1 sleep 2
 type "Ticketbearbeitung und Fehlerbehebung."
 # ok button klicken
 search --name "SAP Business ByDesign" windowactivate sleep 0.1 mousemove --window %1 2145 1665 click 1 sleep 2
@@ -154,7 +158,7 @@ key  --delay 50 --repeat 3 Tab
 type --delay 50 DE0081
 sleep 1
 key  --delay 50 Enter
-key  --delay 50 --repeat 2 Tab
+key  --delay 50 --repeat 3 Tab
 type --delay 50 $($_.Von)
 key  --delay 50 Tab
 type --delay 50 $($_.Bis)
