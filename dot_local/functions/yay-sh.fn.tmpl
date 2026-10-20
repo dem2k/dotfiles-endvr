@@ -22,7 +22,7 @@ yay-update-all() {
     echo " Proceeding with full system upgrade."
   fi
   if (( $+commands[yay] )); then
-    yay -Su
+    yay -Su --sudoloop --needed
   elif (( $+commands[trizen] )); then
     trizen -Su
   elif (( $+commands[pacaur] )); then
