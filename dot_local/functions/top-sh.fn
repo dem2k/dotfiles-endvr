@@ -1,0 +1,11 @@
+# Einmalig beim Laden prüfen und Command speichern
+if command -v htop &> /dev/null; then
+    _TOP_CMD=(htop)
+else
+    _TOP_CMD=(command top)
+fi
+
+# Funktion verwendet die gespeicherte Variable
+top() {
+    "${_TOP_CMD[@]}" "$@"
+}
